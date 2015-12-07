@@ -263,6 +263,19 @@ public class UiUtils {
         }
     }
 
+    public static void setNavigationBarColor(final Activity activity, final int color) {
+        if (OsUtil.isAtLeastL()) {
+            // To achieve the appearance of an 80% opacity blend against a black background,
+            // each color channel is reduced in value by 20%.
+            final int blendedRed = (int) Math.floor(0.8 * Color.red(color));
+            final int blendedGreen = (int) Math.floor(0.8 * Color.green(color));
+            final int blendedBlue = (int) Math.floor(0.8 * Color.blue(color));
+
+            activity.getWindow().setNavigationBarColor(
+                    Color.rgb(blendedRed, blendedGreen, blendedBlue));
+        }
+    }
+
     public static void lockOrientation(final Activity activity) {
         final int orientation = activity.getResources().getConfiguration().orientation;
         final int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
