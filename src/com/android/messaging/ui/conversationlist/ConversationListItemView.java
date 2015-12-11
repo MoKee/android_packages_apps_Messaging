@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,6 +60,7 @@ import com.android.messaging.util.Typefaces;
 import com.android.messaging.util.UiUtils;
 import com.android.messaging.util.UriUtil;
 import org.lineageos.messaging.util.PrefsUtils;
+import com.mokee.cloud.location.OfflineNumber;
 
 import java.util.List;
 
@@ -125,6 +127,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private TextView mSnippetTextView;
     private TextView mSubjectTextView;
     private TextView mTimestampTextView;
+    private TextView mLocationTextView;
     private ContactIconView mContactIconView;
     private ImageView mContactCheckmarkView;
     private ImageView mNotificationBellView;
@@ -151,6 +154,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mSubjectTextView = (TextView) findViewById(R.id.conversation_subject);
         mWorkProfileIconView = (ImageView) findViewById(R.id.work_profile_icon);
         mTimestampTextView = (TextView) findViewById(R.id.conversation_timestamp);
+        mLocationTextView = (TextView) findViewById(R.id.conversation_location);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
         mNotificationBellView = (ImageView) findViewById(R.id.conversation_notification_bell);
@@ -437,6 +441,10 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             }
         }
 
+        String address = mData.getOtherParticipantNormalizedDestination();
+        if (!TextUtils.isEmpty(address))
+            mLocationTextView.setText(OfflineNumber.detect(address, getContext()));
+
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);
         Uri iconUri = null;
@@ -457,7 +465,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             iconUri = Uri.parse(mData.getIcon());
         }
         mContactIconView.setImageResourceUri(iconUri, mData.getParticipantContactId(),
-                mData.getParticipantLookupKey(), mData.getOtherParticipantNormalizedDestination());
+                mData.getParticipantLookupKey(), address);
         mContactIconView.setVisibility(contactIconVisibility);
         mContactIconView.setOnLongClickListener(this);
         mContactIconView.setClickable(!mHostInterface.isSelectionMode());
