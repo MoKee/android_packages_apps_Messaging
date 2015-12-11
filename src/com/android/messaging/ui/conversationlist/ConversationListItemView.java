@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,6 +59,7 @@ import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.Typefaces;
 import com.android.messaging.util.UiUtils;
 import com.android.messaging.util.UriUtil;
+import com.mokee.cloud.location.OfflineNumber;
 
 import java.util.List;
 
@@ -121,6 +123,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private TextView mSnippetTextView;
     private TextView mSubjectTextView;
     private TextView mTimestampTextView;
+    private TextView mLocationTextView;
     private ContactIconView mContactIconView;
     private ImageView mContactCheckmarkView;
     private ImageView mNotificationBellView;
@@ -146,6 +149,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mSnippetTextView = (TextView) findViewById(R.id.conversation_snippet);
         mSubjectTextView = (TextView) findViewById(R.id.conversation_subject);
         mTimestampTextView = (TextView) findViewById(R.id.conversation_timestamp);
+        mLocationTextView = (TextView) findViewById(R.id.conversation_location);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
         mNotificationBellView = (ImageView) findViewById(R.id.conversation_notification_bell);
@@ -425,6 +429,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                 mTimestampTextView.setText(formattedTimestamp);
             }
         }
+
+        mLocationTextView.setText(OfflineNumber.detect(mData.getOtherParticipantNormalizedDestination(), getContext()));
 
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);

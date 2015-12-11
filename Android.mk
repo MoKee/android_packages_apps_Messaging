@@ -83,7 +83,7 @@ LOCAL_PACKAGE_NAME := messaging
 
 LOCAL_CERTIFICATE := platform
 
-LOCAL_SDK_VERSION := current
+# LOCAL_SDK_VERSION := current
 
 include $(BUILD_PACKAGE)
 
