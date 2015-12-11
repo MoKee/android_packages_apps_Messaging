@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +21,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.provider.Telephony.Sms;
 import android.text.TextUtils;
 
 import com.android.messaging.datamodel.BugleDatabaseOperations;
@@ -46,6 +48,16 @@ public class DeleteMessageAction extends Action implements Parcelable {
     private DeleteMessageAction(final String messageId) {
         super();
         actionParameters.putString(KEY_MESSAGE_ID, messageId);
+    }
+
+    private static Uri getTelephonyDeletionUri(MessageData message) {
+        Uri messageUri = message.getSmsMessageUri();
+        if (messageUri.toString().startsWith(Sms.Inbox.CONTENT_URI.toString())) {
+            // TelephonyProvider will not recognize URIs in inbox at deletion,
+            // while it returns such URIs (upon our request) at addition.
+            messageUri = Uri.withAppendedPath(Sms.CONTENT_URI, messageUri.getLastPathSegment());
+        }
+        return messageUri;
     }
 
     // Doing this work in the background so that we're not competing with sync
@@ -79,7 +91,7 @@ public class DeleteMessageAction extends Action implements Parcelable {
                 // We may have changed the conversation list
                 MessagingContentProvider.notifyConversationListChanged();
 
-                final Uri messageUri = message.getSmsMessageUri();
+                final Uri messageUri = getTelephonyDeletionUri(message);
                 if (messageUri != null) {
                     // Delete from telephony DB
                     count = MmsUtils.deleteMessage(messageUri);

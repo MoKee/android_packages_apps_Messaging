@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     Copyright (C) 2015 The Android Open Source Project
+    Copyright (C) 2018 The MoKee Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -47,6 +48,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="mokee.permission.READ_PHONE_LOCATION" />
+    <uses-permission android:name="mokee.permission.WRITE_PHONE_LOCATION" />
 
     <!--  Optional features -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
@@ -353,6 +356,10 @@
                 <action android:name="android.provider.Telephony.MMS_DOWNLOADED" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".receiver.DeleteMessageReceiver" android:exported="false" />
+
+        <receiver android:name=".receiver.CaptchaReceiver" android:exported="false" />
 
         <!-- Intents for aborting SMS/MMS broadcasts pre-KLP -->
         <!-- Registered for a priority just ahead of inbox Messaging apps (2) -->

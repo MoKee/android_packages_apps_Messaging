@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,11 +28,13 @@ import com.android.messaging.datamodel.DatabaseHelper.MessageColumns;
 import com.android.messaging.datamodel.DatabaseHelper.ParticipantColumns;
 import com.android.messaging.datamodel.DatabaseWrapper;
 import com.android.messaging.datamodel.action.DeleteConversationAction;
+import com.android.messaging.Factory;
 import com.android.messaging.util.Assert;
 import com.android.messaging.util.ContactUtil;
 import com.android.messaging.util.Dates;
 import com.android.messaging.util.NotificationUtil;
 import com.google.common.base.Joiner;
+import com.mokee.cloud.location.OfflineNumber;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +72,7 @@ public class ConversationListItemData {
     private String mSnippetSenderFirstName;
     private String mSnippetSenderDisplayDestination;
     private boolean mIsEnterprise;
+    private String mLocation;
 
     public ConversationListItemData() {
     }
@@ -123,10 +127,17 @@ public class ConversationListItemData {
         mSnippetSenderDisplayDestination =
                 cursor.getString(INDEX_SNIPPET_SENDER_DISPLAY_DESTINATION);
         mIsEnterprise = cursor.getInt(INDEX_IS_ENTERPRISE) == 1;
+        if (!TextUtils.isEmpty(mOtherParticipantNormalizedDestination)) {
+            mLocation = OfflineNumber.detect(mOtherParticipantNormalizedDestination, Factory.get().getApplicationContext());
+        }
     }
 
     public String getConversationId() {
         return mConversationId;
+    }
+
+    public String getLocation() {
+        return mLocation;
     }
 
     public String getName() {

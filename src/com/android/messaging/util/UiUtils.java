@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -269,6 +270,19 @@ public class UiUtils {
             final int blendedBlue = (int) Math.floor(0.8 * Color.blue(color));
 
             activity.getWindow().setStatusBarColor(
+                    Color.rgb(blendedRed, blendedGreen, blendedBlue));
+        }
+    }
+
+    public static void setNavigationBarColor(final Activity activity, final int color) {
+        if (OsUtil.isAtLeastL()) {
+            // To achieve the appearance of an 80% opacity blend against a black background,
+            // each color channel is reduced in value by 20%.
+            final int blendedRed = (int) Math.floor(0.8 * Color.red(color));
+            final int blendedGreen = (int) Math.floor(0.8 * Color.green(color));
+            final int blendedBlue = (int) Math.floor(0.8 * Color.blue(color));
+
+            activity.getWindow().setNavigationBarColor(
                     Color.rgb(blendedRed, blendedGreen, blendedBlue));
         }
     }
