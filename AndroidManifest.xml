@@ -353,6 +353,8 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receiver.CaptchasReceiver" />
+
         <!-- Intents for aborting SMS/MMS broadcasts pre-KLP -->
         <!-- Registered for a priority just ahead of inbox Messaging apps (2) -->
         <receiver android:name=".receiver.AbortMmsWapPushReceiver"
