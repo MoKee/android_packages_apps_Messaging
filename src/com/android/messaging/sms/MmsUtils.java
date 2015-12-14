@@ -1173,6 +1173,13 @@ public class MmsUtils {
         return false;
     }
 
+    public static boolean allowAutoArchiveCaptchaSms(final int subId) {
+        final Context context = Factory.get().getApplicationContext();
+        final Resources resources = context.getResources();
+        final BuglePrefs prefs = BuglePrefs.getSubscriptionPrefs(subId);
+        return prefs.getBoolean(resources.getString(R.string.captchas_auto_archive_pref_key),resources.getBoolean(R.bool.captchas_auto_archive_pref_default));
+    }
+
     /**
      * Parse the message row id from a message Uri.
      *
