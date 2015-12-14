@@ -34,6 +34,8 @@ import android.os.SystemClock;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.Builder;
+import android.support.v4.app.NotificationCompat.Style;
 import android.support.v4.app.NotificationCompat.WearableExtender;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.RemoteInput;
@@ -192,6 +194,22 @@ public class BugleNotifications {
         }
     }
 
+    private static class CaptchasNotificationState extends MessageNotificationState {
+        CaptchasNotificationState() {
+            super(null);
+        }
+
+        @Override
+        protected Style build(Builder builder) {
+            return null;
+        }
+
+        @Override
+        public boolean getNotificationVibrate() {
+            return true;
+        }
+    }
+
     public static void postCaptchasNotication(String conversationId, String captchas, String captchaProvider) {
         cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
         final NotificationState state = MessageNotificationState.getNotificationState();
@@ -202,7 +220,6 @@ public class BugleNotifications {
                 : String.format(context.getString(R.string.captchas_with_provider_title), captchas, captchaProvider);
         String content = context.getString(R.string.captchas_content);
 
-        final Uri ringtoneUri = RingtoneUtil.getNotificationRingtoneUri(state.getRingtoneUri());
         Intent pendingIntent = new Intent();
         pendingIntent.setClass(context, CaptchasReceiver.class);
         pendingIntent.putExtra("captchas", captchas);
@@ -215,12 +232,13 @@ public class BugleNotifications {
                 .setTicker(title)
                 .setSmallIcon(R.drawable.ic_sms_light)
                 .setContentText(content)
-                .setWhen(state.getLatestReceivedTimestamp())
+                .setWhen(state != null ? state.getLatestReceivedTimestamp() : System.currentTimeMillis())
         // Returning PRIORITY_HIGH causes L to put up a HUD notification. Without it, the ticker
         // isn't displayed.
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setContentIntent(captchasIntent)
-                .setSound(ringtoneUri)
+                .setSound(state != null ? RingtoneUtil.getNotificationRingtoneUri(state.getRingtoneUri())
+                        : getNotificationRingtoneUriForConversationId(conversationId))
                 .setColor(context.getResources().getColor(R.color.notification_accent_color));
 
         final NotificationCompat.BigTextStyle bigTextStyle =
@@ -233,7 +251,7 @@ public class BugleNotifications {
                 NotificationManagerCompat.from(Factory.get().getApplicationContext());
 
         int defaults = Notification.DEFAULT_LIGHTS;
-        if (BugleNotifications.shouldVibrate(state)) {
+        if (BugleNotifications.shouldVibrate(new CaptchasNotificationState())) {
             defaults |= Notification.DEFAULT_VIBRATE;
         }
         notification.defaults = defaults;
