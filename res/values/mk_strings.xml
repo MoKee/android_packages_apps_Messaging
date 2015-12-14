@@ -24,4 +24,6 @@
     <string name="captchas_auto_archive_title">Archive sms captcha</string>
     <string name="captchas_auto_archive_summary">Automatically archive sms captcha</string>
     <string name="archive_category_pref_title">Archive</string>
+    <string name="public_service_auto_archive_title">Archive public service</string>
+    <string name="public_service_auto_archive_summary">Automatically archive public service</string>
 </resources>
