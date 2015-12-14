@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +19,7 @@ package com.android.messaging.datamodel.action;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.mokee.utils.MoKeeUtils;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -36,6 +38,11 @@ import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
+
+import com.mokee.cloud.location.CloudNumber;
+import com.mokee.cloud.location.LocationInfo;
+import com.mokee.cloud.location.LocationUtils;
+import com.mokee.mms.utils.CaptchasUtils;
 
 /**
  * Action used to "receive" an incoming message
@@ -165,13 +172,42 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
                         + "secondary user.");
             }
         }
-        // Show a notification to let the user know a new message has arrived
-        BugleNotifications.update(false/*silent*/, conversationId, BugleNotifications.UPDATE_ALL);
+
+        // Lookup addresser info
+        if (MoKeeUtils.isOnline(context) && MoKeeUtils.isSupportLanguage(true)) {
+            LocationInfo locationInfo = LocationUtils.getLocationInfo(context.getContentResolver(), messageValues.getAsString(Sms.ADDRESS));
+            if (LocationUtils.shouldUpdateLocationInfo(locationInfo)) {
+                CloudNumber.detect(messageValues.getAsString(Sms.ADDRESS), new CloudNumber.Callback() {
+                    @Override
+                    public void onResult(String phoneNumber, String result, CloudNumber.PhoneType phoneType, CloudNumber.EngineType engineType) {
+                    }
+                }, context, true);
+            }
+        }
+
+        // Get Captcha
+        final String captchas = getCaptchas(messageValues.getAsString(Sms.BODY));
+        final String captchaProvider = CaptchasUtils.getCaptchaProvider(messageValues.getAsString(Sms.BODY), messageValues.getAsString(Sms.ADDRESS));
+        if (TextUtils.isEmpty(captchas)) {
+            // Show a notification to let the user know a new message has arrived
+            BugleNotifications.update(false/*silent*/, conversationId, BugleNotifications.UPDATE_ALL);
+        } else {
+            BugleNotifications.postCaptchasNotication(conversationId, captchas, captchaProvider);
+        }
 
         MessagingContentProvider.notifyMessagesChanged(conversationId);
         MessagingContentProvider.notifyPartsChanged();
 
         return message;
+    }
+
+    public static String getCaptchas(String messageBody) {
+        if (!CaptchasUtils.isChineseContains(messageBody) && CaptchasUtils.isCaptchasEnMessage(messageBody)) {
+            return CaptchasUtils.tryToGetEnCaptchas(messageBody);
+        } else if (CaptchasUtils.isCaptchasMessage(messageBody)) {
+            return CaptchasUtils.tryToGetCnCaptchas(messageBody);
+        }
+        return "";
     }
 
     private ReceiveSmsMessageAction(final Parcel in) {

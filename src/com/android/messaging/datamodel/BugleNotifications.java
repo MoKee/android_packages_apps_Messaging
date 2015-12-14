@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,6 +61,7 @@ import com.android.messaging.datamodel.media.MediaResourceManager;
 import com.android.messaging.datamodel.media.MessagePartVideoThumbnailRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.datamodel.media.VideoThumbnailRequest;
+import com.android.messaging.receiver.CaptchasReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.ui.UIIntents;
@@ -171,7 +173,7 @@ public class BugleNotifications {
                     + " conversationId = " + conversationId
                     + " coverage = " + coverage);
         }
-    Assert.isNotMainThread();
+        Assert.isNotMainThread();
         checkInitialized();
 
         if (!shouldNotify()) {
@@ -188,6 +190,55 @@ public class BugleNotifications {
         if ((coverage & UPDATE_ERRORS) != 0) {
             MessageNotificationState.checkFailedMessages();
         }
+    }
+
+    public static void postCaptchasNotication(String conversationId, String captchas, String captchaProvider) {
+        cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
+        final NotificationState state = MessageNotificationState.getNotificationState();
+        final Context context = Factory.get().getApplicationContext();
+        final Resources resources = context.getResources();
+
+        String title = TextUtils.isEmpty(captchaProvider) ? String.format(context.getString(R.string.captchas_title), captchas)
+                : String.format(context.getString(R.string.captchas_with_provider_title), captchas, captchaProvider);
+        String content = context.getString(R.string.captchas_content);
+
+        final Uri ringtoneUri = RingtoneUtil.getNotificationRingtoneUri(state.getRingtoneUri());
+        Intent pendingIntent = new Intent();
+        pendingIntent.setClass(context, CaptchasReceiver.class);
+        pendingIntent.putExtra("captchas", captchas);
+        pendingIntent.putExtra("conversationId", conversationId);
+        PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
+        builder.setContentTitle(title)
+                .setTicker(title)
+                .setSmallIcon(R.drawable.ic_sms_light)
+                .setContentText(content)
+                .setWhen(state.getLatestReceivedTimestamp())
+        // Returning PRIORITY_HIGH causes L to put up a HUD notification. Without it, the ticker
+        // isn't displayed.
+                .setPriority(Notification.PRIORITY_HIGH)
+                .setContentIntent(captchasIntent)
+                .setSound(ringtoneUri)
+                .setColor(context.getResources().getColor(R.color.notification_accent_color));
+
+        final NotificationCompat.BigTextStyle bigTextStyle =
+                new NotificationCompat.BigTextStyle(builder);
+        bigTextStyle.setBigContentTitle(title);
+        bigTextStyle.bigText(content);
+        final Notification notification = bigTextStyle.build();
+
+        final NotificationManagerCompat notificationManager =
+                NotificationManagerCompat.from(Factory.get().getApplicationContext());
+
+        int defaults = Notification.DEFAULT_LIGHTS;
+        if (BugleNotifications.shouldVibrate(state)) {
+            defaults |= Notification.DEFAULT_VIBRATE;
+        }
+        notification.defaults = defaults;
+        notificationManager.notify(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID, notification);
+
     }
 
     /**
