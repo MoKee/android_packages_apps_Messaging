@@ -19,6 +19,7 @@ package com.android.messaging.datamodel.action;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.mokee.location.PhoneNumberOfflineGeocoder;
 import android.mokee.utils.MoKeeUtils;
 import android.net.Uri;
 import android.os.Parcel;
@@ -193,6 +194,10 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
         if (TextUtils.isEmpty(captchas)) {
             // Show a notification to let the user know a new message has arrived
             BugleNotifications.update(false/*silent*/, conversationId, BugleNotifications.UPDATE_ALL);
+            if (MmsUtils.allowAutoArchivePublicServiceSms(subId)
+                    && PhoneNumberOfflineGeocoder.getPhoneLocation(messageValues.getAsString(Sms.ADDRESS)).equals("信息服务台")) {
+                UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
+            }
         } else {
             BugleNotifications.postCaptchasNotication(conversationId, captchas, captchaProvider);
             if (MmsUtils.allowAutoArchiveCaptchaSms(subId)) {
