@@ -430,7 +430,9 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             }
         }
 
-        mLocationTextView.setText(OfflineNumber.detect(mData.getOtherParticipantNormalizedDestination(), getContext()));
+        String address = mData.getOtherParticipantNormalizedDestination();
+        if (!TextUtils.isEmpty(address))
+            mLocationTextView.setText(OfflineNumber.detect(address, getContext()));
 
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);
@@ -452,7 +454,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             iconUri = Uri.parse(mData.getIcon());
         }
         mContactIconView.setImageResourceUri(iconUri, mData.getParticipantContactId(),
-                mData.getParticipantLookupKey(), mData.getOtherParticipantNormalizedDestination());
+                mData.getParticipantLookupKey(), address);
         mContactIconView.setVisibility(contactIconVisibility);
         mContactIconView.setOnLongClickListener(this);
         mContactIconView.setClickable(!mHostInterface.isSelectionMode());

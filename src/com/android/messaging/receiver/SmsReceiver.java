@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,11 +26,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.mokee.utils.MoKeeUtils;
 import android.provider.Telephony;
 import android.provider.Telephony.Sms;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.Builder;
 import android.support.v4.app.NotificationCompat.Style;
+import android.text.TextUtils;
 import android.support.v4.app.NotificationManagerCompat;
 
 import java.util.ArrayList;
@@ -51,6 +54,9 @@ import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
 import com.android.messaging.util.PendingIntentConstants;
 import com.android.messaging.util.PhoneUtils;
+import com.mokee.cloud.location.CloudNumber;
+import com.mokee.cloud.location.LocationInfo;
+import com.mokee.cloud.location.LocationUtils;
 
 /**
  * Class that receives incoming SMS messages through android.provider.Telephony.SMS_RECEIVED
@@ -220,6 +226,18 @@ public final class SmsReceiver extends BroadcastReceiver {
                 DebugUtils.debugClassZeroSmsEnabled()) {
             Factory.get().getUIIntents().launchClassZeroActivity(context, messageValues);
         } else {
+            // Lookup addresser info
+            String address = messageValues.getAsString(Sms.ADDRESS);
+            if (MoKeeUtils.isOnline(context) && MoKeeUtils.isSupportLanguage(true) && !TextUtils.isEmpty(address)) {
+                LocationInfo locationInfo = LocationUtils.getLocationInfo(context.getContentResolver(), address);
+                if (LocationUtils.shouldUpdateLocationInfo(locationInfo)) {
+                    CloudNumber.detect(address, new CloudNumber.Callback() {
+                        @Override
+                        public void onResult(String phoneNumber, String result, CloudNumber.PhoneType phoneType, CloudNumber.EngineType engineType) {
+                        }
+                    }, context, true);
+                }
+            }
             final ReceiveSmsMessageAction action = new ReceiveSmsMessageAction(messageValues);
             action.start();
         }

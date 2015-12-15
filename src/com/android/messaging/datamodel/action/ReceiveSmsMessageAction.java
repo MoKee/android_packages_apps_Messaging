@@ -20,7 +20,6 @@ package com.android.messaging.datamodel.action;
 import android.content.ContentValues;
 import android.content.Context;
 import android.mokee.location.PhoneNumberOfflineGeocoder;
-import android.mokee.utils.MoKeeUtils;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -42,9 +41,6 @@ import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
 
-import com.mokee.cloud.location.CloudNumber;
-import com.mokee.cloud.location.LocationInfo;
-import com.mokee.cloud.location.LocationUtils;
 import com.mokee.mms.utils.CaptchasUtils;
 
 /**
@@ -173,18 +169,6 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
             if (LogUtil.isLoggable(TAG, LogUtil.DEBUG)) {
                 LogUtil.d(TAG, "ReceiveSmsMessageAction: Not inserting received SMS message for "
                         + "secondary user.");
-            }
-        }
-
-        // Lookup addresser info
-        if (MoKeeUtils.isOnline(context) && MoKeeUtils.isSupportLanguage(true)) {
-            LocationInfo locationInfo = LocationUtils.getLocationInfo(context.getContentResolver(), messageValues.getAsString(Sms.ADDRESS));
-            if (LocationUtils.shouldUpdateLocationInfo(locationInfo)) {
-                CloudNumber.detect(messageValues.getAsString(Sms.ADDRESS), new CloudNumber.Callback() {
-                    @Override
-                    public void onResult(String phoneNumber, String result, CloudNumber.PhoneType phoneType, CloudNumber.EngineType engineType) {
-                    }
-                }, context, true);
             }
         }
 
