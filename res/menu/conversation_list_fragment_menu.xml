@@ -28,7 +28,8 @@
         android:id="@+id/action_show_archived"
         android:orderInCategory="200"
         android:title="@string/action_menu_show_archived"
-        android:showAsAction="never"/>
+        android:icon="@drawable/ic_archive_small_light"
+        appcompat:showAsAction="always"/>
 
     <item
         android:id="@+id/action_show_blocked_contacts"
