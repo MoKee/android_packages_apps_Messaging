@@ -25,4 +25,5 @@
   <string name="archive_category_pref_title">归档</string>
   <string name="public_service_auto_archive_title">归档信息服务台短信</string>
   <string name="public_service_auto_archive_summary">自动归档信息服务台短信</string>
+  <string name="swipe_right_deletes_conversation_text">右滑以删除对话</string>
 </resources>
