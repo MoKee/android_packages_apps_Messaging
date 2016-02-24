@@ -708,7 +708,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                         mConversationNameView.setContentDescription(vocalizedDisplayName);
                     }
                     if (!TextUtils.isEmpty(response.mPhotoUrl)) {
-                        mContactIconView.setImageUrl(response.mPhotoUrl);
+                        mContactIconView.setImageResourceUri(Uri.parse(response.mPhotoUrl), 0, null,
+                                response.mNumber);
                     }
                 }
             }
