@@ -16,14 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">验证码 %s</string>
-  <string name="captchas_with_provider_title">验证码 %1$s 【%2$s】</string>
-  <string name="captchas_content">系统获取到一条验证短信，点击完成复制。</string>
-  <string name="captchas_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
-  <string name="captchas_auto_archive_title">归档验证码短信</string>
-  <string name="captchas_auto_archive_summary">自动归档验证码短信</string>
-  <string name="archive_category_pref_title">归档</string>
-  <string name="public_service_auto_archive_title">归档信息服务台短信</string>
-  <string name="public_service_auto_archive_summary">自动归档信息服务台短信</string>
+  <string name="captchas_title">Captcha là %s</string>
+  <string name="captchas_with_provider_title">Captcha là %1$s 【%2$s】</string>
+  <string name="captchas_content">Nhận tin nhắn captcha, nhấn vào đây để sao chép.</string>
+  <string name="captchas_has_copied">Captcha đã sao chép vào clipboard, bấm giữ lâu vào hộp nhập liệu của bạn để dán.</string>
 </resources>
