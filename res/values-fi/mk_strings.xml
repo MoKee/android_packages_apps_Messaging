@@ -17,8 +17,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">Captcha là %s</string>
-  <string name="captchas_with_provider_title">Captcha là %1$s 【%2$s】</string>
-  <string name="captchas_content">Nhận tin nhắn captcha, nhấn vào đây để sao chép.</string>
-  <string name="captchas_has_copied">Captcha đã sao chép vào clipboard, bấm giữ lâu vào hộp nhập liệu của bạn để dán.</string>
 </resources>

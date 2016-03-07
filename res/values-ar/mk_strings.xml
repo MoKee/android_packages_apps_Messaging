@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Captchas -->
   <string name="captchas_title">كلمة التحقق هو %s</string>
   <string name="captchas_with_provider_title">كلمة التحقق هو %1$s 【%2$s】</string>
   <string name="captchas_content">تلقي رسالة كلمة التحقق، انقر فوق نسخ.</string>

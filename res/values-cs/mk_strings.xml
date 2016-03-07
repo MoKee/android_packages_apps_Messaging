@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Captchas -->
   <string name="captchas_title">Captcha je %s</string>
   <string name="captchas_with_provider_title">Captcha je %1$s 【%2$s】</string>
   <string name="captchas_content">Přijata zpráva s captcha, klepněte zkopírovat.</string>
