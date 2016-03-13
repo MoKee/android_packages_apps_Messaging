@@ -21,4 +21,8 @@
   <string name="captchas_with_provider_title">Captcha adalah %1$s 【%2$s】</string>
   <string name="captchas_content">Menerima pesan captcha, klik untuk menyalin.</string>
   <string name="captchas_has_copied">Captcha sudah disalin ke clipboard, tekan lama kotak masukan untuk menyisipkan.</string>
+  <string name="captchas_auto_archive_title">Arsip sms captcha</string>
+  <string name="captchas_auto_archive_summary">Otomatis arsip sms captcha</string>
+  <string name="archive_category_pref_title">Arsip</string>
+  <string name="public_service_auto_archive_title">Arsip layanan publik</string>
 </resources>
