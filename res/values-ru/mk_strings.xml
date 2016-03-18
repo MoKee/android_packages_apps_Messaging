@@ -21,5 +21,9 @@
   <string name="captchas_with_provider_title">Код: %1$s 【%2$s】</string>
   <string name="captchas_content">Получено сообщение с кодом, нажмите чтобы скопировать.</string>
   <string name="captchas_has_copied">Код уже скопирован в буфер обмена, долгое нажатие на поле ввода вставит его.</string>
+  <string name="captchas_auto_archive_title">Сохранять SMS коды</string>
+  <string name="captchas_auto_archive_summary">Автоматически сохранять в архив SMS коды</string>
   <string name="archive_category_pref_title">Архив</string>
+  <string name="public_service_auto_archive_title">Архивировать открытые службы</string>
+  <string name="public_service_auto_archive_summary">Автоматически архивировать открытые службы</string>
 </resources>
