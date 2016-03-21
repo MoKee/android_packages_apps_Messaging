@@ -17,4 +17,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">Doğrulama resmi %s\'tir</string>
+  <string name="captchas_with_provider_title">Doğrulama resmi %1$s\'dir 【%2$s】</string>
+  <string name="captchas_content">Bir doğrulama kodu alındı, kopyalamak için tıkla.</string>
+  <string name="captchas_has_copied">Doğrulama kodu zaten kopyalandı, yapıştırmak için basılı tut.</string>
+  <string name="captchas_auto_archive_title">Sms doğrulama resmini arşivle</string>
+  <string name="captchas_auto_archive_summary">Sms doğrulama kodunu otomatik olarak arşivle</string>
+  <string name="archive_category_pref_title">Arşiv</string>
+  <string name="public_service_auto_archive_title">Genel servis\'i arşivle</string>
 </resources>
