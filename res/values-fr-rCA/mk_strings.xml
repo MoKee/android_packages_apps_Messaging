@@ -21,4 +21,5 @@
   <string name="captchas_with_provider_title">Captcha est %1$s 【%2$s】</string>
   <string name="captchas_content">A reçu un message de captcha, cliquez sur copier.</string>
   <string name="captchas_has_copied">Captcha déjà copié dans le presse-papier, appuyez longuement sur votre zone de saisie pour coller.</string>
+  <string name="archive_category_pref_title">Archive</string>
 </resources>
