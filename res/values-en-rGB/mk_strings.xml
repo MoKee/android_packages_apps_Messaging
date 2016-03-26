@@ -21,4 +21,6 @@
   <string name="captchas_with_provider_title">Captcha is %1$s (%2$s)</string>
   <string name="captchas_content">Received a captcha message, click to copy.</string>
   <string name="captchas_has_copied">Captcha already copied to the clipboard, long press your input box to paste.</string>
+  <string name="captchas_auto_archive_title">Archive sms captcha</string>
+  <string name="captchas_auto_archive_summary">Automatically archive sms captcha</string>
 </resources>
