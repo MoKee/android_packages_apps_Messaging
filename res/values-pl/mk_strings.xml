@@ -24,4 +24,6 @@
   <string name="captchas_auto_archive_title">Zapisz wiadomość captcha</string>
   <string name="captchas_auto_archive_summary">Automatycznie zapisuj wiadomości captcha</string>
   <string name="archive_category_pref_title">Archiwum</string>
+  <string name="public_service_auto_archive_title">Zapisuj usługi publiczne</string>
+  <string name="public_service_auto_archive_summary">Automatycznie zapisuj usługi publiczne</string>
 </resources>
