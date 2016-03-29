@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.text.format.DateUtils;
 import android.text.format.Time;
@@ -15,6 +16,7 @@ import android.view.View;
 
 import com.android.contacts.common.util.MaterialColorMapUtils;
 import com.android.messaging.R;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.cyanogenmod.messaging.util.PrefsUtils;
 
 public class QuickMessageHelper {
@@ -32,13 +34,28 @@ public class QuickMessageHelper {
 
     public static void addQuickMessageAction(Context context, NotificationCompat.Builder builder,
             NotificationInfo ni) {
-        if (PrefsUtils.isQuickMessagingEnabled()) {
-            Intent qmIntent = getQuickMessageIntent(context, ni);
-            CharSequence qmText = context.getText(R.string.notification_reply_prompt);
-            PendingIntent qmPendingIntent = PendingIntent.getActivity(context, 0, qmIntent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
-            builder.addAction(R.drawable.ic_reply, qmText, qmPendingIntent);
-        }
+        Intent qmIntent = getQuickMessageIntent(context, ni);
+        CharSequence qmText = context.getText(R.string.notification_reply_prompt);
+        PendingIntent qmPendingIntent = PendingIntent.getActivity(context, 0, qmIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.addAction(R.drawable.ic_reply, qmText, qmPendingIntent);
+
+        // Add the Call action
+        CharSequence callText = context.getText(R.string.notification_call);
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:" + ni.mSenderNumber));
+        PendingIntent callPendingIntent = PendingIntent.getActivity(context, 0, callIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.addAction(R.drawable.ic_call, callText, callPendingIntent);
+
+        // Add the 'Mark as read' action
+        CharSequence markReadText = context.getText(R.string.notification_read);
+        Intent mrIntent = new Intent();
+        mrIntent.setClass(context, QuickMessageRead.class);
+        mrIntent.putExtra(ConversationColumns.SMS_THREAD_ID, ni.mConversationId);
+        PendingIntent mrPendingIntent = PendingIntent.getBroadcast(context, 0, mrIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.addAction(R.drawable.ic_read, markReadText, mrPendingIntent);
     }
 
     public static String formatTimeStampString(Context context, long when, boolean fullFormat) {

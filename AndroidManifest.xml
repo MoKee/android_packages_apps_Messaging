@@ -357,7 +357,9 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.CaptchasReceiver" />
+        <receiver android:name="com.cyanogenmod.messaging.quickmessage.QuickMessageCaptcha" />
+
+        <receiver android:name="com.cyanogenmod.messaging.quickmessage.QuickMessageRead" />
 
         <!-- Intents for aborting SMS/MMS broadcasts pre-KLP -->
         <!-- Registered for a priority just ahead of inbox Messaging apps (2) -->

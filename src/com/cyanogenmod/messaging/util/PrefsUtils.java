@@ -27,7 +27,6 @@ import com.android.messaging.util.UnicodeFilter;
 public class PrefsUtils {
 
     // QuickMessage
-    public static final String QUICKMESSAGE_ENABLED      = "pref_key_quickmessage";
     public static final String QM_CLOSE_ALL_ENABLED      = "pref_key_close_all";
     public static final String SHOW_EMOTICONS_ENABLED    = "pref_show_emoticons";
 
@@ -47,11 +46,6 @@ public class PrefsUtils {
         final boolean defaultValue = context.getResources().getBoolean(
                 R.bool.swipe_right_deletes_conversation_default);
         return prefs.getBoolean(prefKey, defaultValue);
-    }
-
-    public static boolean isQuickMessagingEnabled() {
-        final BuglePrefs prefs = BuglePrefs.getApplicationPrefs();
-        return prefs.getBoolean(QUICKMESSAGE_ENABLED, false);
     }
 
     public static boolean isQuickMessagingCloseAllEnabled() {

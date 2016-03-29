@@ -48,6 +48,7 @@ import android.text.style.TextAppearanceSpan;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.datamodel.MessageNotificationState.BundledMessageNotificationState;
 import com.android.messaging.datamodel.MessageNotificationState.ConversationLineInfo;
 import com.android.messaging.datamodel.MessageNotificationState.MultiConversationNotificationState;
@@ -63,7 +64,6 @@ import com.android.messaging.datamodel.media.MediaResourceManager;
 import com.android.messaging.datamodel.media.MessagePartVideoThumbnailRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.datamodel.media.VideoThumbnailRequest;
-import com.android.messaging.receiver.CaptchasReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.ui.UIIntents;
@@ -87,6 +87,7 @@ import com.android.messaging.util.UriUtil;
 
 import com.cyanogenmod.messaging.quickmessage.QuickMessageHelper;
 import com.cyanogenmod.messaging.quickmessage.NotificationInfo;
+import com.cyanogenmod.messaging.quickmessage.QuickMessageCaptcha;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -224,9 +225,9 @@ public class BugleNotifications {
         String content = context.getString(R.string.captchas_content);
 
         Intent pendingIntent = new Intent();
-        pendingIntent.setClass(context, CaptchasReceiver.class);
+        pendingIntent.setClass(context, QuickMessageCaptcha.class);
         pendingIntent.putExtra("captchas", captchas);
-        pendingIntent.putExtra("conversationId", conversationId);
+        pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, conversationId);
         PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015-2016 The MoKee Open Source Project
+ * Copyright (C) 2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,24 +14,20 @@
  * limitations under the License.
  */
 
-package com.android.messaging.receiver;
+package com.cyanogenmod.messaging.quickmessage;
 
-import com.android.messaging.R;
-import com.android.messaging.Factory;
 import com.android.messaging.datamodel.BugleNotifications;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.util.PendingIntentConstants;
 
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.Toast;
 
-import android.support.v4.app.NotificationManagerCompat;
-
-public class CaptchasReceiver extends BroadcastReceiver {
+public class QuickMessageRead extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -42,19 +38,17 @@ public class CaptchasReceiver extends BroadcastReceiver {
             return;
         }
 
-        String captchas = extras.getString("captchas");
-        String conversationId = extras.getString("conversationId");
-        if (!TextUtils.isEmpty(captchas)) {
-            ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboardManager.setText(captchas);
-            Toast.makeText(context, String.format(context.getString(R.string.captchas_has_copied), captchas), Toast.LENGTH_SHORT).show();
-
-            // MarkRead
+        // Parse the intent and ensure we have a message Id to work with
+        String conversationId = extras.getString(ConversationColumns.SMS_THREAD_ID);
+        if (!TextUtils.isEmpty(conversationId) && Integer.valueOf(conversationId) != -1) {
+            // Mark thread as read
             BugleNotifications.markMessagesAsRead(conversationId);
 
-            final NotificationManagerCompat notificationManager =
-                    NotificationManagerCompat.from(Factory.get().getApplicationContext());
-            notificationManager.cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
+            // Dismiss the notification that brought us here.
+            NotificationManager notificationManager =
+                (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.cancel(PendingIntentConstants.SMS_NOTIFICATION_ID);
         }
     }
+
 }
