@@ -26,4 +26,6 @@
   <string name="archive_category_pref_title">Архив</string>
   <string name="public_service_auto_archive_title">Архивировать открытые службы</string>
   <string name="public_service_auto_archive_summary">Автоматически архивировать открытые службы</string>
+  <string name="notification_call">Вызов</string>
+  <string name="notification_read">Просмотр</string>
 </resources>

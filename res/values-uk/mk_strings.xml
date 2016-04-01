@@ -26,4 +26,6 @@
   <string name="archive_category_pref_title">Архівування</string>
   <string name="public_service_auto_archive_title">Архівування державної служби</string>
   <string name="public_service_auto_archive_summary">Автоматичне архівування державної служби</string>
+  <string name="notification_call">Виклик</string>
+  <string name="notification_read">Прочитати</string>
 </resources>
