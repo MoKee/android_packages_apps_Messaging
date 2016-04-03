@@ -22,4 +22,10 @@
   <string name="captchas_content">Képkódot kapott. Koppintson a másoláshoz.</string>
   <string name="captchas_has_copied">Képkód már a vágólapon van. Hosszan érintse meg a beviteli mezőt a beillesztéshez.</string>
   <string name="captchas_auto_archive_title">SMS képkód archiválása</string>
+  <string name="captchas_auto_archive_summary">Sms captcha automatikus archiválása</string>
+  <string name="archive_category_pref_title">Archívum</string>
+  <string name="public_service_auto_archive_title">Archív közszolgálati</string>
+  <string name="public_service_auto_archive_summary">Automatikus archiválás a közszolgálati</string>
+  <string name="notification_call">Hívás</string>
+  <string name="notification_read">Elolvas</string>
 </resources>
