@@ -21,4 +21,5 @@
   <string name="captchas_with_provider_title">Το Captcha είναι %1$s 【%2$s】</string>
   <string name="captchas_content">Λάβατε ένα μήνυμα captcha, κάντε κλικ για να αντιγράψετε.</string>
   <string name="captchas_has_copied">Το Captcha έχει ήδη αντιγραφεί στο πρόχειρο, πατήστε μόνιμα το πλαίσιο εισόδου για να επικολλήσετε.</string>
+  <string name="notification_call">Κλήση</string>
 </resources>
