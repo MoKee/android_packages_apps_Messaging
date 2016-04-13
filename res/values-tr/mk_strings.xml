@@ -25,4 +25,6 @@
   <string name="captchas_auto_archive_summary">Sms doğrulama kodunu otomatik olarak arşivle</string>
   <string name="archive_category_pref_title">Arşiv</string>
   <string name="public_service_auto_archive_title">Genel servis\'i arşivle</string>
+  <string name="notification_call">Çağrı</string>
+  <string name="notification_read">Oku</string>
 </resources>
