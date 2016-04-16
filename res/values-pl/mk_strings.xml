@@ -26,4 +26,6 @@
   <string name="archive_category_pref_title">Archiwum</string>
   <string name="public_service_auto_archive_title">Zapisuj usługi publiczne</string>
   <string name="public_service_auto_archive_summary">Automatycznie zapisuj usługi publiczne</string>
+  <string name="notification_call">Zadzwoń</string>
+  <string name="notification_read">Przeczytane</string>
 </resources>
