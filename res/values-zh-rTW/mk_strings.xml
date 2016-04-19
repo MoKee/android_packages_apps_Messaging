@@ -17,4 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">驗證碼為 %s</string>
+  <string name="captchas_with_provider_title">驗證碼為 %1$s 【%2$s】</string>
+  <string name="captchas_content">收到一條驗證簡訊，請輕按複製。</string>
+  <string name="captchas_has_copied">驗證碼已複製至剪貼簿，長按輸入欄位可選擇貼上。</string>
+  <string name="captchas_auto_archive_title">檔案簡訊驗證碼</string>
+  <string name="captchas_auto_archive_summary">自動封存簡訊驗證碼</string>
+  <string name="archive_category_pref_title">檔案</string>
+  <string name="public_service_auto_archive_title">檔案公共服務</string>
+  <string name="public_service_auto_archive_summary">自動封存公共服務</string>
+  <string name="notification_call">撥打</string>
+  <string name="notification_read">已讀</string>
 </resources>
