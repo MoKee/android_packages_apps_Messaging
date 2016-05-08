@@ -78,12 +78,14 @@
         <CheckBoxPreference
             android:key="@string/captchas_auto_archive_pref_key"
             android:title="@string/captchas_auto_archive_title"
-            android:summary="@string/captchas_auto_archive_summary" />
+            android:summary="@string/captchas_auto_archive_summary"
+            android:defaultValue="true" />
 
         <CheckBoxPreference
             android:key="@string/public_service_auto_archive_pref_key"
             android:title="@string/public_service_auto_archive_title"
-            android:summary="@string/public_service_auto_archive_summary" />
+            android:summary="@string/public_service_auto_archive_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
