@@ -27,5 +27,5 @@
   <string name="public_service_auto_archive_title">Servizio pubblico di archiviazione</string>
   <string name="public_service_auto_archive_summary">Archiviare automaticamente sul servizio pubblico</string>
   <string name="notification_call">Chiama</string>
-  <string name="notification_read">Leggi</string>
+  <string name="notification_read">Letto</string>
 </resources>
