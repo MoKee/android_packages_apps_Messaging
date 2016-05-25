@@ -21,6 +21,7 @@
   <string name="captchas_with_provider_title">Captcha je %1$s 【%2$s】</string>
   <string name="captchas_content">Přijata zpráva s captcha, klepněte zkopírovat.</string>
   <string name="captchas_has_copied">Captcha je již zkopírována do schránky, pro vložení dlouze podržte prst na vstupním poli.</string>
+  <string name="captchas_auto_archive_title">Archiv ověřovacích kódů</string>
   <string name="captchas_auto_archive_summary">Automaticky archivovat ověřovací kód zprávy</string>
   <string name="archive_category_pref_title">Archivovat</string>
   <string name="public_service_auto_archive_summary">Automaticky archivovat zprávy služby</string>
