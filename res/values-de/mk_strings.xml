@@ -26,4 +26,6 @@
   <string name="archive_category_pref_title">Archiv</string>
   <string name="public_service_auto_archive_title">Archiviere öffentliche Dienste</string>
   <string name="public_service_auto_archive_summary">Archiviere öffentliche Dienste Automatisch</string>
+  <string name="notification_call">Anrufen</string>
+  <string name="notification_read">Lesen</string>
 </resources>
