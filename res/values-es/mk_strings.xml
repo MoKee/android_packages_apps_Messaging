@@ -26,4 +26,5 @@
   <string name="archive_category_pref_title">Archivar</string>
   <string name="public_service_auto_archive_title">Archivar servicio publico</string>
   <string name="public_service_auto_archive_summary">Automáticamente archivar servicio público</string>
+  <string name="notification_call">Llamada</string>
 </resources>
