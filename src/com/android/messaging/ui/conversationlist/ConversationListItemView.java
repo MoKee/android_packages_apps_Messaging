@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -239,13 +240,14 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         final String subjectText = mData.getShowDraft() ?
                 mData.getDraftSubject() :
                     MmsUtils.cleanseMmsSubject(getContext().getResources(), mData.getSubject());
-        if (!TextUtils.isEmpty(subjectText)) {
-            final String subjectPrepend = getResources().getString(R.string.subject_label);
-            mSubjectTextView.setText(TextUtils.concat(subjectPrepend, subjectText));
-            mSubjectTextView.setVisibility(VISIBLE);
-        } else {
-            mSubjectTextView.setVisibility(GONE);
-        }
+        // if (!TextUtils.isEmpty(subjectText)) {
+        //     final String subjectPrepend = getResources().getString(R.string.subject_label);
+        //     mSubjectTextView.setText(TextUtils.concat(subjectPrepend, subjectText));
+        //     mSubjectTextView.setVisibility(VISIBLE);
+        // } else {
+        //     mSubjectTextView.setVisibility(GONE);
+        // }
+        mSubjectTextView.setVisibility(GONE);
     }
 
     private void setSnippet() {
