@@ -243,13 +243,14 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         final String subjectText = mData.getShowDraft() ?
                 mData.getDraftSubject() :
                     MmsUtils.cleanseMmsSubject(getContext().getResources(), mData.getSubject());
-        if (!TextUtils.isEmpty(subjectText)) {
-            final String subjectPrepend = getResources().getString(R.string.subject_label);
-            mSubjectTextView.setText(TextUtils.concat(subjectPrepend, subjectText));
-            mSubjectTextView.setVisibility(VISIBLE);
-        } else {
-            mSubjectTextView.setVisibility(GONE);
-        }
+        // if (!TextUtils.isEmpty(subjectText)) {
+        //     final String subjectPrepend = getResources().getString(R.string.subject_label);
+        //     mSubjectTextView.setText(TextUtils.concat(subjectPrepend, subjectText));
+        //     mSubjectTextView.setVisibility(VISIBLE);
+        // } else {
+        //     mSubjectTextView.setVisibility(GONE);
+        // }
+        mSubjectTextView.setVisibility(GONE);
     }
 
     private void setSnippet() {
