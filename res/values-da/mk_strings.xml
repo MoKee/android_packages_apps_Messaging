@@ -18,5 +18,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
   <string name="archive_category_pref_title">Arkiv</string>
-  <string name="notification_read">Læs</string>
+  <string name="notification_read">Læst</string>
 </resources>
