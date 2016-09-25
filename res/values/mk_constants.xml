@@ -16,10 +16,10 @@
 -->
 <resources>
 
-    <string name="captchas_auto_archive_pref_key" translatable="false">captchas_auto_archive</string>
+    <string name="captchas_auto_archive_pref_key" translatable="false">buglesub_captchas_auto_archive</string>
     <bool name="captchas_auto_archive_pref_default" translatable="false">false</bool>
 
-    <string name="public_service_auto_archive_pref_key" translatable="false">public_service_auto_archive</string>
+    <string name="public_service_auto_archive_pref_key" translatable="false">buglesub_public_service_auto_archive</string>
     <bool name="public_service_auto_archive_pref_default" translatable="false">false</bool>
 
 </resources>
