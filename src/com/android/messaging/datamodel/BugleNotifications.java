@@ -223,7 +223,7 @@ public class BugleNotifications {
         Intent pendingIntent = new Intent();
         pendingIntent.setClass(context, CaptchasReceiver.class);
         pendingIntent.putExtra("captchas", captchas);
-        pendingIntent.putExtra("conversationId", conversationId);
+        pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, conversationId);
         PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
