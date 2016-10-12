@@ -19,6 +19,7 @@ package com.android.messaging.receiver;
 import com.android.messaging.R;
 import com.android.messaging.Factory;
 import com.android.messaging.datamodel.BugleNotifications;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.util.PendingIntentConstants;
 
 import android.content.BroadcastReceiver;
@@ -43,13 +44,13 @@ public class CaptchasReceiver extends BroadcastReceiver {
         }
 
         String captchas = extras.getString("captchas");
-        String conversationId = extras.getString("conversationId");
+        String conversationId = extras.getString(ConversationColumns.SMS_THREAD_ID);
         if (!TextUtils.isEmpty(captchas)) {
             ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
             clipboardManager.setText(captchas);
             Toast.makeText(context, String.format(context.getString(R.string.captchas_has_copied), captchas), Toast.LENGTH_SHORT).show();
 
-            // MarkRead
+            // Mark thread as read
             BugleNotifications.markMessagesAsRead(conversationId);
 
             final NotificationManagerCompat notificationManager =
