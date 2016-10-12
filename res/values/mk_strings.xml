@@ -17,13 +17,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Captchas -->
-    <string name="captchas_title">Captcha is %s</string>
-    <string name="captchas_with_provider_title">Captcha is %1$s 【%2$s】</string>
-    <string name="captchas_content">Received a captcha message, click to copy.</string>
-    <string name="captchas_has_copied">Captcha already copied to the clipboard, long press your input box to paste.</string>
-    <string name="captchas_auto_archive_title">Archive sms captcha</string>
-    <string name="captchas_auto_archive_summary">Automatically archive sms captcha</string>
+    <string name="captchas_title">Verification code is %s</string>
+    <string name="captchas_with_provider_title">Verification code is %1$s 【%2$s】</string>
+    <string name="captchas_content">Received a verification code, click to copy.</string>
+    <string name="captchas_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
+    <string name="captchas_auto_archive_title">Archive verification codes</string>
+    <string name="captchas_auto_archive_summary">Automatically archive verification code messages</string>
     <string name="archive_category_pref_title">Archive</string>
-    <string name="public_service_auto_archive_title">Archive public service</string>
-    <string name="public_service_auto_archive_summary">Automatically archive public service</string>
+    <string name="public_service_auto_archive_title">Archive service messages</string>
+    <string name="public_service_auto_archive_summary">Automatically archive service messages</string>
 </resources>
