@@ -433,7 +433,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
 
         String address = mData.getOtherParticipantNormalizedDestination();
         if (!TextUtils.isEmpty(address))
-            mLocationTextView.setText(address, getContext()));
+            mLocationTextView.setText(OfflineNumber.detect(address, getContext()));
 
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);

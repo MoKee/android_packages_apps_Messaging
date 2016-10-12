@@ -48,6 +48,7 @@ import android.text.style.TextAppearanceSpan;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.datamodel.MessageNotificationState.BundledMessageNotificationState;
 import com.android.messaging.datamodel.MessageNotificationState.ConversationLineInfo;
 import com.android.messaging.datamodel.MessageNotificationState.MultiConversationNotificationState;
