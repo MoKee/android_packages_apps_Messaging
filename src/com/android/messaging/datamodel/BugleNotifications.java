@@ -46,6 +46,7 @@ import android.text.style.TextAppearanceSpan;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.datamodel.MessageNotificationState.BundledMessageNotificationState;
 import com.android.messaging.datamodel.MessageNotificationState.ConversationLineInfo;
 import com.android.messaging.datamodel.MessageNotificationState.MultiConversationNotificationState;
@@ -206,7 +207,7 @@ public class BugleNotifications {
         Intent pendingIntent = new Intent();
         pendingIntent.setClass(context, CaptchasReceiver.class);
         pendingIntent.putExtra("captchas", captchas);
-        pendingIntent.putExtra("conversationId", conversationId);
+        pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, conversationId);
         PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
