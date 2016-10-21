@@ -17,4 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">O código de verificação é %s</string>
+  <string name="captchas_auto_archive_title">Códigos de verificação de arquivo</string>
+  <string name="public_service_auto_archive_title">Mensagens de serviço de arquivo</string>
+  <string name="notification_call">Chamada</string>
 </resources>
