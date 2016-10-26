@@ -123,6 +123,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private ViewGroup mCrossSwipeBackground;
     private ViewGroup mSwipeableContent;
     private TextView mConversationNameView;
+    private ImageView mWorkProfileIconView;
     private TextView mSnippetTextView;
     private TextView mSubjectTextView;
     private TextView mTimestampTextView;
@@ -151,6 +152,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mConversationNameView = (TextView) findViewById(R.id.conversation_name);
         mSnippetTextView = (TextView) findViewById(R.id.conversation_snippet);
         mSubjectTextView = (TextView) findViewById(R.id.conversation_subject);
+        mWorkProfileIconView = (ImageView) findViewById(R.id.work_profile_icon);
         mTimestampTextView = (TextView) findViewById(R.id.conversation_timestamp);
         mLocationTextView = (TextView) findViewById(R.id.conversation_location);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
@@ -188,6 +190,10 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         } else if (v == mSubjectTextView) {
             setSubject();
         }
+    }
+
+    private void setWorkProfileIcon() {
+        mWorkProfileIconView.setVisibility(mData.isEnterprise() ? View.VISIBLE : View.GONE);
     }
 
     private void setConversationName() {
@@ -399,6 +405,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         setSnippet();
         setConversationName();
         setSubject();
+        setWorkProfileIcon();
         setContentDescription(buildContentDescription(resources, mData,
                 mConversationNameView.getPaint()));
 
