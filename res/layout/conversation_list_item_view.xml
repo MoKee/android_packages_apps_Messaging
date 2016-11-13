@@ -114,7 +114,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent">
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="2dp">
                     <TextView
                         android:id="@+id/conversation_name"
                         style="@style/ConversationListItemViewConversationNameStyle"
