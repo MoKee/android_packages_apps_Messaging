@@ -17,8 +17,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">كلمة التحقق هو %s</string>
-  <string name="captchas_with_provider_title">كلمة التحقق هو %1$s 【%2$s】</string>
-  <string name="captchas_content">تلقي رسالة كلمة التحقق، انقر فوق نسخ.</string>
-  <string name="captchas_has_copied">كلمة التحقق مسبقاً تم نسخها إلى الحافظة، اضغط طويلا للصق.</string>
+  <string name="captchas_title">Koda za preverjanje je %s</string>
+  <string name="captchas_with_provider_title">Koda za preverjanje je %1$s 【%2$s】</string>
+  <string name="captchas_content">Prejeli ste kodo za preverjanje, kliknite, če jo želite kopirati.</string>
+  <string name="captchas_has_copied">Kodo za preverjanje ste že kopirali v odložišče, dlje zadržite v vnosnem polju za prilepi.</string>
+  <string name="captchas_auto_archive_title">Arhiv kod za preverjanje</string>
+  <string name="archive_category_pref_title">Arhiv</string>
 </resources>
