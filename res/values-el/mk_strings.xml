@@ -17,8 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">كلمة التحقق هو %s</string>
-  <string name="captchas_with_provider_title">كلمة التحقق هو %1$s 【%2$s】</string>
-  <string name="captchas_content">تلقي رسالة كلمة التحقق، انقر فوق نسخ.</string>
-  <string name="captchas_has_copied">كلمة التحقق مسبقاً تم نسخها إلى الحافظة، اضغط طويلا للصق.</string>
+  <string name="captchas_title">Το Captcha είναι %s</string>
+  <string name="captchas_with_provider_title">Το Captcha είναι %1$s 【%2$s】</string>
+  <string name="captchas_content">Λάβατε ένα μήνυμα captcha, κάντε κλικ για να αντιγράψετε.</string>
+  <string name="captchas_has_copied">Το Captcha έχει ήδη αντιγραφεί στο πρόχειρο, πατήστε μόνιμα το πλαίσιο εισόδου για να επικολλήσετε.</string>
 </resources>
