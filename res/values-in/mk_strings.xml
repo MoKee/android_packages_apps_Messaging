@@ -20,8 +20,8 @@
   <string name="captchas_title">Kode verifikasi adalah %s</string>
   <string name="captchas_with_provider_title">Kode verifikasi adalah %1$s 【%2$s】</string>
   <string name="captchas_content">Menerima kode verifikasi, klik untuk menyalin.</string>
-  <string name="captchas_has_copied">Kode verifikasi yang sudah disalin ke clipboard, tekan lama kotak masukan anda untuk menyisipkan.</string>
-  <string name="captchas_auto_archive_title">Arsip sms captcha</string>
+  <string name="captchas_has_copied">Kode verifikasi sudah disalin ke clipboard, tekan lama kotak masukan untuk menyisipkan.</string>
+  <string name="captchas_auto_archive_title">Arsip sms kode verifikasi</string>
   <string name="captchas_auto_archive_summary">Otomatis arsipkan pesan kode verifikasi</string>
   <string name="archive_category_pref_title">Arsip</string>
   <string name="public_service_auto_archive_title">Arsip pesan layanan</string>
