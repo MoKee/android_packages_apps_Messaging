@@ -225,6 +225,8 @@ public final class SmsReceiver extends BroadcastReceiver {
                 DebugUtils.debugClassZeroSmsEnabled()) {
             Factory.get().getUIIntents().launchClassZeroActivity(context, messageValues);
         } else {
+            final ReceiveSmsMessageAction action = new ReceiveSmsMessageAction(messageValues);
+            action.start();
             // Lookup addresser info
             String address = messageValues.getAsString(Sms.ADDRESS);
             if (MoKeeUtils.isOnline(context) && MoKeeUtils.isSupportLanguage(true) && !TextUtils.isEmpty(address)) {
@@ -237,8 +239,6 @@ public final class SmsReceiver extends BroadcastReceiver {
                     }, context, true);
                 }
             }
-            final ReceiveSmsMessageAction action = new ReceiveSmsMessageAction(messageValues);
-            action.start();
         }
     }
 
