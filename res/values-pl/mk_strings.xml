@@ -17,15 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">Kod captcha: %s</string>
-  <string name="captchas_with_provider_title">Kod captcha: %1$s 【%2$s】</string>
-  <string name="captchas_content">Otrzymano wiadomość captcha, kliknij, aby skopiować.</string>
-  <string name="captchas_has_copied">Kod Captcha został skopiowany do schowka, przytrzymaj na polu do wprowadzania, aby wkleić.</string>
-  <string name="captchas_auto_archive_title">Zapisz wiadomość captcha</string>
-  <string name="captchas_auto_archive_summary">Automatycznie zapisuj wiadomości captcha</string>
+  <string name="captchas_title">Kod sprawdzający to %s</string>
+  <string name="captchas_with_provider_title">Kod sprawdzający to %1$s 【%2$s】</string>
+  <string name="captchas_content">Otrzymano kod sprawdzający. Kliknij, aby skopiować.</string>
+  <string name="captchas_has_copied">Kod sprawdzający został skopiowany do schowka. Przytrzymaj dłużej w polu tekstowym, aby wkleić.</string>
+  <string name="captchas_auto_archive_title">Zarchiwizuj kody sprawdzające</string>
+  <string name="captchas_auto_archive_summary">Automatycznie archiwizuj kody sprawdzające</string>
   <string name="archive_category_pref_title">Archiwum</string>
-  <string name="public_service_auto_archive_title">Zapisuj usługi publiczne</string>
-  <string name="public_service_auto_archive_summary">Automatycznie zapisuj usługi publiczne</string>
+  <string name="public_service_auto_archive_title">Zapisuj wiadomości tworzone przez usługi</string>
+  <string name="public_service_auto_archive_summary">Automatycznie zapisuj wiadomości tworzone przez usługi</string>
   <string name="notification_call">Zadzwoń</string>
-  <string name="notification_read">Przeczytane</string>
+  <string name="notification_read">Czytaj</string>
 </resources>
