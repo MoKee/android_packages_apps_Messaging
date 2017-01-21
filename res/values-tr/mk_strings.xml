@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
   <string name="captchas_title">Doğrulama resmi %s\'tir</string>
-  <string name="captchas_with_provider_title">Doğrulama resmi %1$s\'dir 【%2$s】</string>
+  <string name="captchas_with_provider_title">Doğrulama kodu %1$s 【%2$s】</string>
   <string name="captchas_content">Bir doğrulama kodu alındı, kopyalamak için tıkla.</string>
   <string name="captchas_has_copied">Doğrulama kodu panoya kopyalanmış halde, yapıştırmak için basılı tutun.</string>
   <string name="captchas_auto_archive_title">Arşiv doğrulama kodu</string>
