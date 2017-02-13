@@ -19,10 +19,10 @@
   <!-- Captchas -->
   <string name="captchas_title">Код: %s</string>
   <string name="captchas_with_provider_title">Код: %1$s 【%2$s】</string>
-  <string name="captchas_content">Паступіла паведамленне з кодам, націсніце каб скапіраваць.</string>
+  <string name="captchas_content">Паступіла паведамленне з кодам, націсніце каб скапіяваць.</string>
   <string name="captchas_has_copied">Код ужо скапіпаваны ў буфер абмену, націсніце і ўтрымлівайце на полi ўводу, каб ўставіць.</string>
   <string name="captchas_auto_archive_title">Захоўваць SMS коды</string>
-  <string name="captchas_auto_archive_summary">Аўтаматычна захоўваць у архіў SMS коды</string>
+  <string name="captchas_auto_archive_summary">Аўтаматычна архіваваць коды пацверджання</string>
   <string name="archive_category_pref_title">Архіў</string>
   <string name="public_service_auto_archive_title">Архіваваць адкрытыя службы</string>
   <string name="public_service_auto_archive_summary">Аўтаматычна архіваваць адкрытыя службы</string>
