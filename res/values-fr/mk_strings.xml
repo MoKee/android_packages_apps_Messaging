@@ -21,9 +21,9 @@
   <string name="captchas_with_provider_title">Captcha est %1$s 【%2$s】</string>
   <string name="captchas_content">A reçu un message de captcha, cliquez sur copier.</string>
   <string name="captchas_has_copied">Captcha déjà copié dans le presse-papier, appuyez longuement sur votre zone de saisie pour coller.</string>
-  <string name="captchas_auto_archive_title">Archive des sms captcha</string>
+  <string name="captchas_auto_archive_title">Archivage des codes de vérification</string>
   <string name="captchas_auto_archive_summary">Archiver automatiquement les sms captcha</string>
   <string name="archive_category_pref_title">Archive</string>
-  <string name="public_service_auto_archive_title">Service d\'archives publique</string>
-  <string name="public_service_auto_archive_summary">Service d\'archives public automatique</string>
+  <string name="public_service_auto_archive_title">Service d\'archivage des messages</string>
+  <string name="public_service_auto_archive_summary">Archiver automatiquement les messages</string>
 </resources>
