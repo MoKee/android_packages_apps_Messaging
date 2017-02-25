@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">A képkód %s</string>
+  <string name="captchas_title">Igazoló kód %s</string>
   <string name="captchas_with_provider_title">A képkód %1$s 【%2$s】</string>
   <string name="captchas_content">Képkódot kapott. Koppintson a másoláshoz.</string>
   <string name="captchas_has_copied">Képkód már a vágólapon van. Hosszan érintse meg a beviteli mezőt a beillesztéshez.</string>
