@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">Overovací kód je %s</string>
+  <string name="captchas_with_provider_title">Overovací kód je %1$s 【%2$s】</string>
+  <string name="captchas_content">Dostali ste správu s overovacím kódom, kliknite na položku Kopírovať.</string>
+  <string name="captchas_has_copied">Overovací kód ste už skopírovali do schránky, pre vloženie dlho podržte prst na vstupnom poli.</string>
+  <string name="captchas_auto_archive_title">Archív overovacích kódov</string>
+  <string name="captchas_auto_archive_summary">Automaticky archivovať overovacie správy</string>
+  <string name="archive_category_pref_title">Archivovať</string>
+  <string name="public_service_auto_archive_title">Archív servisných správ</string>
+  <string name="public_service_auto_archive_summary">Automaticky archivovať servisné správy</string>
 </resources>
