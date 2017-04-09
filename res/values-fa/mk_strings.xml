@@ -17,4 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">کد تایید %s میباشد</string>
+  <string name="captchas_with_provider_title">کد تایید %1$s 【%2$s】 است</string>
+  <string name="captchas_content">کد تایید دریافت شد, برای کپی کردن کلیک کنید.</string>
+  <string name="archive_category_pref_title">آرشیو</string>
 </resources>
