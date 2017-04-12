@@ -28,6 +28,9 @@ import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.FileUtil;
 import com.android.messaging.util.ImageUtils;
 import com.android.messaging.util.SafeAsyncTask;
+import com.android.messaging.util.UriUtil;
+
+import java.io.File;
 
 /**
  * Wraps around the functionalities to allow the user to pick images from the document
@@ -113,7 +116,8 @@ public class DocumentImagePicker {
         new SafeAsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackgroundTimed(final Void... params) {
-                if (FileUtil.isInPrivateDir(documentUri)) {
+                if (UriUtil.isFileUri(documentUri) &&
+                        FileUtil.isInDataDir(new File(documentUri.getPath()))) {
                     // hacker sending private app data. Bail out
                     if (LogUtil.isLoggable(LogUtil.BUGLE_TAG, LogUtil.ERROR)) {
                         LogUtil.e(LogUtil.BUGLE_TAG, "Aborting attach of private app data ("
