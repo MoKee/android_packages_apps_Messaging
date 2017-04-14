@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">Vahvistuskoodi on %s</string>
+  <string name="captchas_with_provider_title">Vahvistuskoodi on %1$s 【%2$s】</string>
+  <string name="captchas_content">Vastaanotti vahvistuskoodin, paina kopioi.</string>
+  <string name="captchas_has_copied">Vahvistuskoodi on kopioitu leikepöydälle, paina pitkään liittääksesi tekstin.</string>
+  <string name="captchas_auto_archive_title">Arkistoi todentamisviestit</string>
+  <string name="captchas_auto_archive_summary">Arkistoi automaattisesti todentamisviestit</string>
+  <string name="archive_category_pref_title">Arkistoi</string>
+  <string name="public_service_auto_archive_title">Arkistoi palveluviestit</string>
+  <string name="public_service_auto_archive_summary">Arkistoi automaattisesti palveluviestit</string>
 </resources>
