@@ -107,15 +107,14 @@
                 style="@style/ConversationListItemViewPaddingStyle"
                 android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="top"
                 android:background="@android:color/transparent">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:paddingBottom="2dp">
+                    android:background="@android:color/transparent">
                     <TextView
                         android:id="@+id/conversation_name"
                         style="@style/ConversationListItemViewConversationNameStyle"
@@ -124,7 +123,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:layout_toStartOf="@+id/conversation_location"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                    	android:paddingBottom="2dp" />
                     <TextView
                         android:id="@+id/conversation_location"
                         style="@style/ConversationListItemViewTextStyle"
@@ -132,7 +132,8 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:singleLine="true"
-                        android:layout_alignParentEnd="true" />
+                        android:layout_alignParentEnd="true"
+                    	android:paddingBottom="2dp" />
                 </RelativeLayout>
                 <TextView
                     android:id="@+id/conversation_subject"
