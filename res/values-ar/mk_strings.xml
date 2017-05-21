@@ -21,4 +21,9 @@
   <string name="captchas_with_provider_title">كلمة التحقق هو %1$s 【%2$s】</string>
   <string name="captchas_content">تلقي رسالة كلمة التحقق، انقر فوق نسخ.</string>
   <string name="captchas_has_copied">كلمة التحقق مسبقاً تم نسخها إلى الحافظة، اضغط طويلا للصق.</string>
+  <string name="captchas_auto_archive_title">أرشيف رموز التحقق</string>
+  <string name="captchas_auto_archive_summary">أرشفة رسائل رموز التحقق تلقائياً</string>
+  <string name="archive_category_pref_title">الأرشيف</string>
+  <string name="public_service_auto_archive_title">أرشيف خدمة الرسائل</string>
+  <string name="public_service_auto_archive_summary">أرشفة رسائل الخدمة تلقائياً</string>
 </resources>
