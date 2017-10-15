@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">Kod verifikasi ialah</string>
+  <string name="captchas_with_provider_title">Kod verifikasi ialah %1$s%2$s</string>
+  <string name="captchas_content">Terima kod verifikasi, klik untuk salin.</string>
+  <string name="captchas_has_copied">Kod verifikasi telah disalin ke klipbod, tekan lama dikotak untuk ditampal.</string>
+  <string name="captchas_auto_archive_title">Arkib kod pengesahan</string>
+  <string name="captchas_auto_archive_summary">Mengarkib secara automatik mesej kod verifikasi</string>
+  <string name="archive_category_pref_title">Arkib</string>
+  <string name="public_service_auto_archive_title">Arkib mesej servis</string>
+  <string name="public_service_auto_archive_summary">Mengarkib secara automatik mesej servis</string>
 </resources>
