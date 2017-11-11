@@ -26,4 +26,8 @@
   <string name="archive_category_pref_title">归档</string>
   <string name="public_service_auto_archive_title">归档信息服务台短信</string>
   <string name="public_service_auto_archive_summary">自动归档信息服务台短信</string>
+  <!-- quick message option -->
+  <string name="notification_reply">回复</string>
+  <string name="notification_call">拨打</string>
+  <string name="notification_read">已读</string>
 </resources>
