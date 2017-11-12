@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Archivovať</string>
   <string name="public_service_auto_archive_title">Archív servisných správ</string>
   <string name="public_service_auto_archive_summary">Automaticky archivovať servisné správy</string>
+  <!-- quick message option -->
+  <string name="notification_call">Hovor</string>
+  <string name="notification_read">Prečítať</string>
 </resources>

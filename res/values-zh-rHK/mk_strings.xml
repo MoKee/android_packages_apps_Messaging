@@ -26,4 +26,8 @@
   <string name="archive_category_pref_title">封存</string>
   <string name="public_service_auto_archive_title">封存服務訊息</string>
   <string name="public_service_auto_archive_summary">自動封存公共服務</string>
+  <!-- quick message option -->
+  <string name="notification_reply">回覆</string>
+  <string name="notification_call">撥打</string>
+  <string name="notification_read">已讀</string>
 </resources>

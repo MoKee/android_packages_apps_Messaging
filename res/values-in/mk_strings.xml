@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Arsip</string>
   <string name="public_service_auto_archive_title">Arsip pesan layanan</string>
   <string name="public_service_auto_archive_summary">Otomatis arsip pesan layanan</string>
+  <!-- quick message option -->
+  <string name="notification_call">Panggil</string>
+  <string name="notification_read">Baca</string>
 </resources>

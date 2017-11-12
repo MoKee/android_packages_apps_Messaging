@@ -24,4 +24,5 @@
   <string name="captchas_auto_archive_title">Archive verification codes</string>
   <string name="captchas_auto_archive_summary">Automatically archive verification code messages</string>
   <string name="archive_category_pref_title">Archive</string>
+  <!-- quick message option -->
 </resources>

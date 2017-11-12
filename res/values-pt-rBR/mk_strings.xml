@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Arquivar</string>
   <string name="public_service_auto_archive_title">Arquivar serviço público</string>
   <string name="public_service_auto_archive_summary">Arquivar automaticamente o serviço público</string>
+  <!-- quick message option -->
+  <string name="notification_call">Ligar</string>
+  <string name="notification_read">Lidas</string>
 </resources>

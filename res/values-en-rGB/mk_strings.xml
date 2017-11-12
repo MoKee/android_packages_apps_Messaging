@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Archive</string>
   <string name="public_service_auto_archive_title">Archive service messages</string>
   <string name="public_service_auto_archive_summary">Automatically archive service messages</string>
+  <!-- quick message option -->
+  <string name="notification_call">Call</string>
+  <string name="notification_read">Read</string>
 </resources>

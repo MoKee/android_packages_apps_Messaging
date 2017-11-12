@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Archiver</string>
   <string name="public_service_auto_archive_title">Service d\'archives publique</string>
   <string name="public_service_auto_archive_summary">Service d\'archives public automatique</string>
+  <!-- quick message option -->
+  <string name="notification_call">Appel</string>
+  <string name="notification_read">Lire</string>
 </resources>

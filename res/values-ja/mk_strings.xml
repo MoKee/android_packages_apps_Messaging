@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">記録</string>
   <string name="public_service_auto_archive_title">サービスメッセージを記録</string>
   <string name="public_service_auto_archive_summary">自動記録メッセージサービス</string>
+  <!-- quick message option -->
+  <string name="notification_call">電話</string>
+  <string name="notification_read">読み込む</string>
 </resources>

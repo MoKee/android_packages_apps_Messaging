@@ -24,4 +24,6 @@
   <string name="archive_category_pref_title">Arkiv</string>
   <string name="public_service_auto_archive_title">Arkivera tjänstemeddelanden</string>
   <string name="public_service_auto_archive_summary">Automatiskt arkivera tjänstemeddelanden</string>
+  <!-- quick message option -->
+  <string name="notification_read">Läs</string>
 </resources>

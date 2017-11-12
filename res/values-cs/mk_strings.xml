@@ -26,4 +26,8 @@
   <string name="archive_category_pref_title">Archivovat</string>
   <string name="public_service_auto_archive_title">Zprávy služby Push</string>
   <string name="public_service_auto_archive_summary">Automaticky archivovat zprávy služby</string>
+  <!-- quick message option -->
+  <string name="notification_reply">Odpovědět</string>
+  <string name="notification_call">Volání</string>
+  <string name="notification_read">Načíst</string>
 </resources>

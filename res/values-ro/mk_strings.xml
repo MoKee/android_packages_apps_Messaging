@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Arhivă</string>
   <string name="public_service_auto_archive_title">Arhivă mesagerie servicii</string>
   <string name="public_service_auto_archive_summary">Arhivează automat mesajele de servicii</string>
+  <!-- quick message option -->
+  <string name="notification_call">Apel</string>
+  <string name="notification_read">Citește</string>
 </resources>

@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Arkistoi</string>
   <string name="public_service_auto_archive_title">Arkistoi palveluviestit</string>
   <string name="public_service_auto_archive_summary">Arkistoi automaattisesti palveluviestit</string>
+  <!-- quick message option -->
+  <string name="notification_call">Soita</string>
+  <string name="notification_read">Lue</string>
 </resources>

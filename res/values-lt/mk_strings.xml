@@ -23,4 +23,5 @@
   <string name="captchas_auto_archive_summary">Automatiškai archyvuoti sms captcha</string>
   <string name="archive_category_pref_title">Archyvas</string>
   <string name="public_service_auto_archive_title">Archyvuoti viešą paslaugą</string>
+  <!-- quick message option -->
 </resources>

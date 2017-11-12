@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">Archiwum</string>
   <string name="public_service_auto_archive_title">Zapisuj wiadomości pochodzące od usług</string>
   <string name="public_service_auto_archive_summary">Automatycznie zapisuj wiadomości pochodzące od usług</string>
+  <!-- quick message option -->
+  <string name="notification_call">Zadzwoń</string>
+  <string name="notification_read">Czytaj</string>
 </resources>

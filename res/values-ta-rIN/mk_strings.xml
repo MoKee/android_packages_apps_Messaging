@@ -21,4 +21,5 @@
   <string name="captchas_with_provider_title">பிடிப்பு சரம் %1$s【%2$s】</string>
   <string name="captchas_content">பிடிப்பு சரம் பெற்றது, நகலெடுக்க கிளிக் செய்க.</string>
   <string name="captchas_has_copied">பிடிப்பு சரம் ஏற்கனவே கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது, உங்கள் உள்ளீடு பெட்டியில் ஒட்டுவதற்கு நீண்ட நேரம் அழுத்தவும்.</string>
+  <!-- quick message option -->
 </resources>

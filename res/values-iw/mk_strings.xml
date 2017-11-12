@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">ארכיון</string>
   <string name="public_service_auto_archive_title">העבר לארכיון הודעות ציבוריות</string>
   <string name="public_service_auto_archive_summary">העבר לארכיון הודעות ציבוריות אוטומטית</string>
+  <!-- quick message option -->
+  <string name="notification_call">התקשר</string>
+  <string name="notification_read">קרא</string>
 </resources>

@@ -26,4 +26,7 @@
   <string name="archive_category_pref_title">보관함</string>
   <string name="public_service_auto_archive_title">보관 서비스 메시지</string>
   <string name="public_service_auto_archive_summary">자동으로 서비스 메시지 보관</string>
+  <!-- quick message option -->
+  <string name="notification_call">전화걸기</string>
+  <string name="notification_read">읽음</string>
 </resources>
