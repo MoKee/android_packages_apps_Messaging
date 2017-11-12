@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2017 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -91,6 +92,12 @@ public class ArchivedConversationListActivity extends AbstractConversationListAc
 
     @Override
     public boolean isSwipeAnimatable() {
-        return false;
+        return !isInConversationListSelectMode();
     }
+
+    @Override
+    public boolean isArchiveMode() {
+        return true;
+    }
+
 }
