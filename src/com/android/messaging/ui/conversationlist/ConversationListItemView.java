@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2016 The MoKee Open Source Project
+ * Copyright (C) 2015-2017 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -90,6 +90,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                 final Uri photosUri);
         void startFullScreenVideoViewer(final Uri videoUri);
         boolean isSelectionMode();
+        boolean isArchiveMode();
     }
 
     private final OnClickListener fullScreenPreviewClickListener = new OnClickListener() {
@@ -519,12 +520,15 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
                     .getDrawable(R.drawable.ic_delete_small_dark));
             mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
+                    .getDrawable(!mHostInterface.isArchiveMode() ?
+                            R.drawable.ic_archive_small_dark : R.drawable.ic_archive_undo_small_dark));
         } else {
             mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
+                    .getDrawable(!mHostInterface.isArchiveMode() ?
+                            R.drawable.ic_archive_small_dark : R.drawable.ic_archive_undo_small_dark));
             mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
+                    .getDrawable(!mHostInterface.isArchiveMode() ?
+                            R.drawable.ic_archive_small_dark: R.drawable.ic_archive_undo_small_dark));
         }
     }
 
@@ -568,17 +572,32 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                     getResources().getString(R.string.conversation_deleted));
             return;
         }
-        UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
-        final Runnable undoRunnable = new Runnable() {
-            @Override
-            public void run() {
-                UpdateConversationArchiveStatusAction.unarchiveConversation(conversationId);
-            }
-        };
-        final String message = getResources().getString(R.string.archived_toast_message, 1);
-        UiUtils.showSnackBar(getContext(), getRootView(), message, undoRunnable,
-                SnackBar.Action.SNACK_BAR_UNDO,
-                mHostInterface.getSnackBarInteractions());
+        if (!mHostInterface.isArchiveMode()) {
+            UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
+            final Runnable undoRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    UpdateConversationArchiveStatusAction.unarchiveConversation(conversationId);
+                }
+            };
+            final String message = getResources().getString(R.string.archived_toast_message, 1);
+            UiUtils.showSnackBar(getContext(), getRootView(), message, undoRunnable,
+                    SnackBar.Action.SNACK_BAR_UNDO,
+                    mHostInterface.getSnackBarInteractions());
+        } else {
+            UpdateConversationArchiveStatusAction.unarchiveConversation(conversationId);
+            final Runnable undoRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
+                }
+            };
+            final String message = getResources().getString(R.string.unarchived_toast_message, 1);
+            UiUtils.showSnackBar(getContext(), getRootView(), message, undoRunnable,
+                    SnackBar.Action.SNACK_BAR_UNDO,
+                    mHostInterface.getSnackBarInteractions());
+        }
+
     }
 
     private void setShortAndLongClickable(final boolean clickable) {
