@@ -78,4 +78,9 @@ public class ForwardMessageActivity extends BaseBugleActivity
     public boolean isSelectionMode() {
         return false;
     }
+
+    @Override
+    public boolean isArchiveMode() {
+        return false;
+    }
 }

@@ -130,6 +130,11 @@ public class ConversationListActivity extends AbstractConversationListActivity {
     }
 
     @Override
+    public boolean isArchiveMode() {
+        return false;
+    }
+
+    @Override
     public void onWindowFocusChanged(final boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         final ConversationListFragment conversationListFragment =

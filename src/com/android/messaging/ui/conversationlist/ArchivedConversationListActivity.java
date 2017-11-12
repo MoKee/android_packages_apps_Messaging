@@ -91,6 +91,12 @@ public class ArchivedConversationListActivity extends AbstractConversationListAc
 
     @Override
     public boolean isSwipeAnimatable() {
-        return false;
+        return !isInConversationListSelectMode();
     }
+
+    @Override
+    public boolean isArchiveMode() {
+        return true;
+    }
+
 }

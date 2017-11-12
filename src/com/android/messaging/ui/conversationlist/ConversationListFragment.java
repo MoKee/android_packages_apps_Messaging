@@ -86,6 +86,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
         public boolean isSwipeAnimatable();
         public boolean isSelectionMode();
         public boolean hasWindowFocus();
+        public boolean isArchiveMode();
     }
 
     private ConversationListFragmentHost mHost;
@@ -442,5 +443,10 @@ public class ConversationListFragment extends Fragment implements ConversationLi
     @Override
     public boolean isSelectionMode() {
         return mHost != null && mHost.isSelectionMode();
+    }
+
+    @Override
+    public boolean isArchiveMode() {
+        return mHost.isArchiveMode();
     }
 }
