@@ -1068,7 +1068,7 @@ public class BugleNotifications {
 
         Intent deleteIntent = new Intent(context, DeleteMessageReceiver.class);
         deleteIntent.putExtra(PartColumns.MESSAGE_ID, messageId);
-        final PendingIntent deletePendingIntent = PendingIntent.getBroadcast(context, 0, deleteIntent,
+        final PendingIntent deletePendingIntent = PendingIntent.getBroadcast(context, 1, deleteIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         final NotificationCompat.Action.Builder actionBuilder =
@@ -1089,6 +1089,7 @@ public class BugleNotifications {
         Intent pendingIntent = new Intent();
         pendingIntent.setClass(context, CaptchasReceiver.class);
         pendingIntent.putExtra("captchas", captchas);
+        pendingIntent.putExtra(PartColumns.MESSAGE_ID, messageId);
         pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, conversationId);
         PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);

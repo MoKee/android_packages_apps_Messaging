@@ -23,6 +23,8 @@
     <string name="captchas_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
     <string name="captchas_auto_archive_title">Archive verification codes</string>
     <string name="captchas_auto_archive_summary">Automatically archive verification code messages</string>
+    <string name="captchas_auto_delete_title">Delete verification codes</string>
+    <string name="captchas_auto_delete_summary">Automatically delete messages when verification codes copied to the clipboard</string>
     <string name="archive_category_pref_title">Archive</string>
     <string name="public_service_auto_archive_title">Archive service messages</string>
     <string name="public_service_auto_archive_summary">Automatically archive service messages</string>

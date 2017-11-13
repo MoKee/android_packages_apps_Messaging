@@ -23,6 +23,8 @@
   <string name="captchas_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
   <string name="captchas_auto_archive_title">归档验证码短信</string>
   <string name="captchas_auto_archive_summary">自动归档验证码短信</string>
+  <string name="captchas_auto_delete_title">删除验证码短信</string>
+  <string name="captchas_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
   <string name="archive_category_pref_title">归档</string>
   <string name="public_service_auto_archive_title">归档信息服务台短信</string>
   <string name="public_service_auto_archive_summary">自动归档信息服务台短信</string>
