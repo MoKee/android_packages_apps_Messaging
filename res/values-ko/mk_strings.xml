@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">전화걸기</string>
   <string name="notification_read">읽음</string>
+  <string name="notification_delete">삭제</string>
 </resources>

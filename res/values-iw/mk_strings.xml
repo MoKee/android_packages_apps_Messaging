@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">התקשר</string>
   <string name="notification_read">קרא</string>
+  <string name="notification_delete">מחק</string>
 </resources>

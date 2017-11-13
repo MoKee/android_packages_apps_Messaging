@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">Llamada</string>
   <string name="notification_read">Leido</string>
+  <string name="notification_delete">Borrar</string>
 </resources>

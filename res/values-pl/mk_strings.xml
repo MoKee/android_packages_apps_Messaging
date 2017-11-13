@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">Zadzwoń</string>
   <string name="notification_read">Czytaj</string>
+  <string name="notification_delete">Usuń</string>
 </resources>

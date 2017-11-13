@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">Oproep</string>
   <string name="notification_read">Lezen</string>
+  <string name="notification_delete">Verwijderen</string>
 </resources>

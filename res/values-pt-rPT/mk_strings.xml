@@ -22,4 +22,5 @@
   <string name="public_service_auto_archive_title">Mensagens de serviço de arquivo</string>
   <!-- quick message option -->
   <string name="notification_call">Chamada</string>
+  <string name="notification_delete">Eliminar</string>
 </resources>

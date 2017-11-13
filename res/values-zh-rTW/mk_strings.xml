@@ -23,6 +23,8 @@
   <string name="captchas_has_copied">驗證碼已複製至剪貼簿，長按輸入欄位可選擇貼上。</string>
   <string name="captchas_auto_archive_title">封存簡訊驗證碼</string>
   <string name="captchas_auto_archive_summary">自動封存簡訊驗證碼</string>
+  <string name="captchas_auto_delete_title">刪除驗證碼簡訊</string>
+  <string name="captchas_auto_delete_summary">複製驗證碼到剪貼簿後自動刪除簡訊</string>
   <string name="archive_category_pref_title">封存</string>
   <string name="public_service_auto_archive_title">封存服務訊息</string>
   <string name="public_service_auto_archive_summary">自動封存公共服務</string>
@@ -30,4 +32,5 @@
   <string name="notification_reply">回覆</string>
   <string name="notification_call">撥打</string>
   <string name="notification_read">已讀</string>
+  <string name="notification_delete">刪除</string>
 </resources>
