@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015-2016 The MoKee Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,9 @@ import com.android.messaging.R;
 import com.android.messaging.Factory;
 import com.android.messaging.datamodel.BugleNotifications;
 import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
+import com.android.messaging.datamodel.DatabaseHelper.PartColumns;
+import com.android.messaging.datamodel.action.DeleteMessageAction;
+import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.util.PendingIntentConstants;
 
 import android.content.BroadcastReceiver;
@@ -50,8 +53,13 @@ public class CaptchasReceiver extends BroadcastReceiver {
             clipboardManager.setText(captchas);
             Toast.makeText(context, String.format(context.getString(R.string.captchas_has_copied), captchas), Toast.LENGTH_SHORT).show();
 
-            // Mark thread as read
-            BugleNotifications.markMessagesAsRead(conversationId);
+            if (MmsUtils.allowAutoDeleteCaptchaSms()) {
+                String messageId = extras.getString(PartColumns.MESSAGE_ID);
+                DeleteMessageAction.deleteMessage(messageId);
+            } else {
+                // Mark thread as read
+                BugleNotifications.markMessagesAsRead(conversationId);
+            }
 
             final NotificationManagerCompat notificationManager =
                     NotificationManagerCompat.from(Factory.get().getApplicationContext());
