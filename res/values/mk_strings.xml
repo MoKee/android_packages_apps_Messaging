@@ -26,4 +26,5 @@
     <string name="archive_category_pref_title">Archive</string>
     <string name="public_service_auto_archive_title">Archive service messages</string>
     <string name="public_service_auto_archive_summary">Automatically archive service messages</string>
+    <string name="notification_delete">Delete</string>
 </resources>
