@@ -183,7 +183,7 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
                 UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
             }
         } else {
-            BugleNotifications.postCaptchasNotication(conversationId, captchas, captchaProvider);
+            BugleNotifications.postCaptchasNotification(conversationId, message.getMessageId(), captchas, captchaProvider);
             if (MmsUtils.allowAutoArchiveCaptchaSms(subId)) {
                 UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
             }
