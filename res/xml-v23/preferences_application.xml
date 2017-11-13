@@ -81,6 +81,12 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="@string/captchas_auto_delete_pref_key"
+        android:title="@string/captchas_auto_delete_title"
+        android:summary="@string/captchas_auto_delete_summary"
+        android:defaultValue="@bool/captchas_auto_delete_pref_default" />
+
     <PreferenceScreen
             android:key="@string/advanced_pref_key"
             android:title="@string/advanced_settings" />
