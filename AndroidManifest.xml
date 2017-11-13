@@ -359,6 +359,8 @@
 
         <receiver android:name=".receiver.MarkAsReadReceiver" />
 
+        <receiver android:name=".receiver.DeleteMessageReceiver" />
+
         <receiver android:name=".receiver.CaptchasReceiver" />
 
         <!-- Intents for aborting SMS/MMS broadcasts pre-KLP -->

@@ -30,4 +30,5 @@
   <string name="notification_reply">回复</string>
   <string name="notification_call">拨打</string>
   <string name="notification_read">已读</string>
+  <string name="notification_delete">删除</string>
 </resources>
