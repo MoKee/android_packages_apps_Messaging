@@ -1173,6 +1173,15 @@ public class MmsUtils {
         return false;
     }
 
+    public static boolean allowAutoDeleteCaptchaSms() {
+        final Context context = Factory.get().getApplicationContext();
+        final Resources resources = context.getResources();
+        final BuglePrefs prefs = BuglePrefs.getApplicationPrefs();
+        final String mmsAutoDeleteCaptchasKey = resources.getString(R.string.captchas_auto_delete_pref_key);
+        final boolean defaultValue = resources.getBoolean(R.bool.captchas_auto_delete_pref_default);
+        return prefs.getBoolean(mmsAutoDeleteCaptchasKey, defaultValue);
+    }
+
     public static boolean allowAutoArchiveCaptchaSms(final int subId) {
         final Context context = Factory.get().getApplicationContext();
         final Resources resources = context.getResources();
