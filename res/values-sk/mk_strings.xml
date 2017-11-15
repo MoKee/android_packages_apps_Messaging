@@ -23,6 +23,8 @@
   <string name="captchas_has_copied">Overovací kód ste už skopírovali do schránky, pre vloženie dlho podržte prst na vstupnom poli.</string>
   <string name="captchas_auto_archive_title">Archív overovacích kódov</string>
   <string name="captchas_auto_archive_summary">Automaticky archivovať overovacie správy</string>
+  <string name="captchas_auto_delete_title">Vymazať verifikačné kódy</string>
+  <string name="captchas_auto_delete_summary">Automaticky odstrániť správy, keď boli overovacie kódy skopírované do schránky</string>
   <string name="archive_category_pref_title">Archivovať</string>
   <string name="public_service_auto_archive_title">Archív servisných správ</string>
   <string name="public_service_auto_archive_summary">Automaticky archivovať servisné správy</string>

@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">El captcha se ha copiado al portapapeles, mantén tu caja de entrada para pegar.</string>
   <string name="captchas_auto_archive_title">Archivar captcha SMS</string>
   <string name="captchas_auto_archive_summary">Archivar automáticamente captcha SMS</string>
+  <string name="captchas_auto_delete_title">Borrar códigos de verificación</string>
+  <string name="captchas_auto_delete_summary">Borrar mensajes automáticamente cuando el código de verificación es copiado al portapapeles</string>
   <string name="archive_category_pref_title">Archivar</string>
   <string name="public_service_auto_archive_title">Archivar servicio publico</string>
   <string name="public_service_auto_archive_summary">Automáticamente archivar servicio público</string>
   <!-- quick message option -->
+  <string name="notification_reply">Responder</string>
   <string name="notification_call">Llamada</string>
   <string name="notification_read">Leido</string>
   <string name="notification_delete">Borrar</string>

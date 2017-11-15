@@ -23,6 +23,8 @@
   <string name="captchas_has_copied">Captcha já copiado para o clipboard, depois pressione sua caixa de entrada para colar.</string>
   <string name="captchas_auto_archive_title">Arquivar o código de verificação da sms</string>
   <string name="captchas_auto_archive_summary">Arquivar automaticamente mensagens de código de verificação</string>
+  <string name="captchas_auto_delete_title">Apagar os códigos de verificação</string>
+  <string name="captchas_auto_delete_summary">Excluir automaticamente as mensagens quando os códigos de verificação forem copiados para a área de transferência</string>
   <string name="archive_category_pref_title">Arquivar</string>
   <string name="public_service_auto_archive_title">Arquivar serviço público</string>
   <string name="public_service_auto_archive_summary">Arquivar automaticamente o serviço público</string>
