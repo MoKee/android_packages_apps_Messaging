@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Captcha già copiato negli appunti, premi a lungo la casella di input per incollarlo.</string>
   <string name="captchas_auto_archive_title">Archivia captcha</string>
   <string name="captchas_auto_archive_summary">Archivia automaticamente i messaggi captcha</string>
+  <string name="captchas_auto_delete_title">Cancella captcha</string>
+  <string name="captchas_auto_delete_summary">Cancella automaticamente i messaggi quando i codici di verifica son copiati negli appunti</string>
   <string name="archive_category_pref_title">Archivio</string>
   <string name="public_service_auto_archive_title">Archivia messaggi di servizio</string>
   <string name="public_service_auto_archive_summary">Archivia automaticamente i messaggi di servizio</string>
   <!-- quick message option -->
+  <string name="notification_reply">Rispondi</string>
   <string name="notification_call">Chiama</string>
   <string name="notification_read">Letto</string>
   <string name="notification_delete">Elimina</string>

@@ -27,6 +27,7 @@
   <string name="public_service_auto_archive_title">Arhiviraj obvestila storitev</string>
   <string name="public_service_auto_archive_summary">Samodejno arhiviranje obvestil storitev</string>
   <!-- quick message option -->
+  <string name="notification_reply">Odgovori</string>
   <string name="notification_call">Kliči</string>
   <string name="notification_read">Preberi</string>
   <string name="notification_delete">Izbriši</string>
