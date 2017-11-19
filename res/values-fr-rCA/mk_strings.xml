@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Captcha déjà copié dans le presse-papier, appuyez longuement sur votre zone de saisie pour coller.</string>
   <string name="captchas_auto_archive_title">Archive des sms captcha</string>
   <string name="captchas_auto_archive_summary">Archiver automatiquement les sms captcha</string>
+  <string name="captchas_auto_delete_title">Supprimer les codes de vérification</string>
+  <string name="captchas_auto_delete_summary">Supprimer automatiquement les messages quand les codes de vérification ont été copiés dans le presse-papier</string>
   <string name="archive_category_pref_title">Archiver</string>
   <string name="public_service_auto_archive_title">Service d\'archives publique</string>
   <string name="public_service_auto_archive_summary">Service d\'archives public automatique</string>
   <!-- quick message option -->
+  <string name="notification_reply">Répondre</string>
   <string name="notification_call">Appel</string>
   <string name="notification_read">Lire</string>
   <string name="notification_delete">Supprimer</string>
