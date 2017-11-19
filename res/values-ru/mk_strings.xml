@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Код уже скопирован в буфер обмена, долгое нажатие на поле ввода вставит его.</string>
   <string name="captchas_auto_archive_title">Сохранять SMS коды</string>
   <string name="captchas_auto_archive_summary">Автоматически архивировать коды подтверждения</string>
+  <string name="captchas_auto_delete_title">Удалить коды подтверждения</string>
+  <string name="captchas_auto_delete_summary">Удалять автоматически сообщения, когда код подтверждения скопирован в буфер обмена</string>
   <string name="archive_category_pref_title">Архив</string>
   <string name="public_service_auto_archive_title">Архивировать сервисные сообщения</string>
   <string name="public_service_auto_archive_summary">Автоматически архивировать сервисные сообщения</string>
   <!-- quick message option -->
+  <string name="notification_reply">Ответить</string>
   <string name="notification_call">Звонок</string>
   <string name="notification_read">Просмотреть</string>
   <string name="notification_delete">Удалить</string>

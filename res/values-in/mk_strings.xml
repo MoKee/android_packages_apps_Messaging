@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Kode verifikasi sudah disalin ke clipboard, tekan lama kotak masukan untuk menyisipkan.</string>
   <string name="captchas_auto_archive_title">Arsip sms kode verifikasi</string>
   <string name="captchas_auto_archive_summary">Otomatis arsipkan pesan kode verifikasi</string>
+  <string name="captchas_auto_delete_title">Hapus kode verifikasi</string>
+  <string name="captchas_auto_delete_summary">Menghapus kode verifikasi ketika disalin pada clipboard</string>
   <string name="archive_category_pref_title">Arsip</string>
   <string name="public_service_auto_archive_title">Arsip pesan layanan</string>
   <string name="public_service_auto_archive_summary">Otomatis arsip pesan layanan</string>
   <!-- quick message option -->
+  <string name="notification_reply">Balas</string>
   <string name="notification_call">Panggil</string>
   <string name="notification_read">Baca</string>
   <string name="notification_delete">Hapus</string>
