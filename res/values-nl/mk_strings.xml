@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Captcha is inmiddels gekopieerd naar klembord, lang drukken op invoerveld om te plakken.</string>
   <string name="captchas_auto_archive_title">Archief verificatie codes</string>
   <string name="captchas_auto_archive_summary">Verificatie code berichten automatisch archiveren</string>
+  <string name="captchas_auto_delete_title">Reset de verificatiecode</string>
+  <string name="captchas_auto_delete_summary">Berichten worden automatisch verwijderd wanneer verificatie codes naar het klembord worden gekopieerd</string>
   <string name="archive_category_pref_title">Archief</string>
   <string name="public_service_auto_archive_title">Archief dienstberichten</string>
   <string name="public_service_auto_archive_summary">Automatisch archiveren dienstberichten</string>
   <!-- quick message option -->
+  <string name="notification_reply">Beantwoorden</string>
   <string name="notification_call">Oproep</string>
   <string name="notification_read">Lezen</string>
   <string name="notification_delete">Verwijderen</string>
