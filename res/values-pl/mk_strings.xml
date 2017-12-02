@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Kod weryfikacyjny już skopiowany do schowka. Przytrzymaj palec na polu wprowadzania, aby wkleić.</string>
   <string name="captchas_auto_archive_title">Zapisz kod weryfikacyjny</string>
   <string name="captchas_auto_archive_summary">Automatycznie zapisuj kody weryfikacyjne</string>
+  <string name="captchas_auto_delete_title">Zresetuj kody weryfikacyjne</string>
+  <string name="captchas_auto_delete_summary">Automatyczne usuwanie wiadomości, gdy kody weryfikacyjne skopiowane do schowka</string>
   <string name="archive_category_pref_title">Archiwum</string>
   <string name="public_service_auto_archive_title">Zapisuj wiadomości pochodzące od usług</string>
   <string name="public_service_auto_archive_summary">Automatycznie zapisuj wiadomości pochodzące od usług</string>
   <!-- quick message option -->
+  <string name="notification_reply">Odpisz</string>
   <string name="notification_call">Zadzwoń</string>
   <string name="notification_read">Czytaj</string>
   <string name="notification_delete">Usuń</string>
