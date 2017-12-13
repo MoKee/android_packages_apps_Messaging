@@ -23,6 +23,8 @@
   <string name="captchas_has_copied">Kodo za preverjanje ste že kopirali v odložišče, dlje zadržite v vnosnem polju za prilepi.</string>
   <string name="captchas_auto_archive_title">Arhiv kod za preverjanje</string>
   <string name="captchas_auto_archive_summary">Samodejno arhiviranje sporočil za preverjanje kode</string>
+  <string name="captchas_auto_delete_title">Brisanje kod za preverjanje</string>
+  <string name="captchas_auto_delete_summary">Samodejno brisanje sporočila, ko so kode za preverjanje kopirane v odložišče</string>
   <string name="archive_category_pref_title">Arhiv</string>
   <string name="public_service_auto_archive_title">Arhiviraj obvestila storitev</string>
   <string name="public_service_auto_archive_summary">Samodejno arhiviranje obvestil storitev</string>
