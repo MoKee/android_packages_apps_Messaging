@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Doğrulama kodu panoya kopyalanmış halde, yapıştırmak için basılı tutun.</string>
   <string name="captchas_auto_archive_title">Arşiv doğrulama kodu</string>
   <string name="captchas_auto_archive_summary">Sms doğrulama kodunu otomatik olarak arşivle</string>
+  <string name="captchas_auto_delete_title">Doğrulama kodlarını sil</string>
+  <string name="captchas_auto_delete_summary">Doğrulama kodları panoya kopyalandığında mesajları otomatik olarak sil</string>
   <string name="archive_category_pref_title">Arşiv</string>
   <string name="public_service_auto_archive_title">Genel servis\'i arşivle</string>
   <string name="public_service_auto_archive_summary">Servis mesajlarını otomatik olarak arşivle</string>
   <!-- quick message option -->
+  <string name="notification_reply">Yanıtla</string>
   <string name="notification_call">Çağrı</string>
   <string name="notification_read">Oku</string>
   <string name="notification_delete">Sil</string>
