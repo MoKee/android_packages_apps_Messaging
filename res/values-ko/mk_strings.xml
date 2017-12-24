@@ -17,16 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">Captcha는 %s</string>
-  <string name="captchas_with_provider_title">Captcha는 %1$s 【%2$s】</string>
-  <string name="captchas_content">보안 문자 메시지를 복사하려면 클릭하세요</string>
-  <string name="captchas_has_copied">이미 긴 클립보드에 복사 하는 Captcha를 붙여 입력된 상자를 누릅니다.</string>
+  <string name="captchas_title">인증 코드는 %s</string>
+  <string name="captchas_with_provider_title">인증 코드는 %1$s 【%2$s】</string>
+  <string name="captchas_content">인증 코드를 받았습니다, 복사하려면 클릭하세요.</string>
+  <string name="captchas_has_copied">인증 코드가 이미 클립보드이 복사되었습니다, 붙여넣으려면 입력 공간을 길게 누르세요.</string>
   <string name="captchas_auto_archive_title">보관함 인증 코드</string>
   <string name="captchas_auto_archive_summary">인증 코드 메시지를 자동으로 보관</string>
+  <string name="captchas_auto_delete_title">인증 코드 삭제</string>
+  <string name="captchas_auto_delete_summary">인증 코드가 클립보드에 복사될 때 자동으로 메시지를 삭제합니다</string>
   <string name="archive_category_pref_title">보관함</string>
-  <string name="public_service_auto_archive_title">보관 서비스 메시지</string>
+  <string name="public_service_auto_archive_title">서비스 메시지 보관</string>
   <string name="public_service_auto_archive_summary">자동으로 서비스 메시지 보관</string>
   <!-- quick message option -->
+  <string name="notification_reply">답장</string>
   <string name="notification_call">전화걸기</string>
   <string name="notification_read">읽음</string>
   <string name="notification_delete">삭제</string>
