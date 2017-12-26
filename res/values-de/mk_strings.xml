@@ -23,10 +23,12 @@
   <string name="captchas_has_copied">Verifizierungscode ist bereits in die Zwischenablage kopiert, langes drücken um im Eingabefeld einzufügen.</string>
   <string name="captchas_auto_archive_title">Archiviere Verifizierungscodes</string>
   <string name="captchas_auto_archive_summary">Verifizierungscodes automatisch archivieren</string>
+  <string name="captchas_auto_delete_title">Verifizierungscode löschen</string>
   <string name="archive_category_pref_title">Archiv</string>
   <string name="public_service_auto_archive_title">Archiviere Service Mitteilungen</string>
   <string name="public_service_auto_archive_summary">Archiviere Service Mitteliungen automatisch</string>
   <!-- quick message option -->
+  <string name="notification_reply">Antworten</string>
   <string name="notification_call">Anrufen</string>
   <string name="notification_read">Lesen</string>
   <string name="notification_delete">Löschen</string>
