@@ -24,6 +24,7 @@
   <string name="captchas_auto_archive_title">Archiviere Verifizierungscodes</string>
   <string name="captchas_auto_archive_summary">Verifizierungscodes automatisch archivieren</string>
   <string name="captchas_auto_delete_title">Verifizierungscode löschen</string>
+  <string name="captchas_auto_delete_summary">Nachrichten automatisch löschen, wenn Bestätigungscodes in die Zwischenablage kopiert wurden</string>
   <string name="archive_category_pref_title">Archiv</string>
   <string name="public_service_auto_archive_title">Archiviere Service Mitteilungen</string>
   <string name="public_service_auto_archive_summary">Archiviere Service Mitteliungen automatisch</string>
