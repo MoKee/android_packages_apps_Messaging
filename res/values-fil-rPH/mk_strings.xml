@@ -29,4 +29,5 @@
   <!-- quick message option -->
   <string name="notification_call">Tumawag</string>
   <string name="notification_read">Basahin</string>
+  <string name="notification_delete">Burahin</string>
 </resources>
