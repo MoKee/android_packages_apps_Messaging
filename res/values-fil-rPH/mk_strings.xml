@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Na-kopya na ang code sa pagpapatunay sa clipboard, pindutin nang matagal ang iyong input box upang i-paste.</string>
   <string name="captchas_auto_archive_title">Mga code ng pag-verify ng archive</string>
   <string name="captchas_auto_archive_summary">Awtomatikong i-archive ang mga mensahe ng verification code</string>
+  <string name="captchas_auto_delete_title">Burahin ang mga code ng pagpapatunay</string>
+  <string name="captchas_auto_delete_summary">Awtomatikong burahin ang mga mensahe kung nakopya na ang mga code ng pagpapatunay sa clipboard</string>
   <string name="archive_category_pref_title">Arkibo</string>
   <string name="public_service_auto_archive_title">I-archive ang mga mensahe ng serbisyo</string>
   <string name="public_service_auto_archive_summary">Awtomatikong i-archive ang mga mensahe ng serbisyo</string>
   <!-- quick message option -->
+  <string name="notification_reply">Sagutin</string>
   <string name="notification_call">Tumawag</string>
   <string name="notification_read">Basahin</string>
   <string name="notification_delete">Burahin</string>
