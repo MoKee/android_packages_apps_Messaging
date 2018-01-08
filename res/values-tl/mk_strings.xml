@@ -17,6 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">Ang verification code ay %s</string>
+  <string name="captchas_with_provider_title">Ang verification code ay %1$s 【%2$s】</string>
+  <string name="captchas_content">Nakatanggap ng verification code, pindotin upang kopyahin.</string>
+  <string name="captchas_has_copied">Ang verfication code ay nakopya na sa clipboard, pindutin nang matagal ang iyong input box upang i-paste.</string>
+  <string name="captchas_auto_archive_title">Mga code ng pag-verify ng archive</string>
+  <string name="captchas_auto_archive_summary">Awtomatikong i-archive ang mga mensahe ng verification code</string>
+  <string name="archive_category_pref_title">Archive</string>
+  <string name="public_service_auto_archive_title">I-archive ang mga mensahe ng serbisyo</string>
+  <string name="public_service_auto_archive_summary">Awtomatikong i-archive ang mga mensahe ng serbisyo</string>
   <!-- quick message option -->
+  <string name="notification_call">Tawagan</string>
+  <string name="notification_read">Basahin</string>
   <string name="notification_delete">Tanggalin</string>
 </resources>

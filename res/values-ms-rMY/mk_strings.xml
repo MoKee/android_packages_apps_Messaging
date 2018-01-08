@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Kod verifikasi telah disalin ke klipbod, tekan lama dikotak untuk ditampal.</string>
   <string name="captchas_auto_archive_title">Arkib kod pengesahan</string>
   <string name="captchas_auto_archive_summary">Mengarkib secara automatik mesej kod verifikasi</string>
+  <string name="captchas_auto_delete_title">Memadam kod pengesahan</string>
+  <string name="captchas_auto_delete_summary">Memadam mesej secara automatik semasa kod pengesahan disalin kepada papan klip</string>
   <string name="archive_category_pref_title">Arkib</string>
   <string name="public_service_auto_archive_title">Arkib mesej servis</string>
   <string name="public_service_auto_archive_summary">Mengarkib secara automatik mesej servis</string>
   <!-- quick message option -->
+  <string name="notification_reply">Balas</string>
   <string name="notification_call">Panggil</string>
   <string name="notification_read">Baca</string>
   <string name="notification_delete">Padam</string>
