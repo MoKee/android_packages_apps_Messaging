@@ -18,5 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
   <!-- quick message option -->
+  <string name="notification_call">Trucada</string>
   <string name="notification_delete">Suprimeix</string>
 </resources>

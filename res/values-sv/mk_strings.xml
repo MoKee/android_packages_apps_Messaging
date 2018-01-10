@@ -25,6 +25,7 @@
   <string name="public_service_auto_archive_title">Arkivera tjänstemeddelanden</string>
   <string name="public_service_auto_archive_summary">Automatiskt arkivera tjänstemeddelanden</string>
   <!-- quick message option -->
+  <string name="notification_call">Ring</string>
   <string name="notification_read">Läs</string>
   <string name="notification_delete">Ta bort</string>
 </resources>
