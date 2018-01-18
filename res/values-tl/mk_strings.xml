@@ -23,6 +23,7 @@
   <string name="captchas_has_copied">Ang verfication code ay nakopya na sa clipboard, pindutin nang matagal ang iyong input box upang i-paste.</string>
   <string name="captchas_auto_archive_title">Mga code ng pag-verify ng archive</string>
   <string name="captchas_auto_archive_summary">Awtomatikong i-archive ang mga mensahe ng verification code</string>
+  <string name="captchas_auto_delete_title">Burahin ang mga verification code</string>
   <string name="captchas_auto_delete_summary">Awtomatikong burahin ang mga mensahe kapag nakopya na ang mga verification code sa clipboard</string>
   <string name="archive_category_pref_title">Archive</string>
   <string name="public_service_auto_archive_title">I-archive ang mga mensahe ng serbisyo</string>
