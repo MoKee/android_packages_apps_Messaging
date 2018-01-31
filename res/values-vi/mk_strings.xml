@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Captcha đã sao chép vào clipboard, bấm giữ lâu vào hộp nhập liệu của bạn để dán.</string>
   <string name="captchas_auto_archive_title">Lưu trữ mã xác minh</string>
   <string name="captchas_auto_archive_summary">Tự động lưu trữ tin nhắn mã xác minh</string>
+  <string name="captchas_auto_delete_title">Xóa mã xác minh</string>
+  <string name="captchas_auto_delete_summary">Tự động xóa tin nhắn khi mã xác minh được sao chép vào khay nhớ tạm</string>
   <string name="archive_category_pref_title">Lưu trữ</string>
   <string name="public_service_auto_archive_title">Lưu trữ tin nhắn dịch vụ</string>
   <string name="public_service_auto_archive_summary">Tự động lưu trữ tin nhắn dịch vụ</string>
   <!-- quick message option -->
+  <string name="notification_reply">Phản hồi</string>
   <string name="notification_call">Cuộc gọi</string>
   <string name="notification_read">Đọc</string>
   <string name="notification_delete">Xóa</string>
