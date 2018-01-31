@@ -26,11 +26,11 @@
   <string name="captchas_auto_delete_title">Vymazat ověřovací kódy</string>
   <string name="captchas_auto_delete_summary">Automaticky vymazat zprávy, když byly ověřovací kódy zkopírovány do schránky</string>
   <string name="archive_category_pref_title">Archivovat</string>
-  <string name="public_service_auto_archive_title">Zprávy služby Push</string>
-  <string name="public_service_auto_archive_summary">Automaticky archivovat zprávy služby</string>
+  <string name="public_service_auto_archive_title">Archiv servisních zpráv</string>
+  <string name="public_service_auto_archive_summary">Automaticky archivovat servisní zprávy</string>
   <!-- quick message option -->
   <string name="notification_reply">Odpovědět</string>
-  <string name="notification_call">Hovor</string>
-  <string name="notification_read">Načíst</string>
+  <string name="notification_call">Volání</string>
+  <string name="notification_read">Číst</string>
   <string name="notification_delete">Smazat</string>
 </resources>
