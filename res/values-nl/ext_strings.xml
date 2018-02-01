@@ -18,6 +18,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Swipe to delete conversation -->
+  <string name="swipe_to_delete_conversation_pref_title">Veeg om te verwijderen</string>
+  <string name="swipe_to_delete_conversation_pref_summary">Veeg naar rechts om een gesprek te verwijderen</string>
   <!-- Show emoticons -->
+  <string name="show_emoticons_pref_title">Toegang tot lachebekjes</string>
+  <string name="show_emoticons_pref_summary">Toets voor lachebekjes op het toetsenbord weergeven</string>
   <!-- Audio Library Tab for MMS attachments -->
+  <string name="mediapicker_galleryChooserDescription_cm">Afbeeldingen of filmpjes van dit apparaat kiezen</string>
+  <string name="mediapicker_audioListChooserDescription">Geluidsbestanden van dit apparaat kiezen</string>
+  <string name="mediapicker_gallery_image_item_attachment_too_large">Kan het filmpje niet toevoegen. Maximale berichtgrootte is overschreden.</string>
+  <string name="mediapicker_audio_list_title">Geluid kiezen</string>
+  <string name="mediapicker_audio_list_item_selected_content_description">Gekozen geluid</string>
+  <string name="mediapicker_audio_list_item_unselected_content_description">Tik om te kiezen</string>
 </resources>
