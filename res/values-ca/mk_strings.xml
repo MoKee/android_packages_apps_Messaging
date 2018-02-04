@@ -17,7 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">El codi de verificació es %s</string>
+  <string name="captchas_with_provider_title">El codi de verificació és %1$s 【%2$s】</string>
+  <string name="captchas_content">S\'ha rebut un codi de verificació, feu clic per copiar.</string>
+  <string name="captchas_has_copied">El codi de verificació ja s\'ha copiat al portapapers, manteniu press el quadre d\'entrada per enganxar.</string>
+  <string name="captchas_auto_archive_title">Codis de verificació d\'arxiu</string>
+  <string name="captchas_auto_archive_summary">S\'ha rebut automàticament el missatge amb el codi de verificació</string>
+  <string name="captchas_auto_delete_title">Suprimir els codis de verificació</string>
+  <string name="captchas_auto_delete_summary">Suprimeix automàticament els missatges quan els codis de verificació es copiïn</string>
+  <string name="archive_category_pref_title">Arxiu</string>
+  <string name="public_service_auto_archive_title">Servei d\'arxiuament de missatges</string>
+  <string name="public_service_auto_archive_summary">Servei d\'arxivament automàtica de missatges</string>
   <!-- quick message option -->
+  <string name="notification_reply">Respondre</string>
   <string name="notification_call">Trucada</string>
+  <string name="notification_read">Llegeix</string>
   <string name="notification_delete">Suprimeix</string>
 </resources>
