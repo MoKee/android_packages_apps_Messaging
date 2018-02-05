@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Captcha deja copiat în clipboard, apăsați îndelungat pe căsuţa de intrare pentru a lipi.</string>
   <string name="captchas_auto_archive_title">Coduri de verificare arhive</string>
   <string name="captchas_auto_archive_summary">Arhivează automat mesajele codurilor de verificare</string>
+  <string name="captchas_auto_delete_title">Șterge coduri de verificare</string>
+  <string name="captchas_auto_delete_summary">Şterge automat mesajele când codurile de verificare s-au copiat în clipboard</string>
   <string name="archive_category_pref_title">Arhivă</string>
   <string name="public_service_auto_archive_title">Arhivă mesagerie servicii</string>
   <string name="public_service_auto_archive_summary">Arhivează automat mesajele de servicii</string>
   <!-- quick message option -->
+  <string name="notification_reply">Răspunde</string>
   <string name="notification_call">Apel</string>
   <string name="notification_read">Citește</string>
   <string name="notification_delete">Ștergeţi</string>
