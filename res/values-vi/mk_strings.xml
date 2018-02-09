@@ -29,7 +29,7 @@
   <string name="public_service_auto_archive_title">Lưu trữ tin nhắn dịch vụ</string>
   <string name="public_service_auto_archive_summary">Tự động lưu trữ tin nhắn dịch vụ</string>
   <!-- quick message option -->
-  <string name="notification_reply">Phản hồi</string>
+  <string name="notification_reply">Trả lời</string>
   <string name="notification_call">Gọi</string>
   <string name="notification_read">Đọc</string>
   <string name="notification_delete">Xóa</string>
