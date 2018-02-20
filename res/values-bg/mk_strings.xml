@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Кодът за потвърждение вече е копиран. Задръжте върху вх. поле, за да го поставите.</string>
   <string name="captchas_auto_archive_title">Архив на кодове за потвърждение</string>
   <string name="captchas_auto_archive_summary">Автоматично архивиране на съобщения с кодове за потвърждение</string>
+  <string name="captchas_auto_delete_title">Изтрий кодовете за потвърждение</string>
+  <string name="captchas_auto_delete_summary">Автоматично изтрий съобщенията когато кодовете се копират в клипборда</string>
   <string name="archive_category_pref_title">Архивиране</string>
   <string name="public_service_auto_archive_title">Архив на служебни съобщения</string>
   <string name="public_service_auto_archive_summary">Автоматично архивиране на служебни съобщения</string>
   <!-- quick message option -->
+  <string name="notification_reply">Отговори</string>
   <string name="notification_call">Повикване</string>
   <string name="notification_read">Прочети</string>
   <string name="notification_delete">Изтриване</string>
