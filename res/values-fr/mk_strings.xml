@@ -31,6 +31,6 @@
   <!-- quick message option -->
   <string name="notification_reply">Répondre</string>
   <string name="notification_call">Appel</string>
-  <string name="notification_read">Lire</string>
+  <string name="notification_read">Lu</string>
   <string name="notification_delete">Supprimer</string>
 </resources>
