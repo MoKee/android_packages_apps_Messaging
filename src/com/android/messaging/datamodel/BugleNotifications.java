@@ -1108,7 +1108,9 @@ public class BugleNotifications {
                         : getNotificationRingtoneUriForConversationId(conversationId))
                 .setColor(context.getResources().getColor(R.color.notification_accent_color));
 
-        addDeleteMessageAction(builder, messageId);
+        if (!MmsUtils.allowAutoDeleteCaptchaSms()) {
+            addDeleteMessageAction(builder, messageId);
+        }
 
         final NotificationCompat.BigTextStyle bigTextStyle =
                 new NotificationCompat.BigTextStyle(builder);
