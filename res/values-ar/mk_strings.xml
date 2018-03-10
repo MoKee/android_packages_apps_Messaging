@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">كلمة التحقق مسبقاً تم نسخها إلى الحافظة، اضغط طويلا للصق.</string>
   <string name="captchas_auto_archive_title">أرشيف رموز التحقق</string>
   <string name="captchas_auto_archive_summary">أرشفة رسائل رموز التحقق تلقائياً</string>
+  <string name="captchas_auto_delete_title">حذف رموز التحقق</string>
+  <string name="captchas_auto_delete_summary">حذف الرسائل تلقائياً عند نسخ رموز التحقق إلى الحافظة</string>
   <string name="archive_category_pref_title">الأرشيف</string>
   <string name="public_service_auto_archive_title">أرشيف خدمة الرسائل</string>
   <string name="public_service_auto_archive_summary">أرشفة رسائل الخدمة تلقائياً</string>
   <!-- quick message option -->
+  <string name="notification_reply">رد</string>
   <string name="notification_call">اتّصل</string>
   <string name="notification_read">اقرأ</string>
   <string name="notification_delete">حذف</string>

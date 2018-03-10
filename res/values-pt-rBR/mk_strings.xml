@@ -17,11 +17,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
-  <string name="captchas_title">Captcha é %s</string>
-  <string name="captchas_with_provider_title">Captcha é %1$s 【%2$s】</string>
+  <string name="captchas_title">Código de verificação é %s</string>
+  <string name="captchas_with_provider_title">Código de verificação é %1$s 【%2$s】</string>
   <string name="captchas_content">Recebi uma mensagem de captcha, clique em copiar.</string>
-  <string name="captchas_has_copied">Captcha já copiado para o clipboard, depois pressione sua caixa de entrada para colar.</string>
-  <string name="captchas_auto_archive_title">Arquivar o código de verificação da sms</string>
+  <string name="captchas_has_copied">Código de verificação já copiado para área de trabalho, depois pressione sua caixa de entrada para colar.</string>
+  <string name="captchas_auto_archive_title">Códigos de verificação de arquivo</string>
   <string name="captchas_auto_archive_summary">Arquivar automaticamente mensagens de código de verificação</string>
   <string name="captchas_auto_delete_title">Apagar os códigos de verificação</string>
   <string name="captchas_auto_delete_summary">Excluir automaticamente as mensagens quando os códigos de verificação forem copiados para a área de transferência</string>
