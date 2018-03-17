@@ -23,10 +23,12 @@
   <string name="captchas_has_copied">Το Captcha έχει ήδη αντιγραφεί στο πρόχειρο, πατήστε μόνιμα το πλαίσιο εισόδου για να επικολλήσετε.</string>
   <string name="captchas_auto_archive_title">Αρχειοθέτηση κωδικών επαλήθευσης</string>
   <string name="captchas_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων κωδικών επαλήθευσης</string>
+  <string name="captchas_auto_delete_title">Διαγραφή των κωδικών επαλήθευσης</string>
   <string name="archive_category_pref_title">Αρχειοθέτηση</string>
   <string name="public_service_auto_archive_title">Αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
   <string name="public_service_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
   <!-- quick message option -->
+  <string name="notification_reply">Απάντηση</string>
   <string name="notification_call">Κλήση</string>
   <string name="notification_read">Ανάγνωση</string>
   <string name="notification_delete">Διαγραφή</string>
