@@ -23,10 +23,13 @@
   <string name="captchas_has_copied">Képkód már a vágólapon van. Hosszan érintse meg a beviteli mezőt a beillesztéshez.</string>
   <string name="captchas_auto_archive_title">SMS képkód archiválása</string>
   <string name="captchas_auto_archive_summary">Sms captcha automatikus archiválása</string>
+  <string name="captchas_auto_delete_title">Ellenőrzőkódok törlése</string>
+  <string name="captchas_auto_delete_summary">Az üzenetek automatikusan törlődni fognak, amint kimásolta a vágólapra az ellenőrzőkódot</string>
   <string name="archive_category_pref_title">Archívum</string>
   <string name="public_service_auto_archive_title">Archív közszolgálati</string>
   <string name="public_service_auto_archive_summary">Automatikus archiválás a közszolgálati</string>
   <!-- quick message option -->
+  <string name="notification_reply">Válasz</string>
   <string name="notification_call">Hívás</string>
   <string name="notification_read">Elolvas</string>
   <string name="notification_delete">Törlés</string>
