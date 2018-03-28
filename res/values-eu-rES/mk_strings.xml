@@ -19,4 +19,6 @@
   <!-- Captchas -->
   <!-- quick message option -->
   <string name="notification_call">Deia</string>
+  <string name="notification_read">Irakurrita</string>
+  <string name="notification_delete">Ezabatu</string>
 </resources>
