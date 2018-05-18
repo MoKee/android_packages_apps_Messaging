@@ -134,7 +134,7 @@
                         android:layout_centerVertical="true"
                         android:singleLine="true"
                         android:layout_alignParentEnd="true"
-                    	android:paddingBottom="2dp" />
+                        android:paddingBottom="2dp" />
                 </RelativeLayout>
                 <TextView
                     android:id="@+id/conversation_subject"

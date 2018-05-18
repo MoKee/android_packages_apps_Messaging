@@ -205,6 +205,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             mConversationNameView.setTextColor(mListItemUnreadColor);
             mConversationNameView.setTypeface(mListItemUnreadTypeface);
         }
+        mLocationTextView.setTextColor(mListItemReadColor);
 
         final String conversationName = mData.getName();
 
