@@ -18,9 +18,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
   <string name="captchas_title">認証コードは%sです</string>
-  <string name="captchas_with_provider_title">認証コードは %1$s 【%2$s】 です。</string>
-  <string name="captchas_content">確認コードを受け取り、クリックしてコピーします。</string>
-  <string name="captchas_has_copied">既にクリップボードにコピーされた確認コードは、ボックスを長く押して貼り付けます。</string>
+  <string name="captchas_with_provider_title">認証コードは %1$s 【%2$s】 です</string>
+  <string name="captchas_content">確認コードを受け取りクリックしてコピーします</string>
+  <string name="captchas_has_copied">既にクリップボードにコピーされた確認コードはボックスを長く押して貼り付けます</string>
   <string name="captchas_auto_archive_title">アーカイブの検証コード</string>
   <string name="captchas_auto_archive_summary">認証コードメッセージを自動的に記録する</string>
   <string name="archive_category_pref_title">記録</string>

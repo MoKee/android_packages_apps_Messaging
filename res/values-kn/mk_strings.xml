@@ -17,6 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captchas -->
+  <string name="captchas_title">ಪರಿಶೀಲನಾ ಕೋಡ್ %s</string>
+  <string name="captchas_with_provider_title">ಪರಿಶೀಲನಾ ಕೋಡ್ %1$s 【%2$s】</string>
+  <string name="captchas_content">ಪರಿಶೀಲನಾ ಕೋಡ್ ಪಡೆಯಲಾಗಿದೆ, ನಕಲಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+  <string name="captchas_has_copied">ಪರಿಶೀಲನಾ ಕೋಡ್ ಈಗಾಗಲೇ ಕ್ಲಿಪ್ ಬೋರ್ಡ್ ಗೆ ನಕಲಿಸಲ್ಪಟ್ಟಿದೆ, ನಿಮ್ಮ ಇನ್ಪುಟ್ ಪೆಟ್ಟಿಗೆಯಲ್ಲಿ ಅಂಟಿಸಲು ಸ್ವಲ್ಪ ಸಮಯ ಒತ್ತಿ ಹಿಡಿಯಿರಿ.</string>
+  <string name="captchas_auto_archive_title">ಸಂಗ್ರಹಿತ ಪರಿಶೀಲನಾ ಕೋಡ್ ಗಳು</string>
+  <string name="captchas_auto_archive_summary">ಪರಿಶೀಲನಾ ಕೋಡ್ ಸಂದೇಶಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ</string>
+  <string name="captchas_auto_delete_title">ಪರಿಶೀಲನಾ ಕೋಡ್ ಗಳನ್ನು ಅಳಿಸಿ</string>
+  <string name="captchas_auto_delete_summary">ಯಾವಾಗ ಪರಿಶೀಲನಾ ಕೋಡ್ ಗಳು ಕ್ಲಿಪ್ ಬೋರ್ಡ್ ಗೆ ನಕಲಿಸಲ್ಪಡುತ್ತವೆಯೋ ಆಗ ಸಂದೇಶಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಳಿಸಿ</string>
+  <string name="archive_category_pref_title">ಸಂಗ್ರಹಿತ</string>
+  <string name="public_service_auto_archive_title">ಸಂಗ್ರಹಿತ ಸೇವಾ ಸಂದೇಶಗಳು</string>
+  <string name="public_service_auto_archive_summary">ಪರಿಶೀಲನಾ ಕೋಡ್ ಸಂದೇಶಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ</string>
   <!-- quick message option -->
+  <string name="notification_reply">ಪ್ರತ್ಯುತ್ತರ</string>
   <string name="notification_call">ಕರೆ</string>
+  <string name="notification_read">ಓದು</string>
 </resources>
