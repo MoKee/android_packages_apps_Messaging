@@ -24,6 +24,7 @@
   <string name="captchas_auto_archive_title">アーカイブの検証コード</string>
   <string name="captchas_auto_archive_summary">認証コードメッセージを自動的に記録する</string>
   <string name="captchas_auto_delete_title">検証コードを削除</string>
+  <string name="captchas_auto_delete_summary">クリップボードにコピーされた確認コードを自動的に削除する</string>
   <string name="archive_category_pref_title">記録</string>
   <string name="public_service_auto_archive_title">サービスメッセージを記録</string>
   <string name="public_service_auto_archive_summary">自動記録メッセージサービス</string>
