@@ -16,12 +16,10 @@
 
 package com.android.messaging.ui;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.android.messaging.R;
-import com.android.messaging.util.Assert;
 
 /**
  * Show a list of currently blocked participants.
