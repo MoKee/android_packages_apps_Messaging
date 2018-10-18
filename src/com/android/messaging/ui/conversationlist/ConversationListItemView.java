@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2017 The MoKee Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,7 +60,6 @@ import com.android.messaging.util.Typefaces;
 import com.android.messaging.util.UiUtils;
 import com.android.messaging.util.UriUtil;
 import com.cyanogenmod.messaging.util.PrefsUtils;
-import com.mokee.cloud.location.OfflineNumber;
 
 import java.util.List;
 
@@ -442,9 +441,9 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             }
         }
 
-        String address = mData.getOtherParticipantNormalizedDestination();
-        if (!TextUtils.isEmpty(address))
-            mLocationTextView.setText(OfflineNumber.detect(address, getContext()));
+        String location = mData.getLocation();
+        if (!TextUtils.isEmpty(location))
+            mLocationTextView.setText(location);
 
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);
@@ -466,7 +465,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             iconUri = Uri.parse(mData.getIcon());
         }
         mContactIconView.setImageResourceUri(iconUri, mData.getParticipantContactId(),
-                mData.getParticipantLookupKey(), address);
+                mData.getParticipantLookupKey(), mData.getOtherParticipantNormalizedDestination());
         mContactIconView.setVisibility(contactIconVisibility);
         mContactIconView.setOnLongClickListener(this);
         mContactIconView.setClickable(!mHostInterface.isSelectionMode());
