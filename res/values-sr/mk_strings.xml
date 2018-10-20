@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
+  <!-- Captcha -->
   <!-- quick message option -->
   <string name="notification_call">Позив</string>
   <string name="notification_delete">Избриши</string>

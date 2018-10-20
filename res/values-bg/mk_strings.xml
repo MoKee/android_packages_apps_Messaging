@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">Код за потвърждение %s</string>
-  <string name="captchas_with_provider_title">Кодът за потвърждение е %1$s 【%2$s】</string>
-  <string name="captchas_content">Получен е код за потвърждение, чукнете, за да копирате.</string>
-  <string name="captchas_has_copied">Кодът за потвърждение вече е копиран. Задръжте върху вх. поле, за да го поставите.</string>
-  <string name="captchas_auto_archive_title">Архив на кодове за потвърждение</string>
-  <string name="captchas_auto_archive_summary">Автоматично архивиране на съобщения с кодове за потвърждение</string>
-  <string name="captchas_auto_delete_title">Изтрий кодовете за потвърждение</string>
-  <string name="captchas_auto_delete_summary">Автоматично изтрий съобщенията когато кодовете се копират в клипборда</string>
+  <!-- Captcha -->
+  <string name="captcha_title">Код за потвърждение %s</string>
+  <string name="captcha_with_provider_title">Кодът за потвърждение е %1$s 【%2$s】</string>
+  <string name="captcha_content">Получен е код за потвърждение, чукнете, за да копирате.</string>
+  <string name="captcha_has_copied">Кодът за потвърждение вече е копиран. Задръжте върху вх. поле, за да го поставите.</string>
+  <string name="captcha_auto_archive_title">Архив на кодове за потвърждение</string>
+  <string name="captcha_auto_archive_summary">Автоматично архивиране на съобщения с кодове за потвърждение</string>
+  <string name="captcha_auto_delete_title">Изтрий кодовете за потвърждение</string>
+  <string name="captcha_auto_delete_summary">Автоматично изтрий съобщенията когато кодовете се копират в клипборда</string>
   <string name="archive_category_pref_title">Архивиране</string>
   <string name="public_service_auto_archive_title">Архив на служебни съобщения</string>
   <string name="public_service_auto_archive_summary">Автоматично архивиране на служебни съобщения</string>

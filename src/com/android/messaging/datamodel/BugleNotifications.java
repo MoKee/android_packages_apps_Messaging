@@ -28,14 +28,13 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.media.AudioManager;
+import android.mokee.location.PhoneNumberOfflineGeocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.Builder;
-import android.support.v4.app.NotificationCompat.Style;
 import android.support.v4.app.NotificationCompat.WearableExtender;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.RemoteInput;
@@ -57,6 +56,7 @@ import com.android.messaging.datamodel.MessageNotificationState.MultiMessageNoti
 import com.android.messaging.datamodel.action.MarkAsReadAction;
 import com.android.messaging.datamodel.action.MarkAsSeenAction;
 import com.android.messaging.datamodel.action.RedownloadMmsAction;
+import com.android.messaging.datamodel.action.UpdateConversationArchiveStatusAction;
 import com.android.messaging.datamodel.data.ConversationListItemData;
 import com.android.messaging.datamodel.media.AvatarRequestDescriptor;
 import com.android.messaging.datamodel.media.ImageResource;
@@ -65,8 +65,7 @@ import com.android.messaging.datamodel.media.MediaResourceManager;
 import com.android.messaging.datamodel.media.MessagePartVideoThumbnailRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.datamodel.media.VideoThumbnailRequest;
-import com.android.messaging.receiver.CaptchasReceiver;
-import com.android.messaging.receiver.DeleteMessageReceiver;
+import com.android.messaging.receiver.CaptchaReceiver;
 import com.android.messaging.receiver.MarkAsReadReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
@@ -88,6 +87,8 @@ import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.RingtoneUtil;
 import com.android.messaging.util.ThreadUtil;
 import com.android.messaging.util.UriUtil;
+import com.mokee.mms.captcha.CaptchaInfo;
+import com.mokee.mms.captcha.CaptchaUtils;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -849,10 +850,51 @@ public class BugleNotifications {
 
             maybeAddWearableConversationLog(wearableExtender,
                     (MultiMessageNotificationState) notificationState);
-            addWearableVoiceReplyAction(notifBuilder, wearableExtender, notificationState);
-            addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-            addWearableVoiceCallAction(notifBuilder, wearableExtender, notificationState);
-            addWearableReadAction(notifBuilder, wearableExtender, notificationState);
+
+            boolean isCaptchaMessage = false;
+            final ConversationLineInfo convInfo =
+                    ((MultiMessageNotificationState) notificationState).mConvList.mConvInfos.get(0);
+            String content = ((MultiMessageNotificationState) notificationState).mContent.toString();
+            String number = convInfo.mSenderNormalizedDestination;
+            CaptchaInfo captchaInfo = CaptchaUtils.getCaptchaInfo(content, number);
+            if (captchaInfo != null) {
+                isCaptchaMessage = true;
+                String captchaTitle = TextUtils.isEmpty(captchaInfo.getProvider())
+                        ? String.format(context.getString(R.string.captcha_title), captchaInfo.getCaptcha())
+                        : String.format(context.getString(R.string.captcha_with_provider_title), captchaInfo.getCaptcha(), captchaInfo.getProvider());
+                notifBuilder.setContentTitle(captchaTitle);
+                notifBuilder.setTicker(captchaTitle);
+                notifBuilder.setContentText(context.getString(R.string.captcha_content));
+
+                final NotificationCompat.Style notifStyle =
+                        new NotificationCompat.BigTextStyle(notifBuilder).bigText(context.getString(R.string.captcha_content));
+                notifBuilder.setStyle(notifStyle);
+
+                Intent pendingIntent = new Intent();
+                pendingIntent.setClass(context, CaptchaReceiver.class);
+                pendingIntent.putExtra("captcha", captchaInfo.getCaptcha());
+                pendingIntent.putExtra(PartColumns.MESSAGE_ID, convInfo.getLatestMessageId());
+                pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, notificationState.mConversationIds.first());
+                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+                notifBuilder.setContentIntent(captchaIntent);
+
+                if (MmsUtils.allowAutoArchiveCaptchaSms(convInfo.mSubId)) {
+                    UpdateConversationArchiveStatusAction.archiveConversation(notificationState.mConversationIds.first());
+                }
+            } else {
+                if (MmsUtils.allowAutoArchivePublicServiceSms(convInfo.mSubId)
+                        && PhoneNumberOfflineGeocoder.getPhoneLocation(number).equals("信息服务台")) {
+                    UpdateConversationArchiveStatusAction.archiveConversation(notificationState.mConversationIds.first());
+                }
+            }
+
+            if (!isCaptchaMessage) {
+                addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
+                addWearableVoiceReplyAction(notifBuilder, wearableExtender, notificationState);
+                addWearableVoiceCallAction(notifBuilder, wearableExtender, notificationState);
+                addWearableReadAction(notifBuilder, wearableExtender, notificationState);
+            }
         }
 
         // Apply the wearable options and build & post the notification
@@ -1045,86 +1087,6 @@ public class BugleNotifications {
 
         LogUtil.i(TAG, "Notifying for conversation " + conversationId + "; "
                 + "tag = " + notificationTag + ", type = " + type);
-    }
-
-    private static class CaptchasNotificationState extends MessageNotificationState {
-        CaptchasNotificationState() {
-            super(null);
-        }
-
-        @Override
-        protected Style build(Builder builder) {
-            return null;
-        }
-
-        @Override
-        public boolean getNotificationVibrate() {
-            return true;
-        }
-    }
-
-    private static void addDeleteMessageAction(final NotificationCompat.Builder notifBuilder, final String messageId) {
-        final Context context = Factory.get().getApplicationContext();
-
-        Intent deleteIntent = new Intent(context, DeleteMessageReceiver.class);
-        deleteIntent.putExtra(PartColumns.MESSAGE_ID, messageId);
-        final PendingIntent deletePendingIntent = PendingIntent.getBroadcast(context, 1, deleteIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-
-        final NotificationCompat.Action.Builder actionBuilder =
-                new NotificationCompat.Action.Builder(R.drawable.ic_delete_small_light,
-                        context.getString(R.string.notification_delete), deletePendingIntent);
-        notifBuilder.addAction(actionBuilder.build());
-    }
-
-    public static synchronized void postCaptchasNotification(String conversationId, String messageId, String captchas, String captchaProvider) {
-        cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
-        final NotificationState state = MessageNotificationState.getNotificationState();
-        final Context context = Factory.get().getApplicationContext();
-
-        String title = TextUtils.isEmpty(captchaProvider) ? String.format(context.getString(R.string.captchas_title), captchas)
-                : String.format(context.getString(R.string.captchas_with_provider_title), captchas, captchaProvider);
-        String content = context.getString(R.string.captchas_content);
-
-        Intent pendingIntent = new Intent();
-        pendingIntent.setClass(context, CaptchasReceiver.class);
-        pendingIntent.putExtra("captchas", captchas);
-        pendingIntent.putExtra(PartColumns.MESSAGE_ID, messageId);
-        pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, conversationId);
-        PendingIntent captchasIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-
-        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
-        builder.setContentTitle(title)
-                .setTicker(title)
-                .setSmallIcon(R.drawable.ic_sms_light)
-                .setContentText(content)
-                .setWhen(state != null ? state.getLatestReceivedTimestamp() : System.currentTimeMillis())
-                // Returning PRIORITY_HIGH causes L to put up a HUD notification. Without it, the ticker
-                // isn't displayed.
-                .setPriority(Notification.PRIORITY_HIGH)
-                .setContentIntent(captchasIntent)
-                .setSound(state != null ? RingtoneUtil.getNotificationRingtoneUri(state.getRingtoneUri())
-                        : getNotificationRingtoneUriForConversationId(conversationId))
-                .setColor(context.getResources().getColor(R.color.notification_accent_color));
-
-        addDeleteMessageAction(builder, messageId);
-
-        final NotificationCompat.BigTextStyle bigTextStyle =
-                new NotificationCompat.BigTextStyle(builder);
-        bigTextStyle.setBigContentTitle(title);
-        bigTextStyle.bigText(content);
-        final Notification notification = bigTextStyle.build();
-
-        final NotificationManagerCompat notificationManager =
-                NotificationManagerCompat.from(Factory.get().getApplicationContext());
-
-        int defaults = Notification.DEFAULT_LIGHTS;
-        if (BugleNotifications.shouldVibrate(new CaptchasNotificationState())) {
-            defaults |= Notification.DEFAULT_VIBRATE;
-        }
-        notification.defaults = defaults;
-        notificationManager.notify(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID, notification);
     }
 
     // This is the message string used in each line of an inboxStyle notification.

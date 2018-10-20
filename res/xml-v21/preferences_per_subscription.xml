@@ -48,10 +48,10 @@
         android:title="@string/archive_category_pref_title">
 
         <SwitchPreference
-            android:key="@string/captchas_auto_archive_pref_key"
-            android:title="@string/captchas_auto_archive_title"
-            android:summary="@string/captchas_auto_archive_summary"
-            android:defaultValue="@bool/captchas_auto_archive_pref_default" />
+            android:key="@string/captcha_auto_archive_pref_key"
+            android:title="@string/captcha_auto_archive_title"
+            android:summary="@string/captcha_auto_archive_summary"
+            android:defaultValue="@bool/captcha_auto_archive_pref_default" />
 
         <SwitchPreference
             android:key="@string/public_service_auto_archive_pref_key"
