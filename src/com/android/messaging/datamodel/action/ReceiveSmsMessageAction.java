@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2016 The MoKee Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ package com.android.messaging.datamodel.action;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.mokee.location.PhoneNumberOfflineGeocoder;
 import android.mokee.utils.MoKeeUtils;
 import android.net.Uri;
 import android.os.Parcel;
@@ -28,7 +27,6 @@ import android.provider.Telephony.Sms;
 import android.text.TextUtils;
 
 import com.android.messaging.Factory;
-import com.android.messaging.datamodel.action.UpdateConversationArchiveStatusAction;
 import com.android.messaging.datamodel.BugleDatabaseOperations;
 import com.android.messaging.datamodel.BugleNotifications;
 import com.android.messaging.datamodel.DataModel;
@@ -38,14 +36,11 @@ import com.android.messaging.datamodel.SyncManager;
 import com.android.messaging.datamodel.data.MessageData;
 import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.sms.MmsSmsUtils;
-import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
-
 import com.mokee.cloud.location.CloudNumber;
 import com.mokee.cloud.location.LocationInfo;
 import com.mokee.cloud.location.LocationUtils;
-import com.mokee.mms.utils.CaptchasUtils;
 
 /**
  * Action used to "receive" an incoming message
@@ -175,7 +170,6 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
                         + "secondary user.");
             }
         }
-
         // Lookup addresser info
         if (MoKeeUtils.isOnline(context) && MoKeeUtils.isSupportLanguage(true)) {
             LocationInfo locationInfo = LocationUtils.getLocationInfo(context.getContentResolver(), messageValues.getAsString(Sms.ADDRESS));
@@ -188,36 +182,13 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
             }
         }
 
-        // Get Captcha
-        final String captchas = getCaptchas(messageValues.getAsString(Sms.BODY));
-        final String captchaProvider = CaptchasUtils.getCaptchaProvider(messageValues.getAsString(Sms.BODY), messageValues.getAsString(Sms.ADDRESS));
-        if (TextUtils.isEmpty(captchas)) {
-            // Show a notification to let the user know a new message has arrived
-            BugleNotifications.update(false/*silent*/, conversationId, BugleNotifications.UPDATE_ALL);
-            if (MmsUtils.allowAutoArchivePublicServiceSms(subId)
-                    && PhoneNumberOfflineGeocoder.getPhoneLocation(messageValues.getAsString(Sms.ADDRESS)).equals("信息服务台")) {
-                UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
-            }
-        } else {
-            BugleNotifications.postCaptchasNotification(conversationId, message.getMessageId(), captchas, captchaProvider);
-            if (MmsUtils.allowAutoArchiveCaptchaSms(subId)) {
-                UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
-            }
-        }
+        // Show a notification to let the user know a new message has arrived
+        BugleNotifications.update(false/*silent*/, conversationId, BugleNotifications.UPDATE_ALL);
 
         MessagingContentProvider.notifyMessagesChanged(conversationId);
         MessagingContentProvider.notifyPartsChanged();
 
         return message;
-    }
-
-    public static String getCaptchas(String messageBody) {
-        if (!CaptchasUtils.isChineseContains(messageBody) && CaptchasUtils.isCaptchasEnMessage(messageBody)) {
-            return CaptchasUtils.tryToGetEnCaptchas(messageBody);
-        } else if (CaptchasUtils.isCaptchasMessage(messageBody)) {
-            return CaptchasUtils.tryToGetCnCaptchas(messageBody);
-        }
-        return "";
     }
 
     private ReceiveSmsMessageAction(final Parcel in) {

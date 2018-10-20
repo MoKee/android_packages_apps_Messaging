@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The MoKee Open Source Project
+ * Copyright (C) 2015-2016 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,19 @@
 
 package com.android.messaging.receiver;
 
+import com.android.messaging.R;
+import com.android.messaging.datamodel.BugleNotifications;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
+
 import android.content.BroadcastReceiver;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NotificationManagerCompat;
 import android.text.TextUtils;
+import android.widget.Toast;
 
-import com.android.messaging.Factory;
-import com.android.messaging.datamodel.DatabaseHelper.PartColumns;
-import com.android.messaging.datamodel.action.DeleteMessageAction;
-import com.android.messaging.util.PendingIntentConstants;
-
-public class DeleteMessageReceiver extends BroadcastReceiver {
+public class CaptchaReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -39,13 +39,15 @@ public class DeleteMessageReceiver extends BroadcastReceiver {
             return;
         }
 
-        String messageId = extras.getString(PartColumns.MESSAGE_ID);
-        if (!TextUtils.isEmpty(messageId)) {
-            DeleteMessageAction.deleteMessage(messageId);
-            final NotificationManagerCompat notificationManager =
-                    NotificationManagerCompat.from(Factory.get().getApplicationContext());
-            notificationManager.cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
+        String captcha = extras.getString("captcha");
+        String conversationId = extras.getString(ConversationColumns.SMS_THREAD_ID);
+        if (!TextUtils.isEmpty(captcha)) {
+            ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+            clipboardManager.setText(captcha);
+            Toast.makeText(context, String.format(context.getString(R.string.captcha_has_copied), captcha), Toast.LENGTH_SHORT).show();
+
+            // Mark thread as read
+            BugleNotifications.markMessagesAsRead(conversationId);
         }
     }
-
 }
