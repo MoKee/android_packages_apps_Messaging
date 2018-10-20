@@ -17,13 +17,11 @@
 package com.android.messaging.receiver;
 
 import com.android.messaging.R;
-import com.android.messaging.Factory;
 import com.android.messaging.datamodel.BugleNotifications;
 import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
 import com.android.messaging.datamodel.DatabaseHelper.PartColumns;
 import com.android.messaging.datamodel.action.DeleteMessageAction;
 import com.android.messaging.sms.MmsUtils;
-import com.android.messaging.util.PendingIntentConstants;
 
 import android.content.BroadcastReceiver;
 import android.content.ClipboardManager;
@@ -33,9 +31,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import android.support.v4.app.NotificationManagerCompat;
-
-public class CaptchasReceiver extends BroadcastReceiver {
+public class CaptchaReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -46,12 +42,12 @@ public class CaptchasReceiver extends BroadcastReceiver {
             return;
         }
 
-        String captchas = extras.getString("captchas");
+        String captcha = extras.getString("captcha");
         String conversationId = extras.getString(ConversationColumns.SMS_THREAD_ID);
-        if (!TextUtils.isEmpty(captchas)) {
+        if (!TextUtils.isEmpty(captcha)) {
             ClipboardManager clipboardManager = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboardManager.setText(captchas);
-            Toast.makeText(context, String.format(context.getString(R.string.captchas_has_copied), captchas), Toast.LENGTH_SHORT).show();
+            clipboardManager.setText(captcha);
+            Toast.makeText(context, String.format(context.getString(R.string.captcha_has_copied), captcha), Toast.LENGTH_SHORT).show();
 
             if (MmsUtils.allowAutoDeleteCaptchaSms()) {
                 String messageId = extras.getString(PartColumns.MESSAGE_ID);
@@ -60,10 +56,6 @@ public class CaptchasReceiver extends BroadcastReceiver {
                 // Mark thread as read
                 BugleNotifications.markMessagesAsRead(conversationId);
             }
-
-            final NotificationManagerCompat notificationManager =
-                    NotificationManagerCompat.from(Factory.get().getApplicationContext());
-            notificationManager.cancel(PendingIntentConstants.CAPTCHAS_NOTIFICATION_ID);
         }
     }
 }

@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">Captcha là %s</string>
-  <string name="captchas_with_provider_title">Captcha là %1$s 【%2$s】</string>
-  <string name="captchas_content">Nhận tin nhắn captcha, nhấn vào đây để sao chép.</string>
-  <string name="captchas_has_copied">Captcha đã sao chép vào clipboard, bấm giữ lâu vào hộp nhập liệu của bạn để dán.</string>
-  <string name="captchas_auto_archive_title">Lưu trữ mã xác minh</string>
-  <string name="captchas_auto_archive_summary">Tự động lưu trữ tin nhắn mã xác minh</string>
-  <string name="captchas_auto_delete_title">Xóa mã xác minh</string>
-  <string name="captchas_auto_delete_summary">Tự động xóa tin nhắn khi mã xác minh được sao chép vào khay nhớ tạm</string>
+  <!-- Captcha -->
+  <string name="captcha_title">Captcha là %s</string>
+  <string name="captcha_with_provider_title">Captcha là %1$s 【%2$s】</string>
+  <string name="captcha_content">Nhận tin nhắn captcha, nhấn vào đây để sao chép.</string>
+  <string name="captcha_has_copied">Captcha đã sao chép vào clipboard, bấm giữ lâu vào hộp nhập liệu của bạn để dán.</string>
+  <string name="captcha_auto_archive_title">Lưu trữ mã xác minh</string>
+  <string name="captcha_auto_archive_summary">Tự động lưu trữ tin nhắn mã xác minh</string>
+  <string name="captcha_auto_delete_title">Xóa mã xác minh</string>
+  <string name="captcha_auto_delete_summary">Tự động xóa tin nhắn khi mã xác minh được sao chép vào khay nhớ tạm</string>
   <string name="archive_category_pref_title">Lưu trữ</string>
   <string name="public_service_auto_archive_title">Lưu trữ tin nhắn dịch vụ</string>
   <string name="public_service_auto_archive_summary">Tự động lưu trữ tin nhắn dịch vụ</string>

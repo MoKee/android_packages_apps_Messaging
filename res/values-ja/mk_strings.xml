@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">認証コードは%sです</string>
-  <string name="captchas_with_provider_title">認証コードは %1$s 【%2$s】 です</string>
-  <string name="captchas_content">確認コードを受け取りクリックしてコピーします</string>
-  <string name="captchas_has_copied">既にクリップボードにコピーされた確認コードはボックスを長く押して貼り付けます</string>
-  <string name="captchas_auto_archive_title">アーカイブの検証コード</string>
-  <string name="captchas_auto_archive_summary">認証コードメッセージを自動的に記録する</string>
-  <string name="captchas_auto_delete_title">検証コードを削除</string>
-  <string name="captchas_auto_delete_summary">クリップボードにコピーされた確認コードを自動的に削除する</string>
+  <!-- Captcha -->
+  <string name="captcha_title">認証コードは%sです</string>
+  <string name="captcha_with_provider_title">認証コードは %1$s 【%2$s】 です</string>
+  <string name="captcha_content">確認コードを受け取りクリックしてコピーします</string>
+  <string name="captcha_has_copied">既にクリップボードにコピーされた確認コードはボックスを長く押して貼り付けます</string>
+  <string name="captcha_auto_archive_title">アーカイブの検証コード</string>
+  <string name="captcha_auto_archive_summary">認証コードメッセージを自動的に記録する</string>
+  <string name="captcha_auto_delete_title">検証コードを削除</string>
+  <string name="captcha_auto_delete_summary">クリップボードにコピーされた確認コードを自動的に削除する</string>
   <string name="archive_category_pref_title">記録</string>
   <string name="public_service_auto_archive_title">サービスメッセージを記録</string>
   <string name="public_service_auto_archive_summary">自動記録メッセージサービス</string>

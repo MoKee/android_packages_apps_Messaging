@@ -1178,18 +1178,18 @@ public class MmsUtils {
         final Context context = Factory.get().getApplicationContext();
         final Resources resources = context.getResources();
         final BuglePrefs prefs = BuglePrefs.getApplicationPrefs();
-        final String mmsAutoDeleteCaptchasKey = resources.getString(R.string.captchas_auto_delete_pref_key);
-        final boolean defaultValue = resources.getBoolean(R.bool.captchas_auto_delete_pref_default);
-        return prefs.getBoolean(mmsAutoDeleteCaptchasKey, defaultValue);
+        final String mmsAutoDeleteCaptchaKey = resources.getString(R.string.captcha_auto_delete_pref_key);
+        final boolean defaultValue = resources.getBoolean(R.bool.captcha_auto_delete_pref_default);
+        return prefs.getBoolean(mmsAutoDeleteCaptchaKey, defaultValue);
     }
 
     public static boolean allowAutoArchiveCaptchaSms(final int subId) {
         final Context context = Factory.get().getApplicationContext();
         final Resources resources = context.getResources();
         final BuglePrefs prefs = BuglePrefs.getSubscriptionPrefs(subId);
-        final String mmsAutoArchiveCaptchasKey = resources.getString(R.string.captchas_auto_archive_pref_key);
-        final boolean defaultValue = resources.getBoolean(R.bool.captchas_auto_archive_pref_default);
-        return prefs.getBoolean(mmsAutoArchiveCaptchasKey, defaultValue);
+        final String mmsAutoArchiveCaptchaKey = resources.getString(R.string.captcha_auto_archive_pref_key);
+        final boolean defaultValue = resources.getBoolean(R.bool.captcha_auto_archive_pref_default);
+        return prefs.getBoolean(mmsAutoArchiveCaptchaKey, defaultValue);
     }
 
     public static boolean allowAutoArchivePublicServiceSms(final int subId) {

@@ -16,13 +16,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">Bekræftelseskoden er %s</string>
-  <string name="captchas_with_provider_title">Bekræftelseskoden er %1$s 【%2$s】</string>
-  <string name="captchas_content">Modtaget en bekræftelseskode, tryk for at kopiere.</string>
-  <string name="captchas_has_copied">Bekræftelseskoden er allerede kopieret til Udklipsholder, langt tryk på indtastningsfeltet for at indsætte.</string>
-  <string name="captchas_auto_archive_title">Arkivér bekræftelseskoder</string>
-  <string name="captchas_auto_archive_summary">Arkivér automatisk bekræftelseskodebeskeder</string>
+  <!-- Captcha -->
+  <string name="captcha_title">Bekræftelseskoden er %s</string>
+  <string name="captcha_with_provider_title">Bekræftelseskoden er %1$s 【%2$s】</string>
+  <string name="captcha_content">Modtaget en bekræftelseskode, tryk for at kopiere.</string>
+  <string name="captcha_has_copied">Bekræftelseskoden er allerede kopieret til Udklipsholder, langt tryk på indtastningsfeltet for at indsætte.</string>
+  <string name="captcha_auto_archive_title">Arkivér bekræftelseskoder</string>
+  <string name="captcha_auto_archive_summary">Arkivér automatisk bekræftelseskodebeskeder</string>
   <string name="archive_category_pref_title">Arkiv</string>
   <string name="public_service_auto_archive_title">Arkiveringstjenestebeskeder</string>
   <string name="public_service_auto_archive_summary">Tjenestebeskeder for automatiske arkiveringer</string>

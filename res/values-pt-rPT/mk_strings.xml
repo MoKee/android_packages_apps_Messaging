@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">O código de verificação é %s</string>
-  <string name="captchas_with_provider_title">O código de verificação é %1$s[%2$s]</string>
-  <string name="captchas_content">Recebeu um código de verificação, clique para o copiar.</string>
-  <string name="captchas_has_copied">O código de verificação já foi copiado para o clipboard, faça um clique longo para colar na caixa de entrada.</string>
-  <string name="captchas_auto_archive_title">Códigos de verificação de arquivo</string>
-  <string name="captchas_auto_archive_summary">Arquivar automaticamente mensagens de código de verificação</string>
-  <string name="captchas_auto_delete_title">Apagar os códigos de verificação</string>
-  <string name="captchas_auto_delete_summary">Excluir automaticamente as mensagens quando os códigos de verificação forem copiados para a área de transferência</string>
+  <!-- Captcha -->
+  <string name="captcha_title">O código de verificação é %s</string>
+  <string name="captcha_with_provider_title">O código de verificação é %1$s[%2$s]</string>
+  <string name="captcha_content">Recebeu um código de verificação, clique para o copiar.</string>
+  <string name="captcha_has_copied">O código de verificação já foi copiado para o clipboard, faça um clique longo para colar na caixa de entrada.</string>
+  <string name="captcha_auto_archive_title">Códigos de verificação de arquivo</string>
+  <string name="captcha_auto_archive_summary">Arquivar automaticamente mensagens de código de verificação</string>
+  <string name="captcha_auto_delete_title">Apagar os códigos de verificação</string>
+  <string name="captcha_auto_delete_summary">Excluir automaticamente as mensagens quando os códigos de verificação forem copiados para a área de transferência</string>
   <string name="archive_category_pref_title">Arquivar</string>
   <string name="public_service_auto_archive_title">Mensagens de serviço de arquivo</string>
   <string name="public_service_auto_archive_summary">Arquivar automaticamente o serviço público</string>

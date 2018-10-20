@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +23,6 @@ public class PendingIntentConstants {
     public static final int SMS_SECONDARY_USER_NOTIFICATION_ID = 1;
     public static final int MSG_SEND_ERROR = 2;
     public static final int SMS_STORAGE_LOW_NOTIFICATION_ID = 3;
-    public static final int CAPTCHAS_NOTIFICATION_ID = 8;
 
     // Request codes
     public static final int UPDATE_NOTIFICATIONS_ALARM_ACTION_ID = 100;

@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">El código de verificación es %s</string>
-  <string name="captchas_with_provider_title">El código de verificación es %1$s 【%2$s】</string>
-  <string name="captchas_content">Has recibido un captcha. Haz clic para copiar.</string>
-  <string name="captchas_has_copied">El Captcha se ha copiado en el portapapeles, presiona sostenidamente sobre el espacio disponible para pegar.</string>
-  <string name="captchas_auto_archive_title">Archivar captcha SMS</string>
-  <string name="captchas_auto_archive_summary">Archivar automáticamente mensajes de código de verificación</string>
-  <string name="captchas_auto_delete_title">Borrar códigos de verificación</string>
-  <string name="captchas_auto_delete_summary">Borrar mensajes automáticamente cuando el código de verificación es copiado al portapapeles</string>
+  <!-- Captcha -->
+  <string name="captcha_title">El código de verificación es %s</string>
+  <string name="captcha_with_provider_title">El código de verificación es %1$s 【%2$s】</string>
+  <string name="captcha_content">Has recibido un captcha. Haz clic para copiar.</string>
+  <string name="captcha_has_copied">El Captcha se ha copiado en el portapapeles, presiona sostenidamente sobre el espacio disponible para pegar.</string>
+  <string name="captcha_auto_archive_title">Archivar captcha SMS</string>
+  <string name="captcha_auto_archive_summary">Archivar automáticamente mensajes de código de verificación</string>
+  <string name="captcha_auto_delete_title">Borrar códigos de verificación</string>
+  <string name="captcha_auto_delete_summary">Borrar mensajes automáticamente cuando el código de verificación es copiado al portapapeles</string>
   <string name="archive_category_pref_title">Archivar</string>
   <string name="public_service_auto_archive_title">Archivar servicio de servicio</string>
   <string name="public_service_auto_archive_summary">Archivar automáticamente mensajes de servicio</string>
