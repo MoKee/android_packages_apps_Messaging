@@ -19,10 +19,4 @@
     <string name="captcha_auto_delete_pref_key" translatable="false">captcha_auto_delete</string>
     <bool name="captcha_auto_delete_pref_default" translatable="false">false</bool>
 
-    <string name="captcha_auto_archive_pref_key" translatable="false">buglesub_captcha_auto_archive</string>
-    <bool name="captcha_auto_archive_pref_default" translatable="false">true</bool>
-
-    <string name="public_service_auto_archive_pref_key" translatable="false">buglesub_public_service_auto_archive</string>
-    <bool name="public_service_auto_archive_pref_default" translatable="false">true</bool>
-
 </resources>

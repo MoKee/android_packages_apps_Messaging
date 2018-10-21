@@ -1182,24 +1182,6 @@ public class MmsUtils {
         return prefs.getBoolean(mmsAutoDeleteCaptchaKey, defaultValue);
     }
 
-    public static boolean allowAutoArchiveCaptchaSms(final int subId) {
-        final Context context = Factory.get().getApplicationContext();
-        final Resources resources = context.getResources();
-        final BuglePrefs prefs = BuglePrefs.getSubscriptionPrefs(subId);
-        final String mmsAutoArchiveCaptchaKey = resources.getString(R.string.captcha_auto_archive_pref_key);
-        final boolean defaultValue = resources.getBoolean(R.bool.captcha_auto_archive_pref_default);
-        return prefs.getBoolean(mmsAutoArchiveCaptchaKey, defaultValue);
-    }
-
-    public static boolean allowAutoArchivePublicServiceSms(final int subId) {
-        final Context context = Factory.get().getApplicationContext();
-        final Resources resources = context.getResources();
-        final BuglePrefs prefs = BuglePrefs.getSubscriptionPrefs(subId);
-        final String mmsAutoArchiveServiceKey = resources.getString(R.string.public_service_auto_archive_pref_key);
-        final boolean defaultValue = resources.getBoolean(R.bool.public_service_auto_archive_pref_default);
-        return prefs.getBoolean(mmsAutoArchiveServiceKey, defaultValue);
-    }
-
     /**
      * Parse the message row id from a message Uri.
      *
