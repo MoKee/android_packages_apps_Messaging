@@ -878,15 +878,6 @@ public class BugleNotifications {
                 PendingIntent captchaIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
                 notifBuilder.setContentIntent(captchaIntent);
-
-                if (MmsUtils.allowAutoArchiveCaptchaSms(convInfo.mSubId)) {
-                    UpdateConversationArchiveStatusAction.archiveConversation(notificationState.mConversationIds.first());
-                }
-            } else {
-                if (MmsUtils.allowAutoArchivePublicServiceSms(convInfo.mSubId)
-                        && PhoneNumberOfflineGeocoder.getPhoneLocation(number).equals("信息服务台")) {
-                    UpdateConversationArchiveStatusAction.archiveConversation(notificationState.mConversationIds.first());
-                }
             }
 
             if (!isCaptchaMessage) {
