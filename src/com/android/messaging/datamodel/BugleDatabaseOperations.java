@@ -571,9 +571,9 @@ public class BugleDatabaseOperations {
 
         // When the conversation gets updated with new messages, unarchive the conversation unless
         // the sender is blocked, or we have been told to keep it archived.
-        if (!keepArchived) {
-            values.put(ConversationColumns.ARCHIVE_STATUS, 0);
-        }
+//         if (!keepArchived) {
+//            values.put(ConversationColumns.ARCHIVE_STATUS, 0);
+//         }
 
         final MessageData message = readMessage(dbWrapper, messageId);
         addSnippetTextAndPreviewToContentValues(message, false /* showDraft */, values);

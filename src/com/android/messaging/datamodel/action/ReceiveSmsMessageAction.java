@@ -38,7 +38,6 @@ import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
-import com.mokee.cloud.location.CloudNumber;
 import com.mokee.cloud.location.LocationInfo;
 import com.mokee.cloud.location.LocationUtils;
 
@@ -187,6 +186,12 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
 
         MessagingContentProvider.notifyMessagesChanged(conversationId);
         MessagingContentProvider.notifyPartsChanged();
+
+
+        // Archive notification category sms
+        if (!PhoneNumberUtils.isValidMobileNumber(address)) {
+            UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
+        }
 
         return message;
     }
