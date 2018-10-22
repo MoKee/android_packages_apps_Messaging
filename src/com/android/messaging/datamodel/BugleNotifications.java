@@ -28,7 +28,6 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.media.AudioManager;
-import android.mokee.location.PhoneNumberOfflineGeocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -56,7 +55,6 @@ import com.android.messaging.datamodel.MessageNotificationState.MultiMessageNoti
 import com.android.messaging.datamodel.action.MarkAsReadAction;
 import com.android.messaging.datamodel.action.MarkAsSeenAction;
 import com.android.messaging.datamodel.action.RedownloadMmsAction;
-import com.android.messaging.datamodel.action.UpdateConversationArchiveStatusAction;
 import com.android.messaging.datamodel.data.ConversationListItemData;
 import com.android.messaging.datamodel.media.AvatarRequestDescriptor;
 import com.android.messaging.datamodel.media.ImageResource;
@@ -866,7 +864,7 @@ public class BugleNotifications {
                 notifBuilder.setContentText(context.getString(R.string.captcha_content));
 
                 final NotificationCompat.Style notifStyle =
-            addWearableVoiceReplyAction(notifBuilder, wearableExtender, notificationState);
+                        new NotificationCompat.BigTextStyle(notifBuilder).bigText(context.getString(R.string.captcha_content));
                 notifBuilder.setStyle(notifStyle);
 
                 Intent pendingIntent = new Intent();
@@ -881,9 +879,9 @@ public class BugleNotifications {
 
             if (!isCaptchaMessage) {
                 addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-                addWearableVoiceReplyAction(notifBuilder, wearableExtender, notificationState);
-            addReplyAction(notifBuilder, wearableExtender, notificationState);
-            addReadAction(notifBuilder, wearableExtender, notificationState);
+                addReplyAction(notifBuilder, wearableExtender, notificationState);
+                addCallAction(notifBuilder, wearableExtender, notificationState);
+                addReadAction(notifBuilder, wearableExtender, notificationState);
             }
         }
 
@@ -926,6 +924,32 @@ public class BugleNotifications {
         }
     }
 
+    private static void addCallAction(final NotificationCompat.Builder notifBuilder,
+            final WearableExtender wearableExtender, final NotificationState notificationState) {
+        if (!(notificationState instanceof MultiMessageNotificationState)) {
+            return;
+        }
+        final MultiMessageNotificationState multiMessageNotificationState =
+                (MultiMessageNotificationState) notificationState;
+        final Context context = Factory.get().getApplicationContext();
+
+        ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+        if (TextUtils.isEmpty(convInfo.mSenderNormalizedDestination)) return;
+
+        Intent callIntent = new Intent(Intent.ACTION_CALL,
+                Uri.parse(UriUtil.SCHEME_TEL + convInfo.mSenderNormalizedDestination));
+        final PendingIntent callPendingIntent = PendingIntent.getActivity(context, 0, callIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        final NotificationCompat.Action.Builder actionBuilder =
+                new NotificationCompat.Action.Builder(R.drawable.ic_wear_call,
+                        context.getString(R.string.notification_call), callPendingIntent);
+        notifBuilder.addAction(actionBuilder.build());
+
+        // Support the action on a wearable device as well
+        wearableExtender.addAction(actionBuilder.build());
+    }
+
     private static void addReplyAction(final NotificationCompat.Builder notifBuilder,
             final WearableExtender wearableExtender, final NotificationState notificationState) {
         if (!(notificationState instanceof MultiMessageNotificationState)) {
@@ -950,12 +974,9 @@ public class BugleNotifications {
                 .getPendingIntentForSendingMessageToConversation(context,
                         conversationId, selfId, requiresMms, requestCode);
 
-        final int replyLabelRes = requiresMms ? R.string.notification_reply_via_mms :
-            R.string.notification_reply_via_sms;
-
         final NotificationCompat.Action.Builder actionBuilder =
                 new NotificationCompat.Action.Builder(R.drawable.ic_wear_reply,
-                        context.getString(replyLabelRes), replyPendingIntent);
+                        context.getString(R.string.notification_reply), replyPendingIntent);
         final String[] choices = context.getResources().getStringArray(
                 R.array.notification_reply_choices);
         final RemoteInput remoteInput = new RemoteInput.Builder(Intent.EXTRA_TEXT).setLabel(
@@ -1046,7 +1067,6 @@ public class BugleNotifications {
                 + "tag = " + notificationTag + ", type = " + type);
     }
 
-        final PendingIntent deletePendingIntent = PendingIntent.getBroadcast(context, 1, deleteIntent,
     // This is the message string used in each line of an inboxStyle notification.
     // TODO: add attachment type
     static CharSequence formatInboxMessage(final String sender,

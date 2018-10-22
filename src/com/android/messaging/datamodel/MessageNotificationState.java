@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -219,6 +220,9 @@ public abstract class MessageNotificationState extends NotificationState {
         // Number of participants
         final int mParticipantCount;
 
+        // Normalized number of the sender
+        final String mSenderNormalizedDestination;
+
         public ConversationLineInfo(final String conversationId,
                 final boolean isGroup,
                 final String groupConversationName,
@@ -231,7 +235,8 @@ public abstract class MessageNotificationState extends NotificationState {
                 final Uri avatarUri,
                 final Uri contactUri,
                 final int subId,
-                final int participantCount) {
+                final int participantCount,
+                final String senderNormalizedDestination) {
             mConversationId = conversationId;
             mIsGroup = isGroup;
             mGroupConversationName = groupConversationName;
@@ -247,6 +252,7 @@ public abstract class MessageNotificationState extends NotificationState {
             mNotificationVibrate = notificationVibrate;
             mSubId = subId;
             mParticipantCount = participantCount;
+            mSenderNormalizedDestination = senderNormalizedDestination;
         }
 
         public int getLatestMessageNotificationType() {
@@ -900,7 +906,8 @@ public abstract class MessageNotificationState extends NotificationState {
                                 avatarUri,
                                 convMessageData.getSenderContactLookupUri(),
                                 subId,
-                                convData.getParticipantCount());
+                                convData.getParticipantCount(),
+                                convMessageData.getSenderNormalizedDestination());
                         convLineInfos.put(convId, currConvInfo);
                     }
                     // Prepare the message line

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015-2016 The MoKee Open Source Project
+ * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,9 @@ package com.android.messaging.receiver;
 import com.android.messaging.R;
 import com.android.messaging.datamodel.BugleNotifications;
 import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
+import com.android.messaging.datamodel.DatabaseHelper.PartColumns;
+import com.android.messaging.datamodel.action.DeleteMessageAction;
+import com.android.messaging.sms.MmsUtils;
 
 import android.content.BroadcastReceiver;
 import android.content.ClipboardManager;
@@ -46,8 +49,13 @@ public class CaptchaReceiver extends BroadcastReceiver {
             clipboardManager.setText(captcha);
             Toast.makeText(context, String.format(context.getString(R.string.captcha_has_copied), captcha), Toast.LENGTH_SHORT).show();
 
-            // Mark thread as read
-            BugleNotifications.markMessagesAsRead(conversationId);
+            if (MmsUtils.allowAutoDeleteCaptchaSms()) {
+                String messageId = extras.getString(PartColumns.MESSAGE_ID);
+                DeleteMessageAction.deleteMessage(messageId);
+            } else {
+                // Mark thread as read
+                BugleNotifications.markMessagesAsRead(conversationId);
+            }
         }
     }
 }

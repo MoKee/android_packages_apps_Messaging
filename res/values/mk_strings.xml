@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2016 The MoKee Open Source Project
+     Copyright (C) 2015-2018 The MoKee Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,5 +28,7 @@
     <string name="archive_category_pref_title">Archive</string>
     <string name="public_service_auto_archive_title">Archive service messages</string>
     <string name="public_service_auto_archive_summary">Automatically archive service messages</string>
-    <string name="notification_delete">Delete</string>
+    <!-- quick message option -->
+    <string name="notification_reply">Reply</string>
+    <string name="notification_call">Call</string>
 </resources>
