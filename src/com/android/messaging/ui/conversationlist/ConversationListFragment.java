@@ -20,10 +20,19 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteQueryBuilder;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewGroupCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -44,6 +53,7 @@ import android.widget.ImageView;
 import com.android.messaging.R;
 import com.android.messaging.annotation.VisibleForAnimation;
 import com.android.messaging.datamodel.DataModel;
+import com.android.messaging.datamodel.DatabaseHelper;
 import com.android.messaging.datamodel.binding.Binding;
 import com.android.messaging.datamodel.binding.BindingBase;
 import com.android.messaging.datamodel.data.ConversationListData;
@@ -76,6 +86,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
     private boolean mArchiveMode;
     private boolean mBlockedAvailable;
     private boolean mForwardMessageMode;
+    private Drawable mBadgeDrawable;
 
     public interface ConversationListFragmentHost {
         public void onConversationClick(final ConversationListData listData,
@@ -292,6 +303,39 @@ public class ConversationListFragment extends Fragment implements ConversationLi
         if (mListState != null && cursor != null && oldCursor == null) {
             mRecyclerView.getLayoutManager().onRestoreInstanceState(mListState);
         }
+        if (!mArchiveMode && !mForwardMessageMode) {
+            new Thread(() -> {
+                SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+                queryBuilder.setTables(ConversationListItemData.getConversationListView());
+                queryBuilder.appendWhere(DatabaseHelper.ConversationColumns.ARCHIVE_STATUS + " = 1 AND " + DatabaseHelper.MessageColumns.READ + " = 0");
+                final Cursor countCursor = DataModel.get().getDatabase().query(queryBuilder, new String[] { DatabaseHelper.ConversationColumns._ID }, null, null, null, null, null, null);
+                if (countCursor != null) {
+                    if (countCursor.getCount() > 0) {
+                        drawUnreadBadge(String.valueOf(countCursor.getCount()));
+                    } else {
+                        mBadgeDrawable = null;
+                    }
+                    getActivity().invalidateOptionsMenu();
+                }
+            }).start();
+        }
+    }
+
+    public void drawUnreadBadge(String count) {
+        Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaint.setTextAlign(Paint.Align.CENTER);
+        mPaint.setColor(ContextCompat.getColor(getActivity(), R.color.action_bar_background_color_dark));
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_archive_small_light).copy(Bitmap.Config.ARGB_8888, true);
+        Canvas canvas = new Canvas(bitmap);
+        canvas.drawBitmap(bitmap, 0, 0, mPaint);
+        float offset = bitmap.getWidth() * 0.2f;
+        float radius = bitmap.getWidth() / 5.5f;
+        canvas.drawCircle(bitmap.getWidth() - offset, bitmap.getHeight() - offset, radius, mPaint);
+        Paint textPaint = new Paint(mPaint);
+        textPaint.setTextSize(radius * 1.5f);
+        textPaint.setColor(Color.WHITE);
+        canvas.drawText(count, bitmap.getWidth() - offset, bitmap.getHeight() - offset / 2, textPaint);
+        mBadgeDrawable = new BitmapDrawable(getResources(), bitmap);
     }
 
     @Override
@@ -323,6 +367,11 @@ public class ConversationListFragment extends Fragment implements ConversationLi
         final MenuItem archive = menu.findItem(R.id.action_show_archived);
         if (archive != null) {
             archive.setVisible(true);
+            if (mBadgeDrawable != null) {
+                archive.setIcon(mBadgeDrawable);
+            } else {
+                archive.setIcon(R.drawable.ic_archive_small_light);
+            }
         }
     }
 
