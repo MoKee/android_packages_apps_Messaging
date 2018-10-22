@@ -36,6 +36,7 @@ import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.OsUtil;
+import com.mokee.utils.PhoneNumberUtils;
 
 /**
  * Action used to "receive" an incoming message
@@ -170,6 +171,12 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
 
         MessagingContentProvider.notifyMessagesChanged(conversationId);
         MessagingContentProvider.notifyPartsChanged();
+
+
+        // Archive notification category sms
+        if (!PhoneNumberUtils.isValidMobileNumber(address)) {
+            UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
+        }
 
         return message;
     }
