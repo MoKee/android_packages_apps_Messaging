@@ -19,8 +19,8 @@
   <!-- Captcha -->
   <string name="captcha_title">Doğrulama kodu %s</string>
   <string name="captcha_with_provider_title">Doğrulama kodu %1$s 【%2$s】</string>
-  <string name="captcha_content">Bir doğrulama kodu alındı, kopyalamak için tıkla.</string>
-  <string name="captcha_has_copied">Doğrulama kodu panoya kopyalanmış halde, yapıştırmak için basılı tutun.</string>
+  <string name="captcha_content">Doğrulama kodu alındı, kopyalamak için dokunun.</string>
+  <string name="captcha_has_copied">Doğrulama kodu panoya kopyalandı, yapıştırmak için giriş kutusuna uzun basın.</string>
   <string name="captcha_auto_archive_title">Arşiv doğrulama kodu</string>
   <string name="captcha_auto_archive_summary">Sms doğrulama kodunu otomatik olarak arşivle</string>
   <string name="captcha_auto_delete_title">Doğrulama kodlarını sil</string>

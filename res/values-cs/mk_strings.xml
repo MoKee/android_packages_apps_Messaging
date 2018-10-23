@@ -17,10 +17,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Captcha -->
-  <string name="captcha_title">Captcha je %s</string>
-  <string name="captcha_with_provider_title">Captcha je %1$s 【%2$s】</string>
-  <string name="captcha_content">Přijata zpráva s captcha, klepněte zkopírovat.</string>
-  <string name="captcha_has_copied">Captcha je již zkopírována do schránky, pro vložení dlouze podržte prst na vstupním poli.</string>
+  <string name="captcha_title">Ověřovací kód je %s</string>
+  <string name="captcha_with_provider_title">Ověřovací kód je %1$s 【%2$s】</string>
+  <string name="captcha_content">Přijata zpráva s ověřovacím kódem, klepněte zkopírovat.</string>
+  <string name="captcha_has_copied">Ověřovací kód je již zkopírován do schránky, pro vložení dlouze podržte prst na vstupním poli.</string>
   <string name="captcha_auto_archive_title">Archiv ověřovacích kódů</string>
   <string name="captcha_auto_archive_summary">Automaticky archivovat ověřovací kód zprávy</string>
   <string name="captcha_auto_delete_title">Vymazat ověřovací kódy</string>
