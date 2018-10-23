@@ -329,23 +329,19 @@ public class ConversationListFragment extends Fragment implements ConversationLi
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            final Activity activity = getActivity();
+            // TODO: Add the supportInvalidateOptionsMenu call to the host activity.
+            if (activity == null || !(activity instanceof BugleActionBarActivity)) {
+                return;
+            }
             if (msg.what > 0) {
                 drawUnreadBadge(String.valueOf(msg.what));
             } else {
                 mBadgeDrawable = null;
             }
-            invalidateOptionsMenu();
+            ((BugleActionBarActivity) activity).supportInvalidateOptionsMenu();
         }
     };
-
-    private void invalidateOptionsMenu() {
-        final Activity activity = getActivity();
-        // TODO: Add the supportInvalidateOptionsMenu call to the host activity.
-        if (activity == null || !(activity instanceof BugleActionBarActivity)) {
-            return;
-        }
-        ((BugleActionBarActivity) activity).supportInvalidateOptionsMenu();
-    }
 
     public void drawUnreadBadge(String count) {
         Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
