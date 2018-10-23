@@ -16,15 +16,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">Il captcha è %s</string>
-  <string name="captchas_with_provider_title">Il captcha è %1$s 【%2$s】</string>
-  <string name="captchas_content">Ricevuto un captcha, clicca per copiarlo.</string>
-  <string name="captchas_has_copied">Captcha già copiato negli appunti, premi a lungo la casella di input per incollarlo.</string>
-  <string name="captchas_auto_archive_title">Archivia captcha</string>
-  <string name="captchas_auto_archive_summary">Archivia automaticamente i messaggi captcha</string>
-  <string name="captchas_auto_delete_title">Cancella captcha</string>
-  <string name="captchas_auto_delete_summary">Cancella automaticamente i messaggi quando i codici di verifica son copiati negli appunti</string>
+  <!-- Captcha -->
+  <string name="captcha_title">Il captcha è %s</string>
+  <string name="captcha_with_provider_title">Il captcha è %1$s 【%2$s】</string>
+  <string name="captcha_content">Ricevuto un messaggio captcha, click per copiare.</string>
+  <string name="captcha_has_copied">Captcha già copiato negli Appunti, premere a lungo la casella di input per incollare.</string>
+  <string name="captcha_auto_archive_title">Archivia captcha</string>
+  <string name="captcha_auto_archive_summary">Archivia automaticamente i messaggi captcha</string>
+  <string name="captcha_auto_delete_title">Cancella captcha</string>
+  <string name="captcha_auto_delete_summary">Cancella automaticamente i messaggi quando i codici di verifica son copiati negli appunti</string>
   <string name="archive_category_pref_title">Archivio</string>
   <string name="public_service_auto_archive_title">Archivia messaggi di servizio</string>
   <string name="public_service_auto_archive_summary">Archivia automaticamente i messaggi di servizio</string>
