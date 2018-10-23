@@ -16,13 +16,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captchas -->
-  <string name="captchas_title">Το Captcha είναι %s</string>
-  <string name="captchas_with_provider_title">Το Captcha είναι %1$s 【%2$s】</string>
-  <string name="captchas_content">Λάβατε ένα μήνυμα captcha, κάντε κλικ για να αντιγράψετε.</string>
-  <string name="captchas_has_copied">Το Captcha έχει ήδη αντιγραφεί στο πρόχειρο, πατήστε μόνιμα το πλαίσιο εισόδου για να επικολλήσετε.</string>
-  <string name="captchas_auto_archive_title">Αρχειοθέτηση κωδικών επαλήθευσης</string>
-  <string name="captchas_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων κωδικών επαλήθευσης</string>
+  <!-- Captcha -->
+  <string name="captcha_title">Το Captcha είναι %s</string>
+  <string name="captcha_with_provider_title">Το Captcha είναι %1$s 【%2$s】</string>
+  <string name="captcha_content">Λάβατε ένα μήνυμα captcha, κάντε κλικ για να αντιγράψετε.</string>
+  <string name="captcha_has_copied">Το Captcha έχει ήδη αντιγραφεί στο πρόχειρο, πατήστε μόνιμα το πλαίσιο εισόδου για να επικολλήσετε.</string>
+  <string name="captcha_auto_archive_title">Αρχειοθέτηση κωδικών επαλήθευσης</string>
+  <string name="captcha_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων κωδικών επαλήθευσης</string>
+  <string name="captcha_auto_delete_title">Διαγραφή των κωδικών επαλήθευσης</string>
   <string name="archive_category_pref_title">Αρχειοθέτηση</string>
   <string name="public_service_auto_archive_title">Αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
   <string name="public_service_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
