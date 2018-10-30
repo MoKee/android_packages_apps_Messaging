@@ -827,8 +827,9 @@ public class BugleNotifications {
 
             if (!isCaptchaMessage) {
                 addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-                addWearableVoiceReplyAction(wearableExtender, notificationState);
+                addReplyAction(notifBuilder, wearableExtender, notificationState);
                 addCallAction(notifBuilder, wearableExtender, notificationState);
+                addReadAction(notifBuilder, wearableExtender, notificationState);
             }
         }
 
@@ -898,7 +899,7 @@ public class BugleNotifications {
         wearableExtender.addAction(actionBuilder.build());
     }
 
-    private static void addWearableVoiceReplyAction(
+    private static void addReplyAction(final NotificationCompat.Builder notifBuilder,
             final WearableExtender wearableExtender, final NotificationState notificationState) {
         if (!(notificationState instanceof MultiMessageNotificationState)) {
             return;
@@ -932,7 +933,23 @@ public class BugleNotifications {
                 setChoices(choices)
                 .build();
         actionBuilder.addRemoteInput(remoteInput);
+        notifBuilder.addAction(actionBuilder.build());
+
+        // Support the action on a wearable device as well
         wearableExtender.addAction(actionBuilder.build());
+    }
+
+    private static void addReadAction(final NotificationCompat.Builder notifBuilder,
+            final WearableExtender wearableExtender, final NotificationState notificationState) {
+        final Context context = Factory.get().getApplicationContext();
+        final PendingIntent readPendingIntent = notificationState.getReadIntent();
+        final NotificationCompat.Action.Builder readActionBuilder =
+                new NotificationCompat.Action.Builder(R.drawable.ic_wear_read,
+                        context.getString(R.string.notification_mark_as_read), readPendingIntent);
+        notifBuilder.addAction(readActionBuilder.build());
+
+        // Support the action on a wearable device as well
+        wearableExtender.addAction(readActionBuilder.build());
     }
 
     private static void addDownloadMmsAction(final NotificationCompat.Builder notifBuilder,
