@@ -16,11 +16,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captcha -->
-  <string name="captcha_title">کد تایید %s میباشد</string>
-  <string name="captcha_with_provider_title">کد تایید %1$s 【%2$s】 است</string>
-  <string name="captcha_content">کد تایید دریافت شد, برای کپی کردن کلیک کنید.</string>
-  <string name="archive_category_pref_title">آرشیو</string>
-  <!-- quick message option -->
-  <string name="notification_delete">حذف</string>
+    <!-- Captcha -->
+    <string name="captcha_title">کد تایید %s میباشد</string>
+    <string name="captcha_with_provider_title">کد تایید %1$s 【%2$s】 است</string>
+    <string name="captcha_content">کد تایید دریافت شد, برای کپی کردن کلیک کنید.</string>
+    <string name="archive_category_pref_title">آرشیو</string>
+    <!-- quick message option -->
+    <string name="notification_delete">حذف</string>
 </resources>

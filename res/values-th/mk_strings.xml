@@ -16,10 +16,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captcha -->
-  <!-- quick message option -->
-  <string name="notification_reply">ตอบกลับ</string>
-  <string name="notification_call">โทรออก</string>
-  <string name="notification_read">อ่าน</string>
-  <string name="notification_delete">ลบ</string>
+    <!-- Captcha -->
+    <!-- quick message option -->
+    <string name="notification_reply">ตอบกลับ</string>
+    <string name="notification_call">โทรออก</string>
+    <string name="notification_read">อ่าน</string>
+    <string name="notification_delete">ลบ</string>
 </resources>

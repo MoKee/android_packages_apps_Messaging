@@ -16,8 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Captcha -->
-  <!-- quick message option -->
-  <string name="notification_call">Oproep</string>
-  <string name="notification_delete">Vee uit</string>
+    <!-- Captcha -->
+    <!-- quick message option -->
+    <string name="notification_call">Oproep</string>
+    <string name="notification_delete">Vee uit</string>
 </resources>
