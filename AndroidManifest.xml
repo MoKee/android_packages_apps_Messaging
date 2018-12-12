@@ -358,8 +358,6 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.MarkAsReadReceiver" />
-
         <receiver android:name=".receiver.DeleteMessageReceiver" />
 
         <receiver android:name=".receiver.CaptchaReceiver" />

@@ -172,7 +172,6 @@ public class ReceiveSmsMessageAction extends Action implements Parcelable {
         MessagingContentProvider.notifyMessagesChanged(conversationId);
         MessagingContentProvider.notifyPartsChanged();
 
-
         // Archive notification category sms
         if (!PhoneNumberUtils.isValidMobileNumber(address)) {
             UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
