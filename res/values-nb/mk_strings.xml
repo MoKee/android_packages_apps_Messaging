@@ -19,5 +19,4 @@
     <!-- Captcha -->
     <!-- quick message option -->
     <string name="notification_call">Anrop</string>
-    <string name="notification_delete">Slett</string>
 </resources>

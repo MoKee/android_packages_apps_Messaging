@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Odpovedať</string>
     <string name="notification_call">Volanie</string>
-    <string name="notification_read">Prečítať</string>
-    <string name="notification_delete">Vymazať</string>
 </resources>

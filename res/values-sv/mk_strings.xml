@@ -27,6 +27,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Svara</string>
     <string name="notification_call">Ring</string>
-    <string name="notification_read">Läs</string>
-    <string name="notification_delete">Ta bort</string>
 </resources>

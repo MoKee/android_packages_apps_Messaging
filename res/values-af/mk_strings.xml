@@ -19,5 +19,4 @@
     <!-- Captcha -->
     <!-- quick message option -->
     <string name="notification_call">Oproep</string>
-    <string name="notification_delete">Vee uit</string>
 </resources>

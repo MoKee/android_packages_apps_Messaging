@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Odgovori</string>
     <string name="notification_call">Klic</string>
-    <string name="notification_read">Preberi</string>
-    <string name="notification_delete">Izbriši</string>
 </resources>

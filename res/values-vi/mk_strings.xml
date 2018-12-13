@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Trả lời</string>
     <string name="notification_call">Gọi</string>
-    <string name="notification_read">Đọc</string>
-    <string name="notification_delete">Xóa</string>
 </resources>

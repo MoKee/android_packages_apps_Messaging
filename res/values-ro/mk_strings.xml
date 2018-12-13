@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Răspunde</string>
     <string name="notification_call">Apel</string>
-    <string name="notification_read">Citește</string>
-    <string name="notification_delete">Șterge</string>
 </resources>

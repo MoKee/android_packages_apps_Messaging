@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Rispondi</string>
     <string name="notification_call">Chiamate</string>
-    <string name="notification_read">Letto</string>
-    <string name="notification_delete">Elimina</string>
 </resources>

@@ -19,5 +19,4 @@
     <!-- Captcha -->
     <!-- quick message option -->
     <string name="notification_call">Позив</string>
-    <string name="notification_delete">Избриши</string>
 </resources>

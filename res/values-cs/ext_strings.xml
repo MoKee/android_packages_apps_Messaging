@@ -31,4 +31,5 @@
     <string name="mediapicker_audio_list_item_selected_content_description">Vybraný zvuk</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">Klepnutím vyberte</string>
     <string name="mediapicker_audio_list_title_selection">Vybráno: <xliff:g id="COUNT">%d</xliff:g></string>
+    <!-- Mark message as read -->
 </resources>

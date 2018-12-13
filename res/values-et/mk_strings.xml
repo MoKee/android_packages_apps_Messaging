@@ -19,6 +19,4 @@
     <!-- Captcha -->
     <!-- quick message option -->
     <string name="notification_reply">Vasta</string>
-    <string name="notification_read">Loe</string>
-    <string name="notification_delete">Kustuta</string>
 </resources>

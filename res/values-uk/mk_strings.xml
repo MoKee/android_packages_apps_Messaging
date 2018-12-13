@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Відповісти</string>
     <string name="notification_call">Виклик</string>
-    <string name="notification_read">Прочитати</string>
-    <string name="notification_delete">Видалити</string>
 </resources>

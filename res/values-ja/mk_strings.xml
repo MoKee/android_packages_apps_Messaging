@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">返信</string>
     <string name="notification_call">通話</string>
-    <string name="notification_read">読み込む</string>
-    <string name="notification_delete">削除</string>
 </resources>

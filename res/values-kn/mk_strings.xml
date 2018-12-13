@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">ಪ್ರತ್ಯುತ್ತರ</string>
     <string name="notification_call">ಕರೆ</string>
-    <string name="notification_read">ಓದು</string>
-    <string name="notification_delete">ಅಳಿಸು</string>
 </resources>

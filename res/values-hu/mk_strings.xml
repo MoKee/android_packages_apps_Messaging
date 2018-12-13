@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Válasz</string>
     <string name="notification_call">Hívás</string>
-    <string name="notification_read">Elolvas</string>
-    <string name="notification_delete">Törlés</string>
 </resources>

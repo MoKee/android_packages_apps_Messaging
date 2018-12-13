@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Sumagot</string>
     <string name="notification_call">Tawagan</string>
-    <string name="notification_read">Basahin</string>
-    <string name="notification_delete">Tanggalin</string>
 </resources>

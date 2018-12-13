@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">رد</string>
     <string name="notification_call">اتّصل</string>
-    <string name="notification_read">اقرأ</string>
-    <string name="notification_delete">حذف</string>
 </resources>

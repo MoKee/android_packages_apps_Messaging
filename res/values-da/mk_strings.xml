@@ -28,6 +28,4 @@
     <string name="public_service_auto_archive_summary">Tjenestebeskeder for automatiske arkiveringer</string>
     <!-- quick message option -->
     <string name="notification_call">Opkald</string>
-    <string name="notification_read">Tekst</string>
-    <string name="notification_delete">Slet</string>
 </resources>

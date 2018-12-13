@@ -24,5 +24,4 @@
     <string name="archive_category_pref_title">Archyvas</string>
     <string name="public_service_auto_archive_title">Archyvuoti viešą paslaugą</string>
     <!-- quick message option -->
-    <string name="notification_delete">Ištrinti</string>
 </resources>

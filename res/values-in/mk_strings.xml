@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Balas</string>
     <string name="notification_call">Panggilan</string>
-    <string name="notification_read">Baca</string>
-    <string name="notification_delete">Hapus</string>
 </resources>

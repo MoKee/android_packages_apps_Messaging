@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Yanıtla</string>
     <string name="notification_call">Arama</string>
-    <string name="notification_read">Oku</string>
-    <string name="notification_delete">Sil</string>
 </resources>

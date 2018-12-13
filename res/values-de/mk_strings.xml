@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">Antworten</string>
     <string name="notification_call">Anruf</string>
-    <string name="notification_read">Lesen</string>
-    <string name="notification_delete">Löschen</string>
 </resources>

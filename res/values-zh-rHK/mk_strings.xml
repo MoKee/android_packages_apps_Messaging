@@ -31,6 +31,4 @@
     <!-- quick message option -->
     <string name="notification_reply">回覆</string>
     <string name="notification_call">撥打</string>
-    <string name="notification_read">已讀</string>
-    <string name="notification_delete">刪除</string>
 </resources>

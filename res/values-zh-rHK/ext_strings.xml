@@ -31,4 +31,5 @@
     <string name="mediapicker_audio_list_item_selected_content_description">已選取的音訊</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">輕觸即可選擇</string>
     <string name="mediapicker_audio_list_title_selection">已選取 <xliff:g id="count">%d</xliff:g> 個</string>
+    <!-- Mark message as read -->
 </resources>
