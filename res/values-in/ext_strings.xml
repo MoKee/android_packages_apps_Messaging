@@ -32,4 +32,5 @@
     <string name="mediapicker_audio_list_item_unselected_content_description">Ketuk untuk memilih</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> terpilih</string>
     <!-- Mark message as read -->
+    <string name="notification_mark_as_read">Tandai sudah dibaca</string>
 </resources>
