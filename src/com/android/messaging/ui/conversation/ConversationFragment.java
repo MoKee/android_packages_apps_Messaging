@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1541,7 +1540,6 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
         final int themeColor = ConversationDrawables.get().getConversationThemeColor();
         actionBar.setBackgroundDrawable(new ColorDrawable(themeColor));
         UiUtils.setStatusBarColor(getActivity(), themeColor);
-        UiUtils.setNavigationBarColor(getActivity(), themeColor);
     }
 
     public void updateActionBar(final ActionBar actionBar) {

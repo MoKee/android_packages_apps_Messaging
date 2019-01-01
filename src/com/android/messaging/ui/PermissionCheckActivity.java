@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2015-2018 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +53,6 @@ public class PermissionCheckActivity extends Activity {
 
         setContentView(R.layout.permission_check_activity);
         UiUtils.setStatusBarColor(this, getColor(R.color.permission_check_activity_background));
-        UiUtils.setNavigationBarColor(this, getColor(R.color.permission_check_activity_background));
 
         findViewById(R.id.exit).setOnClickListener(new OnClickListener() {
             @Override

@@ -35,7 +35,6 @@
          <item name="colorPrimary">@color/action_bar_background_color</item>
          <item name="colorPrimaryDark">@color/action_bar_background_color_dark</item>
          <item name="colorAccent">@color/mk_accent</item>
-         <item name="android:navigationBarColor">@color/action_bar_background_color_dark</item>
          <item name="android:textColorHighlight">@color/text_highlight_color</item>
          <item name="actionBarStyle">@style/BugleActionBar</item>
          <item name="apnPreferenceStyle">@style/ApnPreference</item>
@@ -63,7 +62,6 @@
     <style name="BugleTheme.ArchivedConversationListActivity" parent="BugleTheme.ConversationListActivity">
         <item name="colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="colorPrimaryDark">@color/archived_conversation_action_bar_background_color_dark</item>
-        <item name="android:navigationBarColor">@color/archived_conversation_action_bar_background_color_dark</item>
     </style>
 
     <style name="BugleTheme.SettingsActivity" parent="BugleTheme">
