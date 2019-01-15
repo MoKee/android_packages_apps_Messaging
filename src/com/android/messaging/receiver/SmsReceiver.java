@@ -237,7 +237,7 @@ public final class SmsReceiver extends BroadcastReceiver {
                         @Override
                         public void onResult(String phoneNumber, String result, CloudNumber.PhoneType phoneType, CloudNumber.EngineType engineType) {
                         }
-                    }, context, true);
+                    }, context);
                 }
             }
         }
