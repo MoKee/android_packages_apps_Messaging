@@ -854,7 +854,7 @@ public class BugleNotifications {
             String content = ((MultiMessageNotificationState) notificationState).mContent.toString();
             String number = convInfo.mSenderNormalizedDestination;
             CaptchaInfo captchaInfo = CaptchaUtils.getCaptchaInfo(content, number);
-            if (captchaInfo != null) {
+            if (captchaInfo != null && !TextUtils.isEmpty(captchaInfo.getCaptcha())) {
                 isCaptchaMessage = true;
                 String captchaTitle = TextUtils.isEmpty(captchaInfo.getProvider())
                         ? String.format(context.getString(R.string.captcha_title), captchaInfo.getCaptcha())
