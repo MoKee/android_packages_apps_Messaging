@@ -34,4 +34,6 @@
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Označit jako přečtené</string>
     <!-- Notification channel -->
+    <string name="notification_channel_title">Zprávy</string>
+    <string name="background_worker_notif">Kontrola zpráv\u2026</string>
 </resources>
