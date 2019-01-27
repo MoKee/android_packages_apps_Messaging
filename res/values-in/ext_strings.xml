@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> terpilih</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Tandai sudah dibaca</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">Pesan</string>
-    <string name="background_worker_notif">Memeriksa pesan\u2026</string>
 </resources>

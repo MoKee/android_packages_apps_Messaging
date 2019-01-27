@@ -33,5 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> aukeratuta</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Markatu irakurrita bezala</string>
-    <!-- Notification channel -->
 </resources>

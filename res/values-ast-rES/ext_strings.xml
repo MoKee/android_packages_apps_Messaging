@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> elementos esbillaos</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Marcar como lleíu</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">Mensaxes</string>
-    <string name="background_worker_notif">Verificando mensaxes\u2026</string>
 </resources>

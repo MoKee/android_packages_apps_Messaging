@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> ausgewählt</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Als gelesen markieren</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">Nachrichten</string>
-    <string name="background_worker_notif">Prüfe auf Nachrichten\u2026</string>
 </resources>

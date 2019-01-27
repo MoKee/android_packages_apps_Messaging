@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> izbranih</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Označi kot prebrano</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">Sporočila</string>
-    <string name="background_worker_notif">Preverjanje sporočil \u2026</string>
 </resources>

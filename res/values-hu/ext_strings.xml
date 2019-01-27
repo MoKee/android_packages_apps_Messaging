@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="COUNT">%d</xliff:g> kiválasztva</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Megjelölés olvasottként</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">Üzenetek</string>
-    <string name="background_worker_notif">Üzenetek ellenőrzése\u2026</string>
 </resources>

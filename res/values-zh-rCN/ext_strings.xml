@@ -33,7 +33,4 @@
     <string name="mediapicker_audio_list_title_selection">已选择 <xliff:g id="count">%d</xliff:g> 项。</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">标记为已读</string>
-    <!-- Notification channel -->
-    <string name="notification_channel_title">短信</string>
-    <string name="background_worker_notif">正在检查信息\u2026</string>
 </resources>
