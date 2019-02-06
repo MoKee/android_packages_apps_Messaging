@@ -51,10 +51,6 @@
     <uses-permission android:name="mokee.permission.READ_PHONE_LOCATION" />
     <uses-permission android:name="mokee.permission.WRITE_PHONE_LOCATION" />
 
-    <!-- To preserve access to Service#startForeground on P+. See b/72116995.
-         This is for Play Store accounting and is not user visible. -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-
     <!--  Optional features -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.front" android:required="false" />
@@ -335,8 +331,12 @@
 
 
         <!-- Action Services -->
-        <service android:name=".datamodel.action.ActionServiceImpl"/>
-        <service android:name=".datamodel.action.BackgroundWorkerService"/>
+        <service android:name=".datamodel.action.ActionServiceImpl"
+                 android:permission="android.permission.BIND_JOB_SERVICE"
+                 android:exported="true"/>
+        <service android:name=".datamodel.action.BackgroundWorkerService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"
+                 android:exported="true"/>
 
         <!-- Sms and Mms related items -->
 

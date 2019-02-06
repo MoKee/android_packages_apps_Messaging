@@ -18,7 +18,6 @@
 package com.android.messaging.datamodel;
 
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -88,6 +87,8 @@ import com.android.messaging.util.ThreadUtil;
 import com.android.messaging.util.UriUtil;
 import com.mokee.mms.captcha.CaptchaInfo;
 import com.mokee.mms.captcha.CaptchaUtils;
+
+import org.lineageos.messaging.util.NotifUtils;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -1065,8 +1066,11 @@ public class BugleNotifications {
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         notification.defaults |= Notification.DEFAULT_LIGHTS;
 
-        createChannel();
-
+        Context context = Factory.get().getApplicationContext();
+        NotifUtils.createNotificationChannel(context,
+                CHANNEL_ID,
+                R.string.notification_channel_messages_title,
+                NotificationManager.IMPORTANCE_DEFAULT);
         notificationManager.notify(notificationTag, type, notification);
 
         LogUtil.i(TAG, "Notifying for conversation " + conversationId + "; "
@@ -1306,25 +1310,14 @@ public class BugleNotifications {
                 .setSound(UriUtil.getUriForResourceId(context, R.raw.message_failure));
 
         final String tag = context.getPackageName() + ":emergency_sms_error";
-        createChannel();
+
+        NotifUtils.createNotificationChannel(context,
+                CHANNEL_ID,
+                R.string.notification_channel_messages_title,
+                NotificationManager.IMPORTANCE_DEFAULT);
         NotificationManagerCompat.from(context).notify(
                 tag,
                 PendingIntentConstants.MSG_SEND_ERROR,
                 builder.build());
-    }
-
-    private static void createChannel() {
-        Context context = Factory.get().getApplicationContext();
-        NotificationManager manager = context.getSystemService(NotificationManager.class);
-
-        NotificationChannel existing = manager.getNotificationChannel(CHANNEL_ID);
-        if (existing != null) {
-            return;
-        }
-
-        String title = context.getString(R.string.notification_channel_title);
-        NotificationChannel newChannel = new NotificationChannel(CHANNEL_ID,
-                title, NotificationManager.IMPORTANCE_DEFAULT);
-        manager.createNotificationChannel(newChannel);
     }
 }
