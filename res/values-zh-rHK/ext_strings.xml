@@ -33,4 +33,5 @@
     <string name="mediapicker_audio_list_title_selection">已選取 <xliff:g id="count">%d</xliff:g> 個</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">標記為已讀</string>
+    <!-- Notification channel -->
 </resources>

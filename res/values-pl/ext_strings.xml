@@ -33,4 +33,5 @@
     <string name="mediapicker_audio_list_title_selection">Wybrano: <xliff:g id="count">%d</xliff:g></string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Oznacz jako przeczytane</string>
+    <!-- Notification channel -->
 </resources>

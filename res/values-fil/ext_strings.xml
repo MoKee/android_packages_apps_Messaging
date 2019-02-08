@@ -32,4 +32,5 @@
     <string name="mediapicker_audio_list_item_unselected_content_description">I-tap upang makapili</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g>napili na</string>
     <!-- Mark message as read -->
+    <!-- Notification channel -->
 </resources>

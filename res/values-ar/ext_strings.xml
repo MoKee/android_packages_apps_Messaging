@@ -33,4 +33,6 @@
     <string name="mediapicker_audio_list_title_selection">تم تحديد <xliff:g id="Count">%d</xliff:g></string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">تاشير كمقروء</string>
+    <!-- Notification channel -->
+    <string name="notification_channel_messages_title">الرسائل</string>
 </resources>

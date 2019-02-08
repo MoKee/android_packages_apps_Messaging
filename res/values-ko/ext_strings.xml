@@ -33,4 +33,5 @@
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g>개 선택됨</string>
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">읽음으로 표시</string>
+    <!-- Notification channel -->
 </resources>

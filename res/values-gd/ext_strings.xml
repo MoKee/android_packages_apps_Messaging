@@ -30,4 +30,5 @@
     <string name="mediapicker_audio_list_title">Tagh fuaim</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> air a thaghadh</string>
     <!-- Mark message as read -->
+    <!-- Notification channel -->
 </resources>

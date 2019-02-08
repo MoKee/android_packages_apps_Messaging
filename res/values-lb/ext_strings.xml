@@ -30,4 +30,5 @@
     <string name="mediapicker_audio_list_title">Toun auswielen</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> ausgewielt</string>
     <!-- Mark message as read -->
+    <!-- Notification channel -->
 </resources>
