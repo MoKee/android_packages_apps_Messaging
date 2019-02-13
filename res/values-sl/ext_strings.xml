@@ -34,4 +34,5 @@
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">Označi kot prebrano</string>
     <!-- Notification channel -->
+    <string name="notification_channel_messages_title">Sporočila</string>
 </resources>
