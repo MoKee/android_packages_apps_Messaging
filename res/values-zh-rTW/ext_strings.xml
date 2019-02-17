@@ -34,4 +34,5 @@
     <!-- Mark message as read -->
     <string name="notification_mark_as_read">標記為已讀</string>
     <!-- Notification channel -->
+    <string name="notification_channel_messages_title">訊息</string>
 </resources>
