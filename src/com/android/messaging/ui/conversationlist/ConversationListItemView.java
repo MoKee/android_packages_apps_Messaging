@@ -131,7 +131,6 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private TextView mLocationTextView;
     private ContactIconView mContactIconView;
     private ImageView mContactCheckmarkView;
-    private ImageView mNotificationBellView;
     private ImageView mFailedStatusIconView;
     private ImageView mCrossSwipeArchiveLeftImageView;
     private ImageView mCrossSwipeArchiveRightImageView;
@@ -158,7 +157,6 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mLocationTextView = (TextView) findViewById(R.id.conversation_location);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
-        mNotificationBellView = (ImageView) findViewById(R.id.conversation_notification_bell);
         mFailedStatusIconView = (ImageView) findViewById(R.id.conversation_failed_status_icon);
         mCrossSwipeArchiveLeftImageView = (ImageView) findViewById(R.id.crossSwipeArchiveIconLeft);
         mCrossSwipeArchiveRightImageView =
@@ -513,9 +511,6 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mImagePreviewView.setOnClickListener(previewClickListener);
         mAudioAttachmentView.setOnLongClickListener(this);
         mAudioAttachmentView.setVisibility(audioPreviewVisiblity);
-
-        final int notificationBellVisiblity = mData.getNotificationEnabled() ? GONE : VISIBLE;
-        mNotificationBellView.setVisibility(notificationBellVisiblity);
 
         if (PrefsUtils.isSwipeRightToDeleteEnabled()) {
             mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
