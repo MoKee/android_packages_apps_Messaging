@@ -32,5 +32,6 @@
     <string name="mediapicker_audio_list_item_unselected_content_description">Краніся, каб абраць</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> абрана</string>
     <!-- Mark message as read -->
+    <string name="notification_mark_as_read">Пазначыць як прачытанае</string>
     <!-- Notification channel -->
 </resources>
