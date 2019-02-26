@@ -18,8 +18,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Swipe to delete conversation -->
-    <string name="swipe_to_delete_conversation_pref_title">Прагарнi, каб выдалiць</string>
-    <string name="swipe_to_delete_conversation_pref_summary">Прагарнi направа, каб выдалiць размову</string>
+    <string name="swipe_to_delete_conversation_pref_title">Правядзіце для выдалення</string>
+    <string name="swipe_to_delete_conversation_pref_summary">Правядзіце направа каб выдаліць дыялог</string>
     <!-- Show emoticons -->
     <string name="show_emoticons_pref_title">Доступ да смайлаў</string>
     <string name="show_emoticons_pref_summary">Паказаць смайлы на клавіятуры</string>
@@ -32,4 +32,5 @@
     <string name="mediapicker_audio_list_item_unselected_content_description">Краніся, каб абраць</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> абрана</string>
     <!-- Mark message as read -->
+    <string name="notification_mark_as_read">Пазначыць як прачытанае</string>
 </resources>
