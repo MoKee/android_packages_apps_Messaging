@@ -17,13 +17,10 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Swipe to delete conversation -->
     <string name="swipe_to_delete_conversation_pref_title">Potiahnite na vymazanie</string>
     <string name="swipe_to_delete_conversation_pref_summary">Potiahnite prstom vpravo pre vymazanie konverzácie</string>
-    <!-- Show emoticons -->
     <string name="show_emoticons_pref_title">Prístup k emotikonám</string>
     <string name="show_emoticons_pref_summary">Zobraziť klávesu pre emotikony na klávesnici</string>
-    <!-- Audio Library Tab for MMS attachments -->
     <string name="mediapicker_galleryChooserDescription_cm">Vyberte obrázky alebo videá z tohoto zariadenia</string>
     <string name="mediapicker_audioListChooserDescription">Vyberte zvukové súbory z tohoto zariadenia</string>
     <string name="mediapicker_gallery_image_item_attachment_too_large">Nedá sa pripojiť video. Bola prekročená maximálna veľkosť správy.</string>
@@ -31,6 +28,5 @@
     <string name="mediapicker_audio_list_item_selected_content_description">Vybraný zvuk</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">Kliknutím vyberte</string>
     <string name="mediapicker_audio_list_title_selection">Vybrané: <xliff:g id="count">%d</xliff:g></string>
-    <!-- Mark message as read -->
     <string name="notification_mark_as_read">Označiť ako prečítané</string>
 </resources>

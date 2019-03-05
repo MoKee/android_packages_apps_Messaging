@@ -17,13 +17,10 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Swipe to delete conversation -->
     <string name="swipe_to_delete_conversation_pref_title">Проведите для удаления</string>
     <string name="swipe_to_delete_conversation_pref_summary">Проведите пальцем вправо, чтобы удалить беседу</string>
-    <!-- Show emoticons -->
     <string name="show_emoticons_pref_title">Доступ к смайликам</string>
     <string name="show_emoticons_pref_summary">Показывать кнопку смайликов на клавиатуре</string>
-    <!-- Audio Library Tab for MMS attachments -->
     <string name="mediapicker_galleryChooserDescription_cm">Выберите изображения или видео с этого устройства</string>
     <string name="mediapicker_audioListChooserDescription">Выберите аудиофайлы с этого устройства</string>
     <string name="mediapicker_gallery_image_item_attachment_too_large">Не удается прикрепить видео. Превышен максимальный размер сообщения.</string>
@@ -31,6 +28,5 @@
     <string name="mediapicker_audio_list_item_selected_content_description">Выбранный аудиофайл</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">Нажмите для выбора</string>
     <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> выбрано</string>
-    <!-- Mark message as read -->
     <string name="notification_mark_as_read">Пометить как прочитанное</string>
 </resources>
