@@ -819,7 +819,7 @@ public class BugleNotifications {
                 pendingIntent.putExtra("captcha", captchaInfo.getCaptcha());
                 pendingIntent.putExtra(PartColumns.MESSAGE_ID, convInfo.getLatestMessageId());
                 pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, notificationState.mConversationIds.first());
-                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, 0, pendingIntent,
+                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, Integer.valueOf(notificationState.mConversationIds.first()), pendingIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
                 notifBuilder.setContentIntent(captchaIntent);
             }
