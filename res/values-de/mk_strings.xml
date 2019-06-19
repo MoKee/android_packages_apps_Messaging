@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Captcha ist %s</string>
     <string name="captcha_with_provider_title">Captcha ist %1$s 【%2$s】</string>
     <string name="captcha_content">Captcha-Nachricht erhalten, klicken Sie auf kopieren.</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">Archiv</string>
     <string name="public_service_auto_archive_title">Archiviere Service Mitteilungen</string>
     <string name="public_service_auto_archive_summary">Archiviere Service Mitteliungen automatisch</string>
-    <!-- quick message option -->
     <string name="notification_reply">Antworten</string>
     <string name="notification_call">Anruf</string>
 </resources>

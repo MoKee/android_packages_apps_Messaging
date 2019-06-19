@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Код: %s</string>
     <string name="captcha_with_provider_title">Код: %1$s 【%2$s】</string>
     <string name="captcha_content">Отримано повідомлення з кодом, натисніть щоб скопіювати.</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">Архів</string>
     <string name="public_service_auto_archive_title">Архівування сервісних повідомлень</string>
     <string name="public_service_auto_archive_summary">Автоматичне архівування сервісних повідомлень</string>
-    <!-- quick message option -->
     <string name="notification_reply">Відповісти</string>
     <string name="notification_call">Виклик</string>
 </resources>
