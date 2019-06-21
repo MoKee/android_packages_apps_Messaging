@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">El codi de verificació es %s</string>
     <string name="captcha_with_provider_title">El codi de verificació és %1$s 【%2$s】</string>
     <string name="captcha_content">S\'ha rebut un codi de verificació, feu clic per copiar.</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">Arxiu</string>
     <string name="public_service_auto_archive_title">Servei d\'arxiuament de missatges</string>
     <string name="public_service_auto_archive_summary">Servei d\'arxivament automàtica de missatges</string>
-    <!-- quick message option -->
     <string name="notification_reply">Respondre</string>
     <string name="notification_call">Trucada</string>
 </resources>

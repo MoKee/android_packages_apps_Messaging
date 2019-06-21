@@ -16,7 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
-    <!-- quick message option -->
+    <string name="captcha_title">Kontrollkood on %s</string>
+    <string name="captcha_with_provider_title">Kontrollkood on %1$s 【%2$s】</string>
+    <string name="captcha_content">Saadud kinnituskoodi, kopeerimiseks klõpsake.</string>
+    <string name="captcha_has_copied">Kontrollkood on juba lõikepuhvrisse kopeeritud, vajutage kleepimiseks pikka aega sisestuskasti.</string>
+    <string name="captcha_auto_archive_title">Arhiveerige kinnituskoodid</string>
+    <string name="captcha_auto_archive_summary">Arhiveerige kinnituskoodid automaatselt</string>
+    <string name="captcha_auto_delete_title">Kustutage kinnituskoodid</string>
+    <string name="captcha_auto_delete_summary">Automaatne sõnumite kustutamine, kui kinnituskoodid kopeeritakse lõikepuhvrisse</string>
+    <string name="archive_category_pref_title">Arhiiv</string>
+    <string name="public_service_auto_archive_title">Arhiveerige teenuseteated</string>
+    <string name="public_service_auto_archive_summary">Arhiveeri teenuseteated automaatselt</string>
     <string name="notification_reply">Vasta</string>
+    <string name="notification_call">Helista</string>
 </resources>

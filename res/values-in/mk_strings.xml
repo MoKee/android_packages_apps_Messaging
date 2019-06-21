@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Kode verifikasi adalah %s</string>
     <string name="captcha_with_provider_title">Kode verifikasi adalah %1$s 【%2$s】</string>
     <string name="captcha_content">Menerima kode verifikasi, klik untuk menyalin.</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">Arsip</string>
     <string name="public_service_auto_archive_title">Arsip pesan layanan</string>
     <string name="public_service_auto_archive_summary">Otomatis arsip pesan layanan</string>
-    <!-- quick message option -->
     <string name="notification_reply">Balas</string>
     <string name="notification_call">Panggilan</string>
 </resources>

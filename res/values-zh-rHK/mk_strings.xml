@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">驗證碼為 %s</string>
     <string name="captcha_with_provider_title">驗證碼為 %1$s 【%2$s】</string>
     <string name="captcha_content">收到一條驗證短訊，請輕按複製。</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">封存</string>
     <string name="public_service_auto_archive_title">封存服務訊息</string>
     <string name="public_service_auto_archive_summary">自動封存公共服務</string>
-    <!-- quick message option -->
     <string name="notification_reply">回覆</string>
     <string name="notification_call">撥打</string>
 </resources>

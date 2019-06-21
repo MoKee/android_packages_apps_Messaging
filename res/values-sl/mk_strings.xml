@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Koda za preverjanje je %s</string>
     <string name="captcha_with_provider_title">Koda za preverjanje je %1$s 【%2$s】</string>
     <string name="captcha_content">Prejeli ste kodo za preverjanje, kliknite, če jo želite kopirati.</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">Arhiv</string>
     <string name="public_service_auto_archive_title">Arhiviraj obvestila storitev</string>
     <string name="public_service_auto_archive_summary">Samodejno arhiviranje obvestil storitev</string>
-    <!-- quick message option -->
     <string name="notification_reply">Odgovori</string>
     <string name="notification_call">Klic</string>
 </resources>

@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Captcha는 %s</string>
     <string name="captcha_with_provider_title">Captcha는 %1$s 【%2$s】</string>
     <string name="captcha_content">보안 문자 메시지를 복사하려면 클릭하세요</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">보관함</string>
     <string name="public_service_auto_archive_title">서비스 메시지 보관</string>
     <string name="public_service_auto_archive_summary">자동으로 서비스 메시지 보관</string>
-    <!-- quick message option -->
     <string name="notification_reply">답장</string>
     <string name="notification_call">통화</string>
 </resources>

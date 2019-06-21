@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Verification code is %s</string>
     <string name="captcha_with_provider_title">Verification code is %1$s 【%2$s】</string>
     <string name="captcha_content">Received a verification code, click to copy.</string>
@@ -24,5 +23,4 @@
     <string name="captcha_auto_archive_title">Archive verification codes</string>
     <string name="captcha_auto_archive_summary">Automatically archive verification code messages</string>
     <string name="archive_category_pref_title">Archive</string>
-    <!-- quick message option -->
 </resources>

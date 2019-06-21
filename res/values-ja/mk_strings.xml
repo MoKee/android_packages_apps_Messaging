@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">認証コードは%sです</string>
     <string name="captcha_with_provider_title">認証コードは %1$s 【%2$s】 です</string>
     <string name="captcha_content">確認コードを受け取りクリックしてコピーします</string>
@@ -28,7 +27,6 @@
     <string name="archive_category_pref_title">記録</string>
     <string name="public_service_auto_archive_title">サービスメッセージを記録</string>
     <string name="public_service_auto_archive_summary">自動記録メッセージサービス</string>
-    <!-- quick message option -->
     <string name="notification_reply">返信</string>
     <string name="notification_call">通話</string>
 </resources>

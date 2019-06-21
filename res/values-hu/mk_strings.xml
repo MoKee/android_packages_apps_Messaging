@@ -16,19 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
-    <string name="captcha_title">A képkód %s</string>
-    <string name="captcha_with_provider_title">A képkód %1$s 【%2$s】</string>
-    <string name="captcha_content">Képkódot kapott. Koppintson a másoláshoz.</string>
-    <string name="captcha_has_copied">Képkód már a vágólapon van. Hosszan érintse meg a beviteli mezőt a beillesztéshez.</string>
-    <string name="captcha_auto_archive_title">SMS képkód archiválása</string>
-    <string name="captcha_auto_archive_summary">Sms captcha automatikus archiválása</string>
+    <string name="captcha_title">Az ellenőrzőkód %s</string>
+    <string name="captcha_with_provider_title">Az ellenőrzőkód %1$s 【%2$s】</string>
+    <string name="captcha_content">Ellenőrzőkódot kapott. Koppintson a másoláshoz.</string>
+    <string name="captcha_has_copied">Az ellenőrzőkód már a vágólapon van. Hosszan érintse meg a beviteli mezőt a beillesztéshez.</string>
+    <string name="captcha_auto_archive_title">SMS-ellenőrzőkód archiválása</string>
+    <string name="captcha_auto_archive_summary">Automatikusan archiválja az SMS-ellenőrzőkódokat</string>
     <string name="captcha_auto_delete_title">Ellenőrzőkódok törlése</string>
     <string name="captcha_auto_delete_summary">Az üzenetek automatikusan törlődni fognak, amint kimásolta a vágólapra az ellenőrzőkódot</string>
     <string name="archive_category_pref_title">Archívum</string>
-    <string name="public_service_auto_archive_title">Archív közszolgálati</string>
-    <string name="public_service_auto_archive_summary">Automatikus archiválás a közszolgálati</string>
-    <!-- quick message option -->
+    <string name="public_service_auto_archive_title">Archívált üzenetek</string>
+    <string name="public_service_auto_archive_summary">Automatikusan archivált üzenetek</string>
     <string name="notification_reply">Válasz</string>
     <string name="notification_call">Hívás</string>
 </resources>

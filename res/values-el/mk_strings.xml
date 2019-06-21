@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Captcha -->
     <string name="captcha_title">Το Captcha είναι %s</string>
     <string name="captcha_with_provider_title">Το Captcha είναι %1$s 【%2$s】</string>
     <string name="captcha_content">Λάβατε ένα μήνυμα captcha, κάντε κλικ για να αντιγράψετε.</string>
@@ -27,7 +26,6 @@
     <string name="archive_category_pref_title">Αρχειοθέτηση</string>
     <string name="public_service_auto_archive_title">Αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
     <string name="public_service_auto_archive_summary">Αυτόματη αρχειοθέτηση μηνυμάτων υπηρεσίας</string>
-    <!-- quick message option -->
     <string name="notification_reply">Απάντηση</string>
     <string name="notification_call">Κλήση</string>
 </resources>
