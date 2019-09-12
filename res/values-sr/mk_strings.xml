@@ -16,5 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="captcha_title">Верификациони код %s</string>
+    <string name="captcha_with_provider_title">Верификациони код %1$s 【%2$s】</string>
+    <string name="captcha_content">Примљен је верификациони код, кликни за копирање.</string>
+    <string name="captcha_has_copied">Валидациона порука је већ копирана на таблу, дуго притисните оквир да бисте налепили.</string>
+    <string name="captcha_auto_archive_title">Архиирај верификациони код</string>
+    <string name="captcha_auto_archive_summary">Аутоматски архивирај поруке са верификационим кодом</string>
+    <string name="captcha_auto_delete_title">Обриши верификациони код</string>
+    <string name="captcha_auto_delete_summary">Аутоматски обриши поруке са верификационим кодом после копирања у клиборд</string>
+    <string name="archive_category_pref_title">Архивирање</string>
+    <string name="public_service_auto_archive_title">Архивирање сервисних порука</string>
+    <string name="public_service_auto_archive_summary">Аутоматско архивирање сервисних порука</string>
+    <string name="notification_reply">Узврати</string>
     <string name="notification_call">Позив</string>
 </resources>
