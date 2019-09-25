@@ -51,7 +51,7 @@ import com.android.messaging.ui.UIIntents;
 import com.android.messaging.ui.conversation.ConversationActivity;
 import com.android.messaging.util.Assert;
 
-import org.lineageos.messaging.util.NotifUtils;
+import org.mokee.messaging.util.NotifUtils;
 
 import java.util.ArrayList;
 import java.util.List;

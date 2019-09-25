@@ -37,7 +37,7 @@ import com.android.messaging.util.Assert;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.widget.WidgetConversationProvider;
 
-import org.lineageos.messaging.util.NotifUtils;
+import org.mokee.messaging.util.NotifUtils;
 
 import java.util.ArrayList;
 import java.util.List;

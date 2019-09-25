@@ -88,7 +88,7 @@ import com.android.messaging.util.UriUtil;
 import com.mokee.mms.captcha.CaptchaInfo;
 import com.mokee.mms.captcha.CaptchaUtils;
 
-import org.lineageos.messaging.util.NotifUtils;
+import org.mokee.messaging.util.NotifUtils;
 
 import java.util.HashSet;
 import java.util.Iterator;
