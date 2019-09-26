@@ -796,9 +796,10 @@ public class BugleNotifications {
                     (MultiMessageNotificationState) notificationState);
 
             boolean isCaptchaMessage = false;
-            final ConversationLineInfo convInfo =
-                    ((MultiMessageNotificationState) notificationState).mConvList.mConvInfos.get(0);
-            String content = ((MultiMessageNotificationState) notificationState).mContent.toString();
+            final MultiMessageNotificationState multiMessageNotificationState =
+                    (MultiMessageNotificationState) notificationState;
+            final ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+            String content = multiMessageNotificationState.mContent.toString();
             String number = convInfo.mSenderNormalizedDestination;
             CaptchaInfo captchaInfo = CaptchaUtils.getCaptchaInfo(content, number);
             if (captchaInfo != null && !TextUtils.isEmpty(captchaInfo.getCaptcha())) {
@@ -819,7 +820,7 @@ public class BugleNotifications {
                 pendingIntent.putExtra("captcha", captchaInfo.getCaptcha());
                 pendingIntent.putExtra(PartColumns.MESSAGE_ID, convInfo.getLatestMessageId());
                 pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, notificationState.mConversationIds.first());
-                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, Integer.valueOf(notificationState.mConversationIds.first()), pendingIntent,
+                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, multiMessageNotificationState.getCaptchIntentRequestCode(), pendingIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
                 notifBuilder.setContentIntent(captchaIntent);
             }
@@ -885,7 +886,8 @@ public class BugleNotifications {
 
         Intent callIntent = new Intent(Intent.ACTION_CALL,
                 Uri.parse(UriUtil.SCHEME_TEL + convInfo.mSenderNormalizedDestination));
-        final PendingIntent callPendingIntent = PendingIntent.getActivity(context, 0, callIntent,
+        final PendingIntent callPendingIntent = PendingIntent.getActivity(context,
+                multiMessageNotificationState.getCallIntentRequestCode(), callIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         final NotificationCompat.Action.Builder actionBuilder =
