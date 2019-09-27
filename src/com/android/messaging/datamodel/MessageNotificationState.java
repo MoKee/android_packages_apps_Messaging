@@ -353,8 +353,8 @@ public abstract class MessageNotificationState extends NotificationState {
         return getBaseExtraRequestCode() + CALL_INTENT_REQUEST_CODE_OFFSET;
     }
 
-    public int getCaptchIntentRequestCode() {
-        return getBaseExtraRequestCode() + CAPTCHA_INTENT_REQUEST_CODE_OFFSET;
+    public int getCaptchaIntentRequestCode() {
+        return getBaseExtraRequestCode() + Integer.valueOf(mConversationIds.first()) + CAPTCHA_INTENT_REQUEST_CODE_OFFSET;
     }
 
     @Override
