@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2019 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -571,9 +572,9 @@ public class BugleDatabaseOperations {
 
         // When the conversation gets updated with new messages, unarchive the conversation unless
         // the sender is blocked, or we have been told to keep it archived.
-        if (!keepArchived) {
-            values.put(ConversationColumns.ARCHIVE_STATUS, 0);
-        }
+//         if (!keepArchived) {
+//            values.put(ConversationColumns.ARCHIVE_STATUS, 0);
+//         }
 
         final MessageData message = readMessage(dbWrapper, messageId);
         addSnippetTextAndPreviewToContentValues(message, false /* showDraft */, values);
