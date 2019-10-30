@@ -127,6 +127,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private TextView mSnippetTextView;
     private TextView mSubjectTextView;
     private TextView mTimestampTextView;
+    private TextView mLocationTextView;
     private ContactIconView mContactIconView;
     private ImageView mContactCheckmarkView;
     private ImageView mFailedStatusIconView;
@@ -152,6 +153,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mSubjectTextView = (TextView) findViewById(R.id.conversation_subject);
         mWorkProfileIconView = (ImageView) findViewById(R.id.work_profile_icon);
         mTimestampTextView = (TextView) findViewById(R.id.conversation_timestamp);
+        mLocationTextView = (TextView) findViewById(R.id.conversation_location);
         mContactIconView = (ContactIconView) findViewById(R.id.conversation_icon);
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
         mFailedStatusIconView = (ImageView) findViewById(R.id.conversation_failed_status_icon);
@@ -200,6 +202,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
             mConversationNameView.setTextColor(mListItemUnreadColor);
             mConversationNameView.setTypeface(mListItemUnreadTypeface);
         }
+        mLocationTextView.setTextColor(mListItemReadColor);
 
         final String conversationName = mData.getName();
 
@@ -436,6 +439,10 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                 mTimestampTextView.setText(formattedTimestamp);
             }
         }
+
+        String location = mData.getLocation();
+        if (!TextUtils.isEmpty(location))
+            mLocationTextView.setText(location);
 
         final boolean isSelected = mHostInterface.isConversationSelected(mData.getConversationId());
         setSelected(isSelected);
