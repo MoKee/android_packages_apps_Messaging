@@ -23,8 +23,6 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_USE_AAPT2 := true
 
-LOCAL_JAVA_LIBRARIES := mokee-cloud
-
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     androidx.media_media \
@@ -69,7 +67,7 @@ endif
 
 LOCAL_PACKAGE_NAME := messaging
 
-LOCAL_SDK_VERSION := current
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 LOCAL_PRODUCT_MODULE := true
 
