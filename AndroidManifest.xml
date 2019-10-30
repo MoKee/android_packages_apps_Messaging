@@ -56,6 +56,10 @@
     <uses-feature android:name="android.hardware.microphone" android:required="false" />
     <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
 
+    <!--  Phone Location -->
+    <uses-permission android:name="mokee.permission.READ_PHONE_LOCATION" />
+    <uses-permission android:name="mokee.permission.WRITE_PHONE_LOCATION" />
+
     <application
         android:name="com.android.messaging.BugleApplication"
         android:allowBackup="false"
