@@ -828,6 +828,7 @@ public class BugleNotifications {
             if (!isCaptchaMessage) {
                 addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
                 addReplyAction(notifBuilder, wearableExtender, notificationState);
+                addCallAction(notifBuilder, wearableExtender, notificationState);
                 addReadAction(notifBuilder, wearableExtender, notificationState);
             }
         }
@@ -869,6 +870,33 @@ public class BugleNotifications {
         if (page != null) {
             wearableExtender.addPage(page);
         }
+    }
+
+    private static void addCallAction(final NotificationCompat.Builder notifBuilder,
+            final WearableExtender wearableExtender, final NotificationState notificationState) {
+        if (!(notificationState instanceof MultiMessageNotificationState)) {
+            return;
+        }
+        final MultiMessageNotificationState multiMessageNotificationState =
+                (MultiMessageNotificationState) notificationState;
+        final Context context = Factory.get().getApplicationContext();
+
+        ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+        if (TextUtils.isEmpty(convInfo.mSenderNormalizedDestination)) return;
+
+        Intent callIntent = new Intent(Intent.ACTION_CALL,
+                Uri.parse(UriUtil.SCHEME_TEL + convInfo.mSenderNormalizedDestination));
+        final PendingIntent callPendingIntent = PendingIntent.getActivity(context,
+                multiMessageNotificationState.getCallIntentRequestCode(), callIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        final NotificationCompat.Action.Builder actionBuilder =
+                new NotificationCompat.Action.Builder(R.drawable.ic_wear_call,
+                        context.getString(R.string.notification_call), callPendingIntent);
+        notifBuilder.addAction(actionBuilder.build());
+
+        // Support the action on a wearable device as well
+        wearableExtender.addAction(actionBuilder.build());
     }
 
     private static void addReplyAction(final NotificationCompat.Builder notifBuilder,
