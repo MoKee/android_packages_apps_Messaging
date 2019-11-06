@@ -23,4 +23,5 @@
     <string name="captcha_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
     <!-- quick message option -->
     <string name="notification_reply">回复</string>
+    <string name="notification_call">拨打</string>
 </resources>

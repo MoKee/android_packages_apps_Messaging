@@ -94,8 +94,9 @@ public abstract class MessageNotificationState extends NotificationState {
     private static final int MAX_CHARACTERS_IN_GROUP_NAME = 30;
 
     private static final int REPLY_INTENT_REQUEST_CODE_OFFSET = 0;
+    private static final int CALL_INTENT_REQUEST_CODE_OFFSET = 1;
     private static final int CAPTCHA_INTENT_REQUEST_CODE_OFFSET = 2;
-    private static final int NUM_EXTRA_REQUEST_CODES_NEEDED = 1;
+    private static final int NUM_EXTRA_REQUEST_CODES_NEEDED = 3;
     protected String mTickerSender = null;
     protected CharSequence mTickerText = null;
     protected String mTitle = null;
@@ -330,6 +331,10 @@ public abstract class MessageNotificationState extends NotificationState {
 
     public int getReplyIntentRequestCode() {
         return getBaseExtraRequestCode() + REPLY_INTENT_REQUEST_CODE_OFFSET;
+    }
+
+    public int getCallIntentRequestCode() {
+        return getBaseExtraRequestCode() + CALL_INTENT_REQUEST_CODE_OFFSET;
     }
 
     public int getCaptchaIntentRequestCode() {

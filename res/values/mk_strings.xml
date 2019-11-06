@@ -24,4 +24,5 @@
     <string name="captcha_auto_delete_summary">Automatically delete messages when verification codes copied to the clipboard</string>
     <!-- quick message option -->
     <string name="notification_reply">Reply</string>
+    <string name="notification_call">Call</string>
 </resources>
