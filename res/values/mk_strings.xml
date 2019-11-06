@@ -15,6 +15,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Captcha -->
+    <string name="captcha_title">Verification code is %s</string>
+    <string name="captcha_with_provider_title">Verification code is %1$s 【%2$s】</string>
+    <string name="captcha_content">Received a verification code, click to copy.</string>
+    <string name="captcha_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
+    <string name="captcha_auto_delete_title">Delete verification codes</string>
+    <string name="captcha_auto_delete_summary">Automatically delete messages when verification codes copied to the clipboard</string>
     <!-- quick message option -->
     <string name="notification_reply">Reply</string>
 </resources>
