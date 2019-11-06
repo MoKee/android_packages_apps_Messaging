@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2018 The MoKee Open Source Project
+     Copyright (C) 2015-2019 The MoKee Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,19 +15,13 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Captcha -->
     <string name="captcha_title">Verification code is %s</string>
     <string name="captcha_with_provider_title">Verification code is %1$s 【%2$s】</string>
     <string name="captcha_content">Received a verification code, click to copy.</string>
     <string name="captcha_has_copied">Verification code already copied to the clipboard, long press your input box to paste.</string>
-    <string name="captcha_auto_archive_title">Archive verification codes</string>
-    <string name="captcha_auto_archive_summary">Automatically archive verification code messages</string>
     <string name="captcha_auto_delete_title">Delete verification codes</string>
     <string name="captcha_auto_delete_summary">Automatically delete messages when verification codes copied to the clipboard</string>
-    <string name="archive_category_pref_title">Archive</string>
-    <string name="public_service_auto_archive_title">Archive service messages</string>
-    <string name="public_service_auto_archive_summary">Automatically archive service messages</string>
     <!-- quick message option -->
     <string name="notification_reply">Reply</string>
     <string name="notification_call">Call</string>
