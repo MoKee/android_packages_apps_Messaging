@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <resources>
-    <color name="ext_accent">#FF9800</color>
+    <color name="ext_accent">@color/primary_color</color>
     <color name="button_text">#000000</color>
 
     <color name="navigation_bar_bg">@android:color/white</color>
