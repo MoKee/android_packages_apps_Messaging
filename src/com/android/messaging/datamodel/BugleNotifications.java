@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2019 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,6 +48,8 @@ import android.text.style.TextAppearanceSpan;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
+import com.android.messaging.datamodel.DatabaseHelper.ConversationColumns;
+import com.android.messaging.datamodel.DatabaseHelper.PartColumns;
 import com.android.messaging.datamodel.MessageNotificationState.BundledMessageNotificationState;
 import com.android.messaging.datamodel.MessageNotificationState.ConversationLineInfo;
 import com.android.messaging.datamodel.MessageNotificationState.MultiConversationNotificationState;
@@ -62,6 +65,7 @@ import com.android.messaging.datamodel.media.MediaResourceManager;
 import com.android.messaging.datamodel.media.MessagePartVideoThumbnailRequestDescriptor;
 import com.android.messaging.datamodel.media.UriImageRequestDescriptor;
 import com.android.messaging.datamodel.media.VideoThumbnailRequest;
+import com.android.messaging.receiver.CaptchaReceiver;
 import com.android.messaging.sms.MmsSmsUtils;
 import com.android.messaging.sms.MmsUtils;
 import com.android.messaging.ui.UIIntents;
@@ -82,6 +86,9 @@ import com.android.messaging.util.PendingIntentConstants;
 import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.ThreadUtil;
 import com.android.messaging.util.UriUtil;
+
+import com.mokee.mms.captcha.CaptchaInfo;
+import com.mokee.mms.captcha.CaptchaUtils;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -787,8 +794,41 @@ public class BugleNotifications {
 
             maybeAddWearableConversationLog(wearableExtender,
                     (MultiMessageNotificationState) notificationState);
-            addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-            addWearableVoiceReplyAction(wearableExtender, notificationState);
+
+            boolean isCaptchaMessage = false;
+            final MultiMessageNotificationState multiMessageNotificationState =
+                    (MultiMessageNotificationState) notificationState;
+            final ConversationLineInfo convInfo = multiMessageNotificationState.mConvList.mConvInfos.get(0);
+            String content = multiMessageNotificationState.mContent.toString();
+            String number = convInfo.mSenderNormalizedDestination;
+            CaptchaInfo captchaInfo = CaptchaUtils.getCaptchaInfo(content, number);
+            if (captchaInfo != null && !TextUtils.isEmpty(captchaInfo.getCaptcha())) {
+                isCaptchaMessage = true;
+                String captchaTitle = TextUtils.isEmpty(captchaInfo.getProvider())
+                        ? String.format(context.getString(R.string.captcha_title), captchaInfo.getCaptcha())
+                        : String.format(context.getString(R.string.captcha_with_provider_title), captchaInfo.getCaptcha(), captchaInfo.getProvider());
+                notifBuilder.setContentTitle(captchaTitle);
+                notifBuilder.setTicker(captchaTitle);
+                notifBuilder.setContentText(context.getString(R.string.captcha_content));
+
+                final NotificationCompat.Style notifStyle =
+                        new NotificationCompat.BigTextStyle(notifBuilder).bigText(context.getString(R.string.captcha_content));
+                notifBuilder.setStyle(notifStyle);
+
+                Intent pendingIntent = new Intent();
+                pendingIntent.setClass(context, CaptchaReceiver.class);
+                pendingIntent.putExtra("captcha", captchaInfo.getCaptcha());
+                pendingIntent.putExtra(PartColumns.MESSAGE_ID, convInfo.getLatestMessageId());
+                pendingIntent.putExtra(ConversationColumns.SMS_THREAD_ID, notificationState.mConversationIds.first());
+                PendingIntent captchaIntent = PendingIntent.getBroadcast(context, multiMessageNotificationState.getCaptchaIntentRequestCode(), pendingIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+                notifBuilder.setContentIntent(captchaIntent);
+            }
+
+            if (!isCaptchaMessage) {
+                addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
+                addWearableVoiceReplyAction(wearableExtender, notificationState);
+            }
         }
 
         // Apply the wearable options and build & post the notification
