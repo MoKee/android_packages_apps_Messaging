@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The Android Open Source Project
+ * Copyright (C) 2015-2019 The MoKee Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1172,6 +1173,15 @@ public class MmsUtils {
             }
         }
         return false;
+    }
+
+    public static boolean allowAutoDeleteCaptchaSms() {
+        final Context context = Factory.get().getApplicationContext();
+        final Resources resources = context.getResources();
+        final BuglePrefs prefs = BuglePrefs.getApplicationPrefs();
+        final String mmsAutoDeleteCaptchaKey = resources.getString(R.string.captcha_auto_delete_pref_key);
+        final boolean defaultValue = resources.getBoolean(R.bool.captcha_auto_delete_pref_default);
+        return prefs.getBoolean(mmsAutoDeleteCaptchaKey, defaultValue);
     }
 
     /**
