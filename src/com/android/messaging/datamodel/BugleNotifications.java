@@ -855,12 +855,9 @@ public class BugleNotifications {
                 .getPendingIntentForSendingMessageToConversation(context,
                         conversationId, selfId, requiresMms, requestCode);
 
-        final int replyLabelRes = requiresMms ? R.string.notification_reply_via_mms :
-            R.string.notification_reply_via_sms;
-
         final NotificationCompat.Action.Builder actionBuilder =
                 new NotificationCompat.Action.Builder(R.drawable.ic_wear_reply,
-                        context.getString(replyLabelRes), replyPendingIntent);
+                        context.getString(R.string.notification_reply), replyPendingIntent);
         final String[] choices = context.getResources().getStringArray(
                 R.array.notification_reply_choices);
         final RemoteInput remoteInput = new RemoteInput.Builder(Intent.EXTRA_TEXT).setLabel(
