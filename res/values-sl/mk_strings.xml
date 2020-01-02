@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="captcha_title">验证码 %s</string>
-    <string name="captcha_with_provider_title">验证码 %1$s 【%2$s】</string>
-    <string name="captcha_content">系统获取到一条验证短信，点击完成复制。</string>
-    <string name="captcha_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
-    <string name="captcha_auto_delete_title">删除验证码短信</string>
-    <string name="captcha_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
-    <string name="notification_reply">回复</string>
-    <string name="notification_call">拨打</string>
+    <string name="captcha_title">Koda za preverjanje je %s</string>
+    <string name="captcha_with_provider_title">Koda za preverjanje je %1$s 【%2$s】</string>
+    <string name="captcha_content">Prejeli ste kodo za preverjanje, kliknite, če jo želite kopirati.</string>
+    <string name="captcha_has_copied">Kodo za preverjanje ste že kopirali v odložišče, dlje zadržite v vnosnem polju za prilepi.</string>
+    <string name="captcha_auto_delete_title">Brisanje kod za preverjanje</string>
+    <string name="captcha_auto_delete_summary">Samodejno brisanje sporočila, ko so kode za preverjanje kopirane v odložišče</string>
+    <string name="notification_reply">Odgovori</string>
+    <string name="notification_call">Klic</string>
 </resources>
