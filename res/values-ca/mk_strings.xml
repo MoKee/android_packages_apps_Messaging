@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="captcha_title">验证码 %s</string>
-    <string name="captcha_with_provider_title">验证码 %1$s 【%2$s】</string>
-    <string name="captcha_content">系统获取到一条验证短信，点击完成复制。</string>
-    <string name="captcha_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
-    <string name="captcha_auto_delete_title">删除验证码短信</string>
-    <string name="captcha_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
-    <string name="notification_reply">回复</string>
-    <string name="notification_call">拨打</string>
+    <string name="captcha_title">El codi de verificació es %s</string>
+    <string name="captcha_with_provider_title">El codi de verificació és %1$s 【%2$s】</string>
+    <string name="captcha_content">S\'ha rebut un codi de verificació, feu clic per copiar.</string>
+    <string name="captcha_has_copied">El codi de verificació ja s\'ha copiat al portapapers, manteniu press el quadre d\'entrada per enganxar.</string>
+    <string name="captcha_auto_delete_title">Suprimir els codis de verificació</string>
+    <string name="captcha_auto_delete_summary">Suprimeix automàticament els missatges quan els codis de verificació es copiïn</string>
+    <string name="notification_reply">Respondre</string>
+    <string name="notification_call">Trucada</string>
 </resources>

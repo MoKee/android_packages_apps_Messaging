@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="captcha_title">验证码 %s</string>
-    <string name="captcha_with_provider_title">验证码 %1$s 【%2$s】</string>
-    <string name="captcha_content">系统获取到一条验证短信，点击完成复制。</string>
-    <string name="captcha_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
-    <string name="captcha_auto_delete_title">删除验证码短信</string>
-    <string name="captcha_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
-    <string name="notification_reply">回复</string>
-    <string name="notification_call">拨打</string>
+    <string name="captcha_title">Captcha는 %s</string>
+    <string name="captcha_with_provider_title">Captcha는 %1$s 【%2$s】</string>
+    <string name="captcha_content">보안 문자 메시지를 복사하려면 클릭하세요</string>
+    <string name="captcha_has_copied">이미 긴 클립보드에 복사 하는 Captcha를 붙여 입력된 상자를 누릅니다.</string>
+    <string name="captcha_auto_delete_title">인증 코드 삭제</string>
+    <string name="captcha_auto_delete_summary">인증 코드가 클립보드에 복사될 때 자동으로 메시지를 삭제합니다</string>
+    <string name="notification_reply">답장</string>
+    <string name="notification_call">통화</string>
 </resources>
