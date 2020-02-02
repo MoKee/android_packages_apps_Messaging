@@ -27,4 +27,6 @@
     <string name="mediapicker_audio_list_item_selected_content_description">Изабрани аудио-снимак</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">Додирните да бисте изабрали</string>
     <string name="mediapicker_audio_list_title_selection">Изабрано: <xliff:g id="count">%d</xliff:g></string>
+    <string name="notification_mark_as_read">Означи као прочитано</string>
+    <string name="notification_channel_messages_title">Poruke</string>
 </resources>
