@@ -28,8 +28,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.media.MediaMetadataRetriever;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -2669,26 +2667,6 @@ public class MmsUtils {
                 break;
         }
         return stringResId;
-    }
-
-    /**
-     * The absence of a connection type.
-     */
-    public static final int TYPE_NONE = -1;
-
-    public static int getConnectivityEventNetworkType(final Context context, final Intent intent) {
-        final ConnectivityManager connMgr = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (OsUtil.isAtLeastJB_MR1()) {
-            return intent.getIntExtra(ConnectivityManager.EXTRA_NETWORK_TYPE, TYPE_NONE);
-        } else {
-            final NetworkInfo info = (NetworkInfo) intent.getParcelableExtra(
-                    ConnectivityManager.EXTRA_NETWORK_INFO);
-            if (info != null) {
-                return info.getType();
-            }
-        }
-        return TYPE_NONE;
     }
 
     /**
