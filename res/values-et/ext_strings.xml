@@ -19,13 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Vestluse kustutamiseks pühi paremale</string>
     <string name="show_emoticons_pref_title">Juurdepääs emotikonidele</string>
     <string name="show_emoticons_pref_summary">Näite emotikonide klahvi klaviatuuril</string>
-    <string name="mediapicker_galleryChooserDescription_cm">Valige pildid või videod sellest seadmest</string>
-    <string name="mediapicker_audioListChooserDescription">Valige helifailid sellest seadmest</string>
-    <string name="mediapicker_gallery_image_item_attachment_too_large">Ei saa lisada videot. Maksimaalne sõnumimaht ületatud.</string>
-    <string name="mediapicker_audio_list_title">Valige heli</string>
-    <string name="mediapicker_audio_list_item_selected_content_description">Valitud heli</string>
-    <string name="mediapicker_audio_list_item_unselected_content_description">Puuduta valimiseks</string>
-    <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> valitud</string>
     <string name="notification_mark_as_read">Märgi loetuks</string>
     <string name="notification_channel_messages_title">Sõnumid</string>
 </resources>
