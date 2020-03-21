@@ -27,4 +27,6 @@
     <string name="mediapicker_audio_list_item_selected_content_description">Вибране аудіо</string>
     <string name="mediapicker_audio_list_item_unselected_content_description">Натисніть, щоб вибрати</string>
     <string name="mediapicker_audio_list_title_selection">Вибрано <xliff:g id="count">%d</xliff:g></string>
+    <string name="notification_mark_as_read">Позначити як прочитане</string>
+    <string name="notification_channel_messages_title">Повідомлення</string>
 </resources>
