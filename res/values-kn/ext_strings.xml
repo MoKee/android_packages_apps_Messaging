@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+    Copyright (C) 2015-2019 The MoKee Open Source Project
     Copyright (C) 2015 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +18,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="swipe_to_delete_conversation_pref_title">ಅಳಿಸಲು ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="swipe_to_delete_conversation_pref_summary">ಒಂದು ಸಂವಾದವನ್ನು ಅಳಿಸಲು ಬಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
+    <string name="show_emoticons_pref_title">ಭಾವನೆಯ ಪ್ರವೇಶ</string>
     <string name="show_emoticons_pref_summary">ಕೀಬೋರ್ಡ್ ಮೇಲೆ ಭಾವನೆಗಳ ಪ್ರಮುಖ ತೋರಿಸಿ</string>
-    <string name="notification_mark_as_read">ಓದಿರುವುದಾಗಿ ಗುರುತಿಸು</string>
-    <string name="notification_channel_messages_title">ಸಂದೇಶಗಳು</string>
+    <string name="mediapicker_galleryChooserDescription_cm">ಚಿತ್ರಗಳನ್ನು ಮತ್ತು ವೀಡಿಯೋಗಳನ್ನು ಈ ಡಿವೈಸ್ ನಿಂದ ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="mediapicker_audioListChooserDescription">ಆಡಿಯೋ ಫೈಲುಗಳನ್ನು ಈ ಡಿವೈಸ್ ನಿಂದ ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="mediapicker_gallery_image_item_attachment_too_large">ವೀಡಿಯೊವನ್ನು ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಗರಿಷ್ಠ ಸಂದೇಶ ಗಾತ್ರ ಮೀರಿದೆ.</string>
+    <string name="mediapicker_audio_list_title">ಆಡಿಯೋ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="mediapicker_audio_list_item_selected_content_description">ಆಯ್ಕೆ ಮಾಡಿದ ಆಡಿಯೋ</string>
+    <string name="mediapicker_audio_list_item_unselected_content_description">ಆಯ್ಕೆಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="mediapicker_audio_list_title_selection"><xliff:g id="count">%d</xliff:g> ಆಯ್ಕೆಯಾಗಿದೆ</string>
+    <string name="notification_mark_as_read">ಓದಿದೆ ಎಂದು ಗುರುತುಮಾಡಿ</string>
 </resources>
