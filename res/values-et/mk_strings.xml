@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2019 The MoKee Open Source Project
+     Copyright (C) 2015-2020 The MoKee Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Automaatne sõnumite kustutamine, kui kinnituskoodid kopeeritakse lõikepuhvrisse</string>
     <string name="notification_reply">Vasta</string>
     <string name="notification_call">Helista</string>
+    <string name="shortcut_label_new_message">Uus sõnum</string>
+    <string name="shortcut_label_archived_message_list">Sõnum on arhiivitud</string>
 </resources>
