@@ -17,9 +17,7 @@ package com.android.messaging.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.text.TextUtils;
 
 import com.android.messaging.Factory;
 import com.android.messaging.R;
@@ -54,7 +52,6 @@ public class ConversationDrawables {
     private int mIncomingAudioButtonColor;
     private int mSelectedBubbleColor;
     private int mThemeColor;
-    private TypedArray sColors;
 
     public static ConversationDrawables get() {
         if (sInstance == null) {
@@ -105,11 +102,10 @@ public class ConversationDrawables {
                 resources.getColor(R.color.message_audio_button_color_incoming);
         mSelectedBubbleColor = resources.getColor(R.color.message_bubble_color_selected);
         mThemeColor = resources.getColor(R.color.primary_color);
-        sColors = resources.obtainTypedArray(R.array.letter_tile_colors);
     }
 
     public Drawable getBubbleDrawable(final boolean selected, final boolean incoming,
-            final boolean needArrow, final boolean isError, final String identifier) {
+            final boolean needArrow, final boolean isError) {
         final Drawable protoDrawable;
         if (needArrow) {
             if (incoming) {
@@ -131,12 +127,7 @@ public class ConversationDrawables {
             if (isError) {
                 color = mIncomingErrorBubbleColor;
             } else {
-                if (!TextUtils.isEmpty(identifier)) {
-                    int idcolor = Math.abs(identifier.hashCode()) % sColors.length();
-                    color = sColors.getColor(idcolor, mThemeColor);
-                } else {
-                    color = mThemeColor;
-                }
+                color = mThemeColor;
             }
         } else {
             color = mOutgoingBubbleColor;
