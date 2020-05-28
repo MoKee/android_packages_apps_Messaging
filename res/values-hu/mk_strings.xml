@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Az üzenetek automatikusan törlődni fognak, amint kimásolta a vágólapra az ellenőrzőkódot</string>
     <string name="notification_reply">Válasz</string>
     <string name="notification_call">Hívás</string>
+    <string name="shortcut_label_new_message">Új üzenet</string>
+    <string name="shortcut_label_archived_message_list">Archivált üzenet</string>
 </resources>

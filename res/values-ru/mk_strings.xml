@@ -23,4 +23,5 @@
     <string name="captcha_auto_delete_summary">Удалять автоматически сообщения, когда код подтверждения скопирован в буфер обмена</string>
     <string name="notification_reply">Ответить</string>
     <string name="notification_call">Вызов</string>
+    <string name="shortcut_label_new_message">Новое сообщение</string>
 </resources>

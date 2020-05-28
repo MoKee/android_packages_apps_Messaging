@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Automatyczne usuwanie wiadomości, gdy kody weryfikacyjne skopiowane do schowka</string>
     <string name="notification_reply">Odpisz</string>
     <string name="notification_call">Połączenia</string>
+    <string name="shortcut_label_new_message">Nowa wiadomość</string>
+    <string name="shortcut_label_archived_message_list">Wiadomość zarchiwizowana</string>
 </resources>
