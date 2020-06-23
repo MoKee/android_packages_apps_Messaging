@@ -15,12 +15,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="captcha_title">Kode verifikasi adalah %s</string>
-    <string name="captcha_with_provider_title">Kode verifikasi adalah %1$s 【%2$s】</string>
+    <string name="captcha_title">Kode verifikasi %s</string>
+    <string name="captcha_with_provider_title">Kode verifikasi  %1$s 【%2$s】</string>
     <string name="captcha_content">Menerima kode verifikasi, klik untuk menyalin.</string>
-    <string name="captcha_has_copied">Kode verifikasi sudah disalin ke clipboard, tekan lama kotak masukan untuk menyisipkan.</string>
+    <string name="captcha_has_copied">Kode verifikasi sudah disalin ke clipboard, tekan lama  untuk menyisipkan.</string>
     <string name="captcha_auto_delete_title">Hapus kode verifikasi</string>
     <string name="captcha_auto_delete_summary">Menghapus kode verifikasi ketika disalin pada clipboard</string>
     <string name="notification_reply">Balas</string>
-    <string name="notification_call">Panggilan</string>
+    <string name="notification_call">Panggil</string>
+    <string name="shortcut_label_new_message">Pesan baru</string>
+    <string name="shortcut_label_archived_message_list">Pesan diarsipkan</string>
 </resources>

@@ -24,4 +24,5 @@
     <string name="notification_reply">Ответить</string>
     <string name="notification_call">Вызов</string>
     <string name="shortcut_label_new_message">Новое сообщение</string>
+    <string name="shortcut_label_archived_message_list">Сообщение перенесено в архив</string>
 </resources>

@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Excluir automaticamente as mensagens quando os códigos de verificação forem copiados para a área de transferência</string>
     <string name="notification_reply">Responder</string>
     <string name="notification_call">Chamada</string>
+    <string name="shortcut_label_new_message">Nova mensagem</string>
+    <string name="shortcut_label_archived_message_list">Mensagem arquivada</string>
 </resources>

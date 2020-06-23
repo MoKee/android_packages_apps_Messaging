@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Tự động xóa tin nhắn khi mã xác minh được sao chép vào khay nhớ tạm</string>
     <string name="notification_reply">Trả lời</string>
     <string name="notification_call">Gọi</string>
+    <string name="shortcut_label_new_message">Tin nhắn mới</string>
+    <string name="shortcut_label_archived_message_list">Tin nhắn đã lưu</string>
 </resources>
