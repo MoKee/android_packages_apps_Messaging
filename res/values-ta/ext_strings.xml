@@ -20,4 +20,12 @@
     <string name="swipe_to_delete_conversation_pref_summary">ஒரு உரையாடல் நீக்குவதற்கு வலது பக்கமாக தேய்க்கவும்</string>
     <string name="show_emoticons_pref_title">எமோடிகான்கள் அணுகல்</string>
     <string name="show_emoticons_pref_summary">விசைப்பலகையில் உள்ள எமோடிகான் விசையை காண்பிக்கவும்</string>
+    <string name="mediapicker_galleryChooserDescription_cm">இந்த சாதனத்திலிருந்து படங்கள் அல்லது காணொளிகளைத் தேர்வுசெய்க</string>
+    <string name="mediapicker_audioListChooserDescription">இந்த சாதனத்திலிருந்து ஒலி கோப்புகளைத் தேர்வுசெய்க</string>
+    <string name="mediapicker_gallery_image_item_attachment_too_large">காணொளியை இணைக்க முடியவில்லை. அதிகபட்ச செய்தி அளவு மீறியது.</string>
+    <string name="mediapicker_audio_list_title">ஒலியைத் தேர்ந்தெடு</string>
+    <string name="mediapicker_audio_list_item_selected_content_description">தேர்வுசெய்யப்பட்ட ஒலி</string>
+    <string name="mediapicker_audio_list_item_unselected_content_description">தேர்ந்தெடுக்கத் தட்டுக</string>
+    <string name="notification_mark_as_read">படிக்கபட்டதாக குறி</string>
+    <string name="notification_channel_messages_title">குறுஞ்செய்திகள்</string>
 </resources>
