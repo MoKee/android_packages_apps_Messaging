@@ -23,4 +23,5 @@
     <string name="captcha_auto_delete_summary">Nachrichten automatisch löschen, wenn Bestätigungscodes in die Zwischenablage kopiert wurden</string>
     <string name="notification_reply">Antworten</string>
     <string name="notification_call">Anruf</string>
+    <string name="shortcut_label_new_message">Neue Nachricht</string>
 </resources>
