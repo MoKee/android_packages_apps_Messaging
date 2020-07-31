@@ -23,6 +23,4 @@
     <string name="captcha_auto_delete_summary">複製驗證碼到剪貼簿後自動刪除簡訊</string>
     <string name="notification_reply">回覆</string>
     <string name="notification_call">撥打</string>
-    <string name="shortcut_label_new_message">新訊息</string>
-    <string name="shortcut_label_archived_message_list">郵件已封存</string>
 </resources>
