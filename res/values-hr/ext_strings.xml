@@ -19,4 +19,5 @@
     <string name="swipe_to_delete_conversation_pref_summary">Prstom prijeđite udesno da biste izbrisali razgovor</string>
     <string name="show_emoticons_pref_title">Pristup emotikonima</string>
     <string name="show_emoticons_pref_summary">Pokaži tipku emotikona na tipkovnici</string>
+    <string name="notification_mark_as_read">Označi kao pročitano</string>
 </resources>
