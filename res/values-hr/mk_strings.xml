@@ -17,5 +17,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="captcha_title">Kod za provjeru je %s</string>
     <string name="captcha_with_provider_title">Verifikacijski kod je %1$s 【%2$s】</string>
+    <string name="captcha_content">Primljen je verifikacioni kod , klik za kopiranje.</string>
+    <string name="captcha_has_copied">Verifikacioni kod je već u klibordu , dugi klik  u mesto unosa za unos koda.</string>
+    <string name="captcha_auto_delete_title">Obriši verifikacione kodove</string>
+    <string name="captcha_auto_delete_summary">Automatski obriši poruke kada su verifikacioni kodovi kopirani u klibord</string>
+    <string name="notification_reply">Odgovori</string>
     <string name="notification_call">Poziv</string>
 </resources>
