@@ -15,17 +15,5 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="notification_reply_choices">
-        <item>Jes</item>
-        <item>Ne</item>
-        <item>OK</item>
-        <item>Hehe</item>
-        <item>Dankon</item>
-        <item>I agree</item>
-        <item>Nice</item>
-        <item>On my way</item>
-        <item>OK, let me get back to you later</item>
-        <item>:)</item>
-        <item>:(</item>
-    </string-array>
+    <string name="notification_channel_messages_title">შეტყობინებები</string>
 </resources>
