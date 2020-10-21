@@ -73,7 +73,7 @@ import com.android.messaging.util.SafeAsyncTask;
 import com.android.messaging.util.UiUtils;
 import com.android.messaging.util.UriUtil;
 
-import org.lineageos.messaging.util.PrefsUtils;
+import org.mokee.messaging.util.PrefsUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
