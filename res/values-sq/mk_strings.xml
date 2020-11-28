@@ -15,5 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="captcha_title">Kodi i verifikimit është %s</string>
+    <string name="captcha_with_provider_title">Kodi i verifikimit është %1$s 【%2$s】</string>
+    <string name="captcha_content">Mori një kod verifikimi, klikoni për të kopjuar.</string>
+    <string name="captcha_has_copied">Kodi i verifikimit është kopjuar tashmë në clipboard, shtypni gjatë kutinë tuaj të hyrjes për ta ngjitur.</string>
+    <string name="captcha_auto_delete_title">Fshi kodet e verifikimit</string>
+    <string name="captcha_auto_delete_summary">Fshi automatikisht mesazhet kur kodet e verifikimit kopjohen në clipboard</string>
     <string name="notification_call">Thirrjet</string>
 </resources>
