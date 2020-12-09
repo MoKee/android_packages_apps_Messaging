@@ -21,5 +21,6 @@
     <string name="captcha_has_copied">Kodi i verifikimit është kopjuar tashmë në clipboard, shtypni gjatë kutinë tuaj të hyrjes për ta ngjitur.</string>
     <string name="captcha_auto_delete_title">Fshi kodet e verifikimit</string>
     <string name="captcha_auto_delete_summary">Fshi automatikisht mesazhet kur kodet e verifikimit kopjohen në clipboard</string>
+    <string name="notification_reply">Përgjigjju</string>
     <string name="notification_call">Thirrjet</string>
 </resources>
