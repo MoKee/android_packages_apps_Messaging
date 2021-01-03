@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Supprimer automatiquement les messages quand les codes de vérification ont été copiés dans le presse-papier</string>
     <string name="notification_reply">Répondre</string>
     <string name="notification_call">Appel</string>
+    <string name="shortcut_label_new_message">Nouveau Message</string>
+    <string name="shortcut_label_archived_message_list">Message Archivé</string>
 </resources>
