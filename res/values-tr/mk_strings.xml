@@ -23,4 +23,6 @@
     <string name="captcha_auto_delete_summary">Doğrulama kodları panoya kopyalandığında mesajları otomatik olarak sil</string>
     <string name="notification_reply">Yanıtla</string>
     <string name="notification_call">Arama</string>
+    <string name="shortcut_label_new_message">Yeni mesaj</string>
+    <string name="shortcut_label_archived_message_list">Mesaj arşivlendi</string>
 </resources>
