@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Pyyhkäise oikealle poistaaksesi keskustelun</string>
     <string name="show_emoticons_pref_title">Hymiöiden käyttö</string>
     <string name="show_emoticons_pref_summary">Näytä hymiönäppäin näppäimistöllä</string>
+    <string name="notification_mark_as_read">Merkitse luetuksi</string>
     <string name="notification_channel_messages_title">Viestit</string>
 </resources>

@@ -19,4 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Превуците у десно да бисте избрисали конверзацију</string>
     <string name="show_emoticons_pref_title">Приступ емотиконима</string>
     <string name="show_emoticons_pref_summary">Прикажите дугме са емотиконима на тастатури</string>
+    <string name="notification_mark_as_read">Означи као прочитано</string>
+    <string name="notification_channel_messages_title">Poruke</string>
 </resources>

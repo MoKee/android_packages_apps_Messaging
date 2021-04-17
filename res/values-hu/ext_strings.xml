@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Húzza jobbra a beszélgetés törléséhez</string>
     <string name="show_emoticons_pref_title">Hangulatjel hozzáférés</string>
     <string name="show_emoticons_pref_summary">Hangulatjel gomb megjelenítése a billentyűzeten</string>
+    <string name="notification_mark_as_read">Megjelölés olvasottként</string>
     <string name="notification_channel_messages_title">Üzenetek</string>
 </resources>

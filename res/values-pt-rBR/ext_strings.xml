@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Deslize para a direita para excluir uma mensagem</string>
     <string name="show_emoticons_pref_title">Acesso a emoticons</string>
     <string name="show_emoticons_pref_summary">Mostrar o botão de emoticons no teclado</string>
+    <string name="notification_mark_as_read">Marcar como lida</string>
     <string name="notification_channel_messages_title">Mensagens</string>
 </resources>

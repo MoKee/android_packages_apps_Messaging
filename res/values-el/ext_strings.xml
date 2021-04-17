@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Σύρετε προς τα δεξιά για να διαγράψετε μια συζήτηση</string>
     <string name="show_emoticons_pref_title">Πρόσβαση emoticon</string>
     <string name="show_emoticons_pref_summary">Εμφάνιση του πλήκτρου emoticon στο πληκτρολόγιο</string>
+    <string name="notification_mark_as_read">Σήμανση ως αναγνωσμένο</string>
     <string name="notification_channel_messages_title">Μηνύματα</string>
 </resources>

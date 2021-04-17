@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Przesuń w prawo, aby usunąć konwersację</string>
     <string name="show_emoticons_pref_title">Dostęp do emotikon</string>
     <string name="show_emoticons_pref_summary">Pokaż klawisz emotikon na klawiaturze</string>
+    <string name="notification_mark_as_read">Oznacz jako przeczytane</string>
     <string name="notification_channel_messages_title">Wiadomości</string>
 </resources>

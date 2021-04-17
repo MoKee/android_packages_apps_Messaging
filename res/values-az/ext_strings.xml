@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Yazışmanı silmək üçün sağa sürüşdür</string>
     <string name="show_emoticons_pref_title">Emoji müraciəti</string>
     <string name="show_emoticons_pref_summary">Klaviaturada emoji düyməsini göstər</string>
+    <string name="notification_mark_as_read">Oxunmuş kimi işarələ</string>
     <string name="notification_channel_messages_title">Mesajlar</string>
 </resources>

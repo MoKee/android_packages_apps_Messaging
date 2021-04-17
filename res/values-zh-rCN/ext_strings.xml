@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">向右滑动以删除会话</string>
     <string name="show_emoticons_pref_title">访问表情符号</string>
     <string name="show_emoticons_pref_summary">在键盘上显示表情符号键</string>
+    <string name="notification_mark_as_read">标记为已读</string>
     <string name="notification_channel_messages_title">短信</string>
 </resources>

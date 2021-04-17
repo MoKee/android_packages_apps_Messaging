@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Rrëshqit gishtin djathtas për të fshirë një bisedë</string>
     <string name="show_emoticons_pref_title">Aksesi i emotikonave</string>
     <string name="show_emoticons_pref_summary">Trego tastin e emotikonave në tastjerë</string>
+    <string name="notification_mark_as_read">Shëno si të lexuar</string>
     <string name="notification_channel_messages_title">Mesazhet</string>
 </resources>

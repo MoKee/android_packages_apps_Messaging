@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">Odsunutím vpravo smazat konverzaci</string>
     <string name="show_emoticons_pref_title">Zobrazení smajlíků</string>
     <string name="show_emoticons_pref_summary">Zobrazit na klávesnici klávesu pro zobrazení smajlíků</string>
+    <string name="notification_mark_as_read">Označit jako přečtené</string>
     <string name="notification_channel_messages_title">Zprávy</string>
 </resources>

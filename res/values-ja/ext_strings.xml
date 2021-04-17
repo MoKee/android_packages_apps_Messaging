@@ -19,5 +19,6 @@
     <string name="swipe_to_delete_conversation_pref_summary">右にスワイプしてスレッドを削除する</string>
     <string name="show_emoticons_pref_title">絵文字アクセス</string>
     <string name="show_emoticons_pref_summary">キーボードに絵文字キーを表示する</string>
+    <string name="notification_mark_as_read">既読にする</string>
     <string name="notification_channel_messages_title">メッセージ</string>
 </resources>

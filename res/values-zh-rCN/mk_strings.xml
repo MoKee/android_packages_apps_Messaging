@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2019 The MoKee Open Source Project
+     Copyright (C) 2015-2020 The MoKee Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -21,7 +21,8 @@
     <string name="captcha_has_copied">验证码已经复制到剪贴板，长按您的输入框进行粘贴。</string>
     <string name="captcha_auto_delete_title">删除验证码短信</string>
     <string name="captcha_auto_delete_summary">复制验证码到剪贴板后自动删除短信</string>
-    <!-- quick message option -->
     <string name="notification_reply">回复</string>
     <string name="notification_call">拨打</string>
+    <string name="shortcut_label_new_message">新消息</string>
+    <string name="shortcut_label_archived_message_list">已归档的消息</string>
 </resources>
