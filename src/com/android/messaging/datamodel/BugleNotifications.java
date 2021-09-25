@@ -827,7 +827,7 @@ public class BugleNotifications {
 
             if (!isCaptchaMessage) {
                 addDownloadMmsAction(notifBuilder, wearableExtender, notificationState);
-                addReplyAction(notifBuilder, wearableExtender, notificationState);
+                addWearableVoiceReplyAction(notifBuilder, wearableExtender, notificationState);
                 addCallAction(notifBuilder, wearableExtender, notificationState);
                 addReadAction(notifBuilder, wearableExtender, notificationState);
             }
@@ -899,7 +899,7 @@ public class BugleNotifications {
         wearableExtender.addAction(actionBuilder.build());
     }
 
-    private static void addReplyAction(final NotificationCompat.Builder notifBuilder,
+    private static void addWearableVoiceReplyAction(final NotificationCompat.Builder notifBuilder,
             final WearableExtender wearableExtender, final NotificationState notificationState) {
         if (!(notificationState instanceof MultiMessageNotificationState)) {
             return;
